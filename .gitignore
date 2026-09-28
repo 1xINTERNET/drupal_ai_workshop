@@ -13,6 +13,9 @@
 /private/
 /config/
 
+# Build output of scripts/build-site.sh.
+/.site-build/
+
 # OS files.
 .DS_Store
 Thumbs.db
