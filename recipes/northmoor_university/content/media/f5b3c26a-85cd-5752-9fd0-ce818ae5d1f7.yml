@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f5b3c26a-85cd-5752-9fd0-ce818ae5d1f7
+  bundle: image
+  default_langcode: en
+  depends:
+    d921e6f9-3f1c-554e-a758-f9a7f4328c38: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Aerial view of the Northmoor campus buildings along a rocky coastline
+  field_media_image:
+  - alt: Aerial view of the Northmoor campus buildings along a rocky coastline
+    title: ''
+    width: 1600
+    height: 1073
+    entity: d921e6f9-3f1c-554e-a758-f9a7f4328c38

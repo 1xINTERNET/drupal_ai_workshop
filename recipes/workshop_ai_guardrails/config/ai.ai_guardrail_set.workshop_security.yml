@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai.ai_guardrail.workshop_prompt_injection
+    - ai.ai_guardrail.workshop_malicious_code_output
+id: workshop_security
+label: 'Workshop security'
+description: 'Blocks prompt injection attempts before the request is sent to the AI provider, and blocks JavaScript execution code in the AI response.'
+stop_threshold: 0.8
+pre_generate_guardrails:
+  plugin_id:
+    - workshop_prompt_injection
+post_generate_guardrails:
+  plugin_id:
+    - workshop_malicious_code_output

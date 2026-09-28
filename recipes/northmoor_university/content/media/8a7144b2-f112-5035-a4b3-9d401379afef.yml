@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8a7144b2-f112-5035-a4b3-9d401379afef
+  bundle: image
+  default_langcode: en
+  depends:
+    2a13812a-95f4-5896-a53c-7f2406c86f5f: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Aquarium tanks with kelp, starfish and fish in a specimen room
+  field_media_image:
+  - alt: Aquarium tanks with kelp, starfish and fish in a specimen room
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 2a13812a-95f4-5896-a53c-7f2406c86f5f

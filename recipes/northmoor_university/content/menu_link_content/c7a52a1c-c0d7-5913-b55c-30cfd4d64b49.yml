@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c7a52a1c-c0d7-5913-b55c-30cfd4d64b49
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Accessibility
+  menu_name:
+  - value: footer
+  link:
+  - uri: internal:/accessibility
+    title: ''
+    options: {}
+  weight:
+  - value: 0
+  expanded:
+  - value: true

@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d116c3b6-e2bc-56fe-be9a-fd49a3d56f13
+  bundle: image
+  default_langcode: en
+  depends:
+    2155ced7-3105-50b4-9998-02b673de44c3: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A crew member on a ship deck recovering a CTD rosette sampler
+  field_media_image:
+  - alt: A crew member on a ship deck recovering a CTD rosette sampler
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 2155ced7-3105-50b4-9998-02b673de44c3

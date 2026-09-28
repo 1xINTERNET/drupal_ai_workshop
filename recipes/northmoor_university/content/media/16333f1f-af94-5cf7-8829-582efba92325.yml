@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 16333f1f-af94-5cf7-8829-582efba92325
+  bundle: image
+  default_langcode: en
+  depends:
+    894315e3-1485-50da-862d-40386316ac81: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: An empty information session room with rows of chairs facing a projection screen
+  field_media_image:
+  - alt: An empty information session room with rows of chairs facing a projection screen
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 894315e3-1485-50da-862d-40386316ac81

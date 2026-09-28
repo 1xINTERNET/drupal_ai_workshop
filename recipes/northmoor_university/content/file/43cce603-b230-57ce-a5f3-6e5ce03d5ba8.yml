@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 43cce603-b230-57ce-a5f3-6e5ce03d5ba8
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: coastal-engineering-sea-wall-inspection.jpg
+  uri:
+  - value: public://northmoor/coastal-engineering-sea-wall-inspection.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 264021
+  status:
+  - value: true

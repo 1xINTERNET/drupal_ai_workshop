@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c82af909-7649-5e81-93cd-6cb3e322c73d
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    35312b3c-3c92-5218-9f39-be5c9487b01b: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: MS in Coastal Resilience
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/ms-coastal-resilience
+    title: ''
+    options: {}
+  weight:
+  - value: 2
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:35312b3c-3c92-5218-9f39-be5c9487b01b

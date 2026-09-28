@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5a47f9af-f7df-5604-bdc0-ea9561b16cf6
+  bundle: image
+  default_langcode: en
+  depends:
+    cc25758a-efdc-56d9-b101-053010608414: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A clifftop weather station with instruments and a small observatory dome by the sea
+  field_media_image:
+  - alt: A clifftop weather station with instruments and a small observatory dome by the sea
+    title: ''
+    width: 1600
+    height: 1073
+    entity: cc25758a-efdc-56d9-b101-053010608414

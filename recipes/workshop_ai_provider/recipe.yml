@@ -1,0 +1,49 @@
+name: 'Workshop: AI provider'
+description: 'Connects the AI providers. Uses a free amazee.ai trial by default; OpenAI or Anthropic are set up when OPENAI_API_KEY or ANTHROPIC_API_KEY is set. Safe to apply again, for example after importing a database dump.'
+type: 'Workshop'
+install:
+  - key
+  - ai
+  - ai_provider_amazeeio
+  - ai_provider_openai
+  - ai_provider_anthropic
+  - easy_encryption_admin
+input:
+  openai_api_key:
+    data_type: string
+    description: 'An OpenAI API key (optional). Leave empty to use amazee.ai.'
+    default:
+      source: env
+      env: OPENAI_API_KEY
+      fallback: ''
+  anthropic_api_key:
+    data_type: string
+    description: 'An Anthropic API key (optional). Leave empty to use amazee.ai.'
+    default:
+      source: env
+      env: ANTHROPIC_API_KEY
+      fallback: ''
+config:
+  strict: false
+  actions:
+    ai.settings:
+      ensureEasyEncryptionSetup: ~
+    ai_provider_openai.settings:
+      setupAiProvider:
+        key_value: ${openai_api_key}
+        key_name: openai_api_key
+        key_label: 'OpenAI API key'
+        provider: openai
+      simpleConfigUpdate:
+        moderation: true
+    ai_provider_anthropic.settings:
+      setupAiProvider:
+        key_value: ${anthropic_api_key}
+        key_name: anthropic_api_key
+        key_label: 'Anthropic API key'
+        provider: anthropic
+    ai_provider_amazeeio.settings:
+      ensureAmazeeAiAccess: ~
+      setupAiProvider:
+        provider: amazeeio
+        no_key_needed: true

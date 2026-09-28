@@ -1,0 +1,20 @@
+# Managed by Composer.
+/vendor/
+/web/
+/drush/Commands/contrib/
+# Contrib recipes are installed by Composer next to the workshop recipes.
+/recipes/*
+!/recipes/northmoor_university/
+!/recipes/workshop_ai_*/
+
+# Local environment and secrets.
+/.ddev/.env
+/.easy_encryption/
+/private/
+/config/
+
+# OS files.
+.DS_Store
+Thumbs.db
+/.editorconfig
+/.gitattributes

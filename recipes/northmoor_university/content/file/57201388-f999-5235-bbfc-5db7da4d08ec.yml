@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 57201388-f999-5235-bbfc-5db7da4d08ec
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: campus-plaza.jpg
+  uri:
+  - value: public://northmoor/campus-plaza.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 257714
+  status:
+  - value: true

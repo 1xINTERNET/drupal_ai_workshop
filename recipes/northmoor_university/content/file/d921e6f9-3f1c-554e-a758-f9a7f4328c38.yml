@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d921e6f9-3f1c-554e-a758-f9a7f4328c38
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: aerial-style-coastline-campus-cluster.jpg
+  uri:
+  - value: public://northmoor/aerial-style-coastline-campus-cluster.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 314603
+  status:
+  - value: true

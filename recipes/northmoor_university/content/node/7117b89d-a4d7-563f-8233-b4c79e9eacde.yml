@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7117b89d-a4d7-563f-8233-b4c79e9eacde
+  bundle: page
+  default_langcode: en
+  depends:
+    d116c3b6-e2bc-56fe-be9a-fd49a3d56f13: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: BS in Oceanography
+  created:
+  - value: 1767286800
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Oceanography at Northmoor University is a quantitative science degree. It treats the ocean as a physical and chemical system: why water moves the way it does, what it carries with it, and how the whole system connects to climate.</p>
+      <h2>At a glance</h2>
+      <ul>
+      <li><strong>Credential:</strong> Bachelor of Science (BS)</li>
+      <li><strong>Length:</strong> 4 years</li>
+      <li><strong>Start term:</strong> Fall</li>
+      <li><strong>Department:</strong> <a href="/department-ocean-earth-sciences">Department of Ocean and Earth Sciences</a></li>
+      </ul>
+      <h2>What you study</h2>
+      <p>Every student in the program goes to sea on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>. In the first year that means a day trip. By the third year you may be running your own sampling station on a multi-day cruise, and in the fourth year some students write their own science into a cruise plan.</p>
+      <p>The first year pairs introductory oceanography and earth systems with the core in mathematics and physics. In the second year the subject divides into physical and chemical oceanography, and the third year adds ocean observing systems and circulation and climate.</p>
+      <p>A data analysis course is required. The faculty insisted on it because a student who cannot work with a messy time series cannot do the science. Ocean data are patchy, noisy and irregularly sampled, and learning to handle them honestly is half of the training.</p>
+      <h2>Where it leads</h2>
+      <p>Graduates go on to graduate school, agency and laboratory science, offshore and environmental consulting, and instrument and survey work. A steady number also move into data-heavy jobs outside ocean science altogether, because the analysis skills travel further than most students expect.</p>
+      <p>The department's own <a href="/phd-oceanography">PhD in Oceanography</a> admits a few students each year, and several of them started in this degree.</p>
+      <h2>What to expect</h2>
+      <p>Mathematics, and more of it than students drawn by the romance of the ocean sometimes expect. Calculus is a real entry requirement, not a suggestion, because second-year courses use it from the first week. There is also genuine sea time: watch-standing, cruises of up to fourteen days, and weather that sets the schedule. Departures are never convenient. See <a href="/admissions">admissions</a> for full entry requirements.</p>
+    format: content_format
+  field_description:
+  - value: A quantitative degree in the physics, chemistry and geology of the ocean, from a department that runs its own research vessel. Every student in the program goes to sea.
+  field_featured_image:
+  - entity: d116c3b6-e2bc-56fe-be9a-fd49a3d56f13
+  path:
+  - alias: /bs-oceanography
+    langcode: en
+    pathauto: 0

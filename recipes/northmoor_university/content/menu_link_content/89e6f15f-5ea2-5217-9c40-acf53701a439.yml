@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 89e6f15f-5ea2-5217-9c40-acf53701a439
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Admissions
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/admissions
+    title: ''
+    options: {}
+  weight:
+  - value: 1
+  expanded:
+  - value: true

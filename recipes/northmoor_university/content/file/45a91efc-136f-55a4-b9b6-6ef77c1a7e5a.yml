@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 45a91efc-136f-55a4-b9b6-6ef77c1a7e5a
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: fabrication-workshop.jpg
+  uri:
+  - value: public://northmoor/fabrication-workshop.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 237766
+  status:
+  - value: true

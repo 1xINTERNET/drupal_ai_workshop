@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2155ced7-3105-50b4-9998-02b673de44c3
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: oceanography-ctd-rosette-recovery.jpg
+  uri:
+  - value: public://northmoor/oceanography-ctd-rosette-recovery.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 210402
+  status:
+  - value: true

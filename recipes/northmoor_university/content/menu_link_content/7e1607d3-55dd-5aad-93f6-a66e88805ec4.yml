@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 7e1607d3-55dd-5aad-93f6-a66e88805ec4
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    4c36d224-2330-5cb5-81b6-7689423cf71c: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Marine Robotics Test Basin
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/marine-robotics-test-basin
+    title: ''
+    options: {}
+  weight:
+  - value: 2
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:4c36d224-2330-5cb5-81b6-7689423cf71c

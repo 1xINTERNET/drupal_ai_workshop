@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4750762e-4f9d-5db3-9f62-df556671cc04
+  bundle: image
+  default_langcode: en
+  depends:
+    c18446e3-ba22-5134-be4c-5be33c1163b1: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: An equipment lab with an underwater robot on a workbench and sonar displays
+  field_media_image:
+  - alt: An equipment lab with an underwater robot on a workbench and sonar displays
+    title: ''
+    width: 1600
+    height: 1073
+    entity: c18446e3-ba22-5134-be4c-5be33c1163b1

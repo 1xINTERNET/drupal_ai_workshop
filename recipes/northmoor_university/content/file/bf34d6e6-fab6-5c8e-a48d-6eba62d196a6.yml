@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bf34d6e6-fab6-5c8e-a48d-6eba62d196a6
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: marine-biology-kelp-forest-survey.jpg
+  uri:
+  - value: public://northmoor/marine-biology-kelp-forest-survey.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 240027
+  status:
+  - value: true

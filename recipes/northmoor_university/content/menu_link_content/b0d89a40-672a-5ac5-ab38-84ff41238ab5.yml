@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: b0d89a40-672a-5ac5-ab38-84ff41238ab5
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    35312b3c-3c92-5218-9f39-be5c9487b01b: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: BS in Marine Biology
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/bs-marine-biology
+    title: ''
+    options: {}
+  weight:
+  - value: 0
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:35312b3c-3c92-5218-9f39-be5c9487b01b

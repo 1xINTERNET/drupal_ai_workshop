@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9ec163e1-a18a-5f49-b59e-fe8e8a3280b2
+  bundle: image
+  default_langcode: en
+  depends:
+    57201388-f999-5235-bbfc-5db7da4d08ec: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A bright multi-storey campus atrium with glass stairways and students
+  field_media_image:
+  - alt: A bright multi-storey campus atrium with glass stairways and students
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 57201388-f999-5235-bbfc-5db7da4d08ec

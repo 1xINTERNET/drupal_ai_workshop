@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 42c7b947-baed-5dc6-9684-94755397de40
+  bundle: image
+  default_langcode: en
+  depends:
+    3c132515-96c0-5b72-ba67-f41510036b95: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A group of people in conversation on a harbour quay with fishing boats behind
+  field_media_image:
+  - alt: A group of people in conversation on a harbour quay with fishing boats behind
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 3c132515-96c0-5b72-ba67-f41510036b95

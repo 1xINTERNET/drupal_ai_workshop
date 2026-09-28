@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 55810700-9661-57d8-af5a-1b8e9d1893cc
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: research-vessel-departing-at-dawn.jpg
+  uri:
+  - value: public://northmoor/research-vessel-departing-at-dawn.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 205431
+  status:
+  - value: true

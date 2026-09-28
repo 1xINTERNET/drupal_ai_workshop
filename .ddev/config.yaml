@@ -1,0 +1,14 @@
+name: drupal-ai-workshop
+type: drupal11
+docroot: web
+php_version: "8.4"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+database:
+    type: mysql
+    version: "8.0"
+composer_version: "2"
+use_dns_when_possible: true
+corepack_enable: false
+web_environment:
+    - DRUSH_OPTIONS_URI=$DDEV_PRIMARY_URL

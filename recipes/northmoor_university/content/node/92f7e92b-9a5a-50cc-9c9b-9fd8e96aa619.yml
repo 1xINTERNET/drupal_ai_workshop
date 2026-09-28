@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 92f7e92b-9a5a-50cc-9c9b-9fd8e96aa619
+  bundle: page
+  default_langcode: en
+  depends:
+    73500acb-d148-55fd-965d-867933e5a1ba: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: PhD in Oceanography
+  created:
+  - value: 1767294000
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>The doctoral program in Oceanography at Northmoor University admits only a few students each year, usually between two and four. The number is small because each place depends on a supervisor with a project and the funding to support it, not on a target cohort size.</p>
+      <h2>At a glance</h2>
+      <ul>
+      <li><strong>Credential:</strong> Doctor of Philosophy (PhD)</li>
+      <li><strong>Length:</strong> 5 years (sometimes four for students entering with a master's)</li>
+      <li><strong>Start term:</strong> Fall</li>
+      <li><strong>Department:</strong> <a href="/department-ocean-earth-sciences">Department of Ocean and Earth Sciences</a></li>
+      </ul>
+      <h2>How admission works</h2>
+      <p>Start by finding the person whose research you want to join, and contact them. An application that arrives without that conversation is at a real disadvantage. This is not about manners: the prospective supervisor makes the decision, and it rests on whether the research fit is genuine.</p>
+      <p>Areas currently taking students include shelf circulation and cross-shelf exchange, coastal carbonate chemistry, paleoceanography and sediment records, and regional sea level. A strong quantitative background is expected, including calculus, differential equations and programming. A master's degree is not required.</p>
+      <h2>Structure and resources</h2>
+      <p>The first two years combine coursework, including advanced ocean modeling and data analysis plus whatever the research demands, with a qualifying examination. Years three to five are given to research and writing.</p>
+      <p>Doctoral students get ship time on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>, including the annual Arctic transit, the only cruise of the year that leaves regional waters. They also have access to moorings, autonomous gliders and the core laboratory, and take priority for research ship time once teaching cruises are scheduled.</p>
+      <p>Students also teach. Most work as teaching assistants on the undergraduate data analysis course, which the department sees as part of their training rather than a duty. Several current students came up through the <a href="/bs-oceanography">BS in Oceanography</a>.</p>
+      <h2>What to expect</h2>
+      <p>A long project, time at sea in bad weather, and a relationship with your supervisor that will shape the five years more than anything else. That is why the conversation before you <a href="/apply">apply</a> matters as much as it does.</p>
+    format: content_format
+  field_description:
+  - value: A small doctoral program in physical, chemical and geological oceanography. Admission is by supervisor, and the cohort is deliberately kept tiny.
+  field_featured_image:
+  - entity: 73500acb-d148-55fd-965d-867933e5a1ba
+  path:
+  - alias: /phd-oceanography
+    langcode: en
+    pathauto: 0

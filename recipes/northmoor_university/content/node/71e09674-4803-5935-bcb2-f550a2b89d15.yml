@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 71e09674-4803-5935-bcb2-f550a2b89d15
+  bundle: page
+  default_langcode: en
+  depends:
+    5a47f9af-f7df-5604-bdc0-ea9561b16cf6: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Department of Ocean and Earth Sciences
+  created:
+  - value: 1767268800
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Ocean and Earth Sciences studies the physics, chemistry and geology of the ocean and the coast, along with the climate science that now runs through all three. The department operates <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>, Northmoor University's research vessel, and that fact shapes both our research and our teaching.</p>
+      <h2>Research areas</h2>
+      <ul>
+      <li><strong>Shelf circulation and exchange.</strong> How water moves between the continental shelf and the open ocean. Much of that exchange happens in brief events that routine sampling misses, so the work combines moorings, autonomous gliders and ship time.</li>
+      <li><strong>Carbonate chemistry.</strong> Acidification as coastal water actually experiences it, where daily and seasonal swings far exceed the long-term trend and the organisms that matter most live inside that variability.</li>
+      <li><strong>Paleoceanography.</strong> Reconstructing past ocean conditions from sediment cores. Current work focuses on the last interglacial, including a core that usefully contradicts the regional picture.</li>
+      <li><strong>Regional sea level and coastal climate.</strong> Translating global projections into figures a planner can use, and presenting uncertainty so it supports a decision rather than stalling one.</li>
+      <li><strong>Estuarine and environmental chemistry.</strong> Contaminant transport in estuaries, including a microplastic survey that led the regional monitoring program to change where it samples.</li>
+      </ul>
+      <h2>Teaching</h2>
+      <p>Every undergraduate in the department spends time at sea. First-year students go out on a day trip, and by the third year students run their own sampling stations. All of our programs require a data analysis course, because the science cannot be done without it. The department pushed for that requirement and has never regretted it.</p>
+      <p>Undergraduate options include the <a href="/bs-oceanography">BS in Oceanography</a>, alongside degrees in marine geoscience and environmental science.</p>
+      <h2>Graduate study and ship time</h2>
+      <p>We supervise doctoral and master's students in physical, chemical and geological oceanography, climate science and coastal resilience. See the <a href="/phd-oceanography">PhD in Oceanography</a> and the <a href="/ms-coastal-resilience">MS in Coastal Resilience</a>, which we teach jointly with <a href="/department-marine-policy">Marine Policy and Economics</a>.</p>
+      <p>External researchers can book ship time when teaching and research commitments allow. Ship time is arranged through Oliver Brandt. The department office is in the Halloran Building, room 118.</p>
+    format: content_format
+  field_description:
+  - value: Physical, chemical and geological oceanography, plus climate and environmental science. The Northmoor University department that operates R/V Cascadia Strait.
+  field_featured_image:
+  - entity: 5a47f9af-f7df-5604-bdc0-ea9561b16cf6
+  path:
+  - alias: /department-ocean-earth-sciences
+    langcode: en
+    pathauto: 0

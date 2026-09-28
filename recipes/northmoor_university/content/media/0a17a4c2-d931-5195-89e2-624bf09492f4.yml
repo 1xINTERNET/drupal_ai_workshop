@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0a17a4c2-d931-5195-89e2-624bf09492f4
+  bundle: image
+  default_langcode: en
+  depends:
+    a1365d32-bea9-5ffc-86cd-4015a26ebeb6: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A wooden boardwalk leading through dune grass to a building on the horizon
+  field_media_image:
+  - alt: A wooden boardwalk leading through dune grass to a building on the horizon
+    title: ''
+    width: 1600
+    height: 1073
+    entity: a1365d32-bea9-5ffc-86cd-4015a26ebeb6

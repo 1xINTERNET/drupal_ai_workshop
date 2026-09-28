@@ -1,0 +1,36 @@
+name: 'Northmoor University'
+type: Site
+description: 'A small sample website for the fictional Northmoor University: 20 pages with images and a main menu, built on the Drupal CMS basics and the Olivero theme.'
+recipes:
+  - drupal_cms_site_template_base
+install:
+  - olivero
+config:
+  strict: false
+  import:
+    olivero:
+      - block.block.olivero_account_menu
+      - block.block.olivero_breadcrumbs
+      - block.block.olivero_content
+      - block.block.olivero_main_menu
+      - block.block.olivero_messages
+      - block.block.olivero_page_title
+      - block.block.olivero_powered
+      - block.block.olivero_primary_admin_actions
+      - block.block.olivero_primary_local_tasks
+      - block.block.olivero_secondary_local_tasks
+      - block.block.olivero_site_branding
+  actions:
+    system.site:
+      simpleConfigUpdate:
+        name: 'Northmoor University'
+        slogan: 'Marine and coastal science on the coast'
+        page.front: /home
+    system.theme:
+      simpleConfigUpdate:
+        default: olivero
+    olivero.settings:
+      simpleConfigUpdate:
+        mobile_menu_all_widths: false
+        site_branding_bg_color: default
+        base_primary_color: '#006aa9'

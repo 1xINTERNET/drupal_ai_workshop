@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e95a799f-db0f-58e7-be35-ec4b4be54a55
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: hallway-circulation-space.jpg
+  uri:
+  - value: public://northmoor/hallway-circulation-space.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 200834
+  status:
+  - value: true

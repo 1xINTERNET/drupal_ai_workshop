@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 41ea87d6-1648-50f4-9d39-0d1bc90ab026
+  bundle: page
+  default_langcode: en
+  depends:
+    67ff53c5-075f-5a36-a64b-9174631e56ee: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: BS in Marine Biology
+  created:
+  - value: 1767283200
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Marine Biology is Northmoor University's largest program, and it is what most people have in mind when they ask about studying the ocean. It is a complete biology degree, covering cells, genetics, evolution and ecology, taught with marine organisms and their habitats as the examples throughout.</p>
+      <h2>At a glance</h2>
+      <ul>
+      <li><strong>Credential:</strong> Bachelor of Science (BS)</li>
+      <li><strong>Length:</strong> 4 years</li>
+      <li><strong>Start term:</strong> Fall</li>
+      <li><strong>Department:</strong> <a href="/department-life-sciences">Department of Life Sciences</a></li>
+      </ul>
+      <h2>What you study</h2>
+      <p>Field work starts early. From your first spring you will spend nights at <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a>, walking transects that have been surveyed every month since 2004. The courses with the most cold water in them fill up first every year.</p>
+      <p>The first two years cover the core: introductory marine biology, general oceanography, the foundations of environmental science, and invertebrate zoology. In the third and fourth years the options widen to fish biology, marine botany, reef ecology and molecular ecology, with space for electives from the aquaculture and policy programs.</p>
+      <p>The molecular courses deserve a mention, because that is where the field is heading. With environmental DNA, a liter of seawater can do the work of a survey. Knowing what that method can deliver, and where it fails without warning, is a skill employers want.</p>
+      <h2>Where it leads</h2>
+      <p>Graduates work in environmental consulting, state and federal agency science, aquaculture and education. The largest single group goes on to graduate study, and there is a clear reason for that.</p>
+      <p><strong>Some specializations at Northmoor University are offered only at graduate level.</strong> Marine mammal science is the best example. If that is your goal, this degree is how you get there: it provides the population biology and statistics the master's program expects you to have. Arriving set on marine mammals and finishing four years later working on them is a normal path, not a detour. Talk to <a href="/admissions">admissions</a> if you want to plan for it from the start.</p>
+      <h2>What to expect</h2>
+      <p>Cold water and early mornings. Tide work does not follow a timetable, and much of the field schedule is set by the moon rather than the registrar. Students who <a href="/visit">visit</a> in February usually know what they are signing up for.</p>
+    format: content_format
+  field_description:
+  - value: A full biology degree taught in a marine setting, with field work from the first year. The largest program at Northmoor University and the usual route into graduate specializations.
+  field_featured_image:
+  - entity: 67ff53c5-075f-5a36-a64b-9174631e56ee
+  path:
+  - alias: /bs-marine-biology
+    langcode: en
+    pathauto: 0

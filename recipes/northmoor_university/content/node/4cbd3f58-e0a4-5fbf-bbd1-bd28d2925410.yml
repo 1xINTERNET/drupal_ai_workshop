@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4cbd3f58-e0a4-5fbf-bbd1-bd28d2925410
+  bundle: page
+  default_langcode: en
+  depends:
+    42c7b947-baed-5dc6-9684-94755397de40: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Department of Marine Policy and Economics
+  created:
+  - value: 1767265200
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Marine Policy and Economics is a small department with a large reach. Sooner or later, most of what the rest of Northmoor University learns about the ocean turns into a decision someone has to make. We study how those decisions are made, who makes them, and what follows.</p>
+      <h2>Research areas</h2>
+      <p><strong>Governance in practice.</strong> Our core interest is the implementation gap: the space between a statute and an agency with a limited budget, a handful of staff and a long coastline. Most governance failures are not failures of the law itself, and the department has two decades of case material to show it.</p>
+      <p><strong>Co-management.</strong> Arrangements in which regulators share authority with the people they regulate. They look good on paper and work unevenly in the field. What separates the successes from the failures has less to do with enforcement than with whether both sides expect to still be working together ten years from now.</p>
+      <p><strong>Resource economics.</strong> How coastal economies respond when the resource they depend on changes. When a fishery declines, the barriers to leaving it are usually licensing, debt and vessel capital, not a lack of skills or willingness. Most transition programs are built on the opposite assumption.</p>
+      <p><strong>Valuation and its limits.</strong> Assigning a dollar value to a wetland helps in a process that would otherwise treat it as worthless. That does not make the number correct, and we teach students to keep the two ideas apart.</p>
+      <h2>The policy clinic</h2>
+      <p>Clinic students take on real work for community organizations and small agencies that cannot pay for analysis. They have testified at state hearings, written comment letters that changed a final rule, and on one occasion found that the agency they were addressing had misplaced its own file. The clinic is open to BA students and to graduate students in both master's programs.</p>
+      <h2>Teaching and supervision</h2>
+      <p>We co-teach with all three other departments, including <a href="/department-ocean-earth-sciences">Ocean and Earth Sciences</a> and <a href="/department-life-sciences">Life Sciences</a>. A fisheries policy course without a stock assessment is a course in opinion, so ours has one.</p>
+      <p>We supervise master's students in marine resource management and in the <a href="/ms-coastal-resilience">MS in Coastal Resilience</a>, which is run jointly with Ocean and Earth Sciences. The department office is in Aldwych Hall, room 405, on the fourth floor. Questions about clinic casework go to Nathaniel Brooks.</p>
+    format: content_format
+  field_description:
+  - value: Ocean governance and marine economics at Northmoor University, with a focus on the gap between a rule as written and the same rule in practice, and a clinic that takes real casework.
+  field_featured_image:
+  - entity: 42c7b947-baed-5dc6-9684-94755397de40
+  path:
+  - alias: /department-marine-policy
+    langcode: en
+    pathauto: 0

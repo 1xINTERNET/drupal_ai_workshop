@@ -1,0 +1,62 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a962f933-d804-5a10-9f05-d22ab9a50f2b
+  bundle: page
+  default_langcode: en
+  depends:
+    d5d37fc6-e376-50e3-9a04-1c35332a3243: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Tuition and financial aid
+  created:
+  - value: 1767240000
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>This is the one page on the site that lists costs. We keep the figures here and nowhere else, so there is a single set of numbers to rely on. <strong>All figures apply to the 2026-27 academic year.</strong></p>
+      <h2>Undergraduate Costs</h2>
+      <ul>
+      <li>Full-time tuition: <strong>$38,400</strong> per year</li>
+      <li>University fees: <strong>$1,850</strong></li>
+      <li>On-campus housing and meals: <strong>$14,200</strong></li>
+      <li>Books, equipment and personal costs: about <strong>$2,400</strong></li>
+      <li>Estimated total, living on campus: <strong>$56,850</strong></li>
+      </ul>
+      <p>Field courses are covered by tuition, and there is no extra charge for staying at <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a> during a course. Your own field gear, such as boots and foul weather clothing, is extra and usually costs around $300 in the first year.</p>
+      <h2>Graduate Costs</h2>
+      <ul>
+      <li>Full-time tuition: <strong>$29,600</strong> per year</li>
+      <li>University fees: <strong>$1,320</strong></li>
+      </ul>
+      <p>Doctoral students admitted with funding receive a tuition waiver and a stipend. The terms are agreed at admission and depend on the supervisor and funding source. The graduate certificate in Coastal Resilience is charged per course, and the programme can be taken part time.</p>
+      <h2>Financial Aid</h2>
+      <p>Most undergraduates receive some form of aid. The main sources are:</p>
+      <ul>
+      <li><strong>Need-based institutional grant</strong>, the largest single source of aid, assessed from your standard financial aid forms with no extra application.</li>
+      <li><strong>Merit scholarships</strong>, awarded at admission based on your academic record.</li>
+      <li><strong>The coastal communities scholarship</strong>, for students from working coastal and fishing communities in the region. It is based on need and community connection, renews for four years and includes a summer placement. The first awards go to students whose enrolment starts in fall 2026.</li>
+      <li><strong>Federal and state aid</strong> through the usual application channels.</li>
+      <li><strong>On-campus employment</strong>, including support roles at the field station and on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>. Many graduate students are funded as teaching assistants.</li>
+      </ul>
+      <h2>Deadlines &amp; Advice</h2>
+      <p>The aid deadline comes <strong>before</strong> admission decisions. Submit your financial aid application by 1 February for fall entry, even if you have not yet heard back. Apply early! Late applications are considered while funds last.</p>
+      <p>Aid is assessed individually and nothing on this page is an offer or an estimate for your situation, because the aid team works through the admissions office and will talk through your circumstances, look at your family's finances and any outside awards, and prepare a personal estimate with you before you commit to anything. For the admissions office, <a href="/contact">click here</a>.</p>
+    format: content_format
+  field_description:
+  - value: What a Northmoor degree costs in 2026–27, the main sources of financial aid, and the February 1 aid deadline. This is the only page that publishes cost figures.
+  field_featured_image:
+  - entity: d5d37fc6-e376-50e3-9a04-1c35332a3243
+  path:
+  - alias: /tuition-and-aid
+    langcode: en
+    pathauto: 0

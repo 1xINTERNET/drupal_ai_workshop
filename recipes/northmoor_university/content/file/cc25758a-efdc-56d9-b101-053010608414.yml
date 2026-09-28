@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: cc25758a-efdc-56d9-b101-053010608414
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: clifftop-weather-station.jpg
+  uri:
+  - value: public://northmoor/clifftop-weather-station.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 332730
+  status:
+  - value: true

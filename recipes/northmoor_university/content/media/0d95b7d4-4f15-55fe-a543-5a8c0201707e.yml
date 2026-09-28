@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0d95b7d4-4f15-55fe-a543-5a8c0201707e
+  bundle: image
+  default_langcode: en
+  depends:
+    e95a799f-db0f-58e7-be35-ec4b4be54a55: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A wide, step-free campus hallway with floor-to-ceiling windows
+  field_media_image:
+  - alt: A wide, step-free campus hallway with floor-to-ceiling windows
+    title: ''
+    width: 1600
+    height: 1073
+    entity: e95a799f-db0f-58e7-be35-ec4b4be54a55

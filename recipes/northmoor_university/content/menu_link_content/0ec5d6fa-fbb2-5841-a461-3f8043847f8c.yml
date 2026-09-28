@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 0ec5d6fa-fbb2-5841-a461-3f8043847f8c
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    89e6f15f-5ea2-5217-9c40-acf53701a439: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: How to apply
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/apply
+    title: ''
+    options: {}
+  weight:
+  - value: 0
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:89e6f15f-5ea2-5217-9c40-acf53701a439

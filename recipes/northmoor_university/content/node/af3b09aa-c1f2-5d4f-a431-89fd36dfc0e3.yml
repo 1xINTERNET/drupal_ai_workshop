@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: af3b09aa-c1f2-5d4f-a431-89fd36dfc0e3
+  bundle: page
+  default_langcode: en
+  depends:
+    a53f9928-6025-55f4-bc97-39cff76b49e2: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Research at Northmoor
+  created:
+  - value: 1767250800
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Research at Northmoor is organized through the four departments rather than through separate centers or institutes. Three major facilities support the work, and we deliberately keep research and teaching together.</p>
+      <h2>Research and teaching in one place</h2>
+      <p>We are too small to run facilities that only researchers use. First-year students go to sea on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>. Undergraduates walk the transects at <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a> and handle real sediment cores. The <a href="/marine-robotics-test-basin">Marine Robotics and Test Basin</a> runs teaching sessions every week in spring term.</p>
+      <p>This began as a practical limit. It is now the principle we would defend most firmly, because students meet real data, with its gaps and failures, from their first year.</p>
+      <h2>Research areas</h2>
+      <ul>
+      <li><strong>Coastal ecology and long-term change.</strong> The Prentice intertidal survey has run every month without a break since 2004, the university's longest dataset. It supports work on disturbance and recovery. Two of the four monitored sites have not returned to their earlier state.</li>
+      <li><strong>Shelf circulation and exchange.</strong> How water moves between the continental shelf and the open ocean, and why much of that transport happens in short events that routine sampling misses. The work combines moorings, autonomous gliders and ship time.</li>
+      <li><strong>Coastal carbonate chemistry.</strong> Acidification as coastal organisms experience it, where daily and seasonal swings far exceed the long-term trend. The results feed directly into a regional shellfish hatchery partnership.</li>
+      <li><strong>Paleoceanography.</strong> Reconstructing past oceans from sediment, currently centered on a 2024 core that challenges the regional picture of the last interglacial.</li>
+      <li><strong>Marine mammal population assessment.</strong> Combining visual surveys, passive acoustics and photo identification, each with different weaknesses. Two regional assessment programs use the resulting joint estimation framework.</li>
+      <li><strong>Autonomous marine systems.</strong> Navigation and decision-making for vehicles out of communication range, with an honest account of uncertainty.</li>
+      <li><strong>Coastal protection and sediment budgets.</strong> Engineering for shorelines that keep moving, including effects that reach neighboring jurisdictions.</li>
+      <li><strong>Ocean governance and resource economics.</strong> The gap between rules as written and as applied, co-management, and the costs that keep households in declining fisheries.</li>
+      <li><strong>Habitat restoration.</strong> Whether a restored habitat actually functions like the original, not just whether the plantings survived.</li>
+      </ul>
+      <h2>Working with us</h2>
+      <p>External researchers can book ship time on <em>Cascadia Strait</em> when the schedule allows. Prospective graduate students, including applicants to the <a href="/phd-oceanography">PhD in Oceanography</a>, should contact a specific faculty member. The policy clinic in <a href="/department-marine-policy">Marine Policy and Economics</a> takes on analysis for organizations that cannot afford it.</p>
+    format: content_format
+  field_description:
+  - value: What Northmoor researches across four departments and three shared facilities, and why research and teaching happen side by side from the first year.
+  field_featured_image:
+  - entity: a53f9928-6025-55f4-bc97-39cff76b49e2
+  path:
+  - alias: /research
+    langcode: en
+    pathauto: 0

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+id: workshop_prompt_injection
+label: 'Block prompt injection'
+description: "Uses AI topic classification to detect attempts to manipulate, override or hijack the AI's instructions, such as jailbreaks, system prompt overrides and role hijacking."
+guardrail: restrict_to_topic
+guardrail_settings:
+  valid_topics: ''
+  invalid_topics: |-
+    prompt injection
+    system prompt override
+    jailbreak attempt
+    role hijacking
+    instruction bypass
+    AI restriction circumvention
+    pretending to be a different AI
+    unrestricted mode activation
+    DAN prompt
+    developer mode activation
+  invalid_topics_present_message: "This message was blocked because it appears to attempt to manipulate the AI's instructions."
+  valid_topics_missing_message: ''

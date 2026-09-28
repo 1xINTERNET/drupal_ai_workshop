@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 18270955-6060-50fc-97ee-9ced77f235bc
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+  - value: true
+  title:
+  - value: About
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/about
+    title: ''
+    options: {}
+  weight:
+  - value: 0
+  expanded:
+  - value: true

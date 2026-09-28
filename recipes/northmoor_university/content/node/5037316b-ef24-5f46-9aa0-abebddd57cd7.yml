@@ -1,0 +1,60 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5037316b-ef24-5f46-9aa0-abebddd57cd7
+  bundle: page
+  default_langcode: en
+  depends:
+    519c8737-f0f3-5073-af04-327e025296c6: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Contact us
+  created:
+  - value: 1767247200
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>The quickest way to get an answer is to contact the office responsible directly. This page lists who handles what.</p>
+      <h2>Admissions and financial aid</h2>
+      <p>The admissions office handles every admission question, undergraduate and graduate. Financial aid questions go to the same office and are passed on to the aid team. The office also arranges individual campus visits and can answer questions about open days and access needs.</p>
+      <ul>
+      <li>Email: admissions@northmoor.example</li>
+      <li>Phone: (360) 555-0180</li>
+      </ul>
+      <p>Before you get in touch, you may find your answer on the <a href="/admissions">admissions</a>, <a href="/apply">how to apply</a> or <a href="/tuition-and-aid">tuition and financial aid</a> pages.</p>
+      <h2>Departments</h2>
+      <ul>
+      <li><a href="/department-life-sciences">Life Sciences</a>: lifesciences@northmoor.example, (360) 555-0100</li>
+      <li><a href="/department-ocean-earth-sciences">Ocean and Earth Sciences</a>: oes@northmoor.example, (360) 555-0120</li>
+      <li><a href="/department-marine-engineering">Marine Engineering</a>: marineeng@northmoor.example, (360) 555-0140</li>
+      <li><a href="/department-marine-policy">Marine Policy and Economics</a>: policy@northmoor.example, (360) 555-0160</li>
+      </ul>
+      <p>If you are a prospective graduate student, write to an individual faculty member rather than a department office. For the <a href="/phd-oceanography">doctoral program</a> this is essential, because admission is decided by the supervisor.</p>
+      <h2>Facilities</h2>
+      <ul>
+      <li><a href="/prentice-coastal-field-station"><strong>Prentice Coastal Field Station</strong></a>: course bookings and research use go to the station manager, Tom Whitfield.</li>
+      <li><a href="/rv-cascadia-strait"><strong>R/V <em>Cascadia Strait</em></strong></a>: ship time and charter requests go to Oliver Brandt, vessel operations manager.</li>
+      <li><a href="/marine-robotics-test-basin"><strong>Marine Robotics and Test Basin</strong></a>: bookings and safety briefings are handled by the Department of Marine Engineering.</li>
+      </ul>
+      <h2>Media, location and access</h2>
+      <p>Journalists asking about research should contact the relevant department, which will put you in touch with the researcher. We do not run research questions through a central press office, because the people doing the work answer them best.</p>
+      <p>The campus is on the waterfront, and visitor parking is signposted from the north entrance. Prentice Coastal Field Station is thirty-one miles north by road. See <a href="/visit">visit campus</a> for directions and tours.</p>
+      <p>If you have access requirements for a visit, event or application, let the office you are working with know and they will make arrangements. Our <a href="/accessibility">accessibility page</a> explains our general approach.</p>
+    format: content_format
+  field_description:
+  - value: Who to contact at Northmoor for admissions, financial aid, departments, facilities and media inquiries. Going straight to the right office is usually fastest.
+  field_featured_image:
+  - entity: 519c8737-f0f3-5073-af04-327e025296c6
+  path:
+  - alias: /contact
+    langcode: en
+    pathauto: 0

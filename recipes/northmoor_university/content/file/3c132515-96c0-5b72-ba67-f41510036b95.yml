@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3c132515-96c0-5b72-ba67-f41510036b95
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: marine-policy-harbour-stakeholder-meeting.jpg
+  uri:
+  - value: public://northmoor/marine-policy-harbour-stakeholder-meeting.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 230454
+  status:
+  - value: true

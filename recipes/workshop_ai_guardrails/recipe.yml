@@ -1,0 +1,12 @@
+name: 'Workshop: AI guardrails'
+description: 'A guardrail set that blocks prompt injection attempts in the input and JavaScript execution code in the AI output. Based on the AI Guardrails Prompt Safety recipe.'
+type: 'Workshop'
+install:
+  - ai
+config:
+  strict: false
+  actions:
+    ai.settings:
+      verifySetupAi:
+        operation_type_has_default_model:
+          - chat

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: workshop_malicious_code_output
+label: 'Block malicious code in output'
+description: 'Detects JavaScript execution patterns such as eval(), setTimeout(), document.write() and document.cookie in AI responses. Relevant when AI output is rendered in a browser or passed to tools that can execute code.'
+guardrail: regexp_guardrail
+guardrail_settings:
+  regexp_pattern: '/\b(eval|setTimeout|setInterval|document\.write|document\.cookie)\s*\(/i'
+  violation_message: 'The AI response was blocked because it contains potentially malicious code.'

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+## Description: Reset the site to the end state of the checked-out workshop step.
+## Usage: catch-up
+## Example: "git checkout 02_automators_ckeditor && ddev catch-up"
+
+set -euo pipefail
+cd "$DDEV_APPROOT"
+
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)
+echo "Resetting the site to the end of step: $branch"
+
+if [ ! -f dumps/db.sql.gz ]; then
+  echo "dumps/db.sql.gz not found. Is this the workshop repository?" >&2
+  exit 1
+fi
+
+if [ ! -f vendor/autoload.php ]; then
+  ddev composer install
+fi
+
+ddev import-db --file=dumps/db.sql.gz
+
+# The database references the sample images, which ship with the site recipe.
+ddev exec 'mkdir -p web/sites/default/files/northmoor && cp recipes/northmoor_university/content/file/*.jpg web/sites/default/files/northmoor/'
+
+# The dump contains no API keys: connect this site to its own AI provider.
+ddev drush recipe ../recipes/workshop_ai_provider
+ddev drush cache:rebuild
+
+echo "Done. Log in with: ddev drush user:login"

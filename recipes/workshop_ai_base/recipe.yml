@@ -1,0 +1,84 @@
+name: 'Workshop: AI base'
+description: 'The Drupal CMS AI stack (without image alt text), plus the API Explorer and AI request logging. The providers are connected by the workshop_ai_provider recipe.'
+type: 'Workshop'
+install:
+  - key
+  - block
+  - taxonomy
+  - ai
+  - ai_api_explorer
+  - ai_logging
+  - ai_dashboard
+  - ai_provider_amazeeio
+  - ai_provider_openai
+  - ai_provider_anthropic
+  - ai_assistant_api
+  - ai_chatbot
+  - ai_agents
+  - canvas_ai
+  # This theme MUST be installed or Canvas breaks in strange ways.
+  - canvas_stark
+  - easy_encryption_admin
+  - klaro
+  - menu_link_content
+recipes:
+  - core/recipes/content_editor_role
+  - workshop_ai_provider
+  - workshop_ai_guardrails
+config:
+  strict: false
+  import:
+    ai_dashboard: '*'
+    ai_agents: '*'
+    ai_logging: '*'
+    canvas_ai: '*'
+    klaro: '*'
+  actions:
+    ai_agents.settings:
+      simpleConfigUpdate:
+        agent_settings:
+          field_type_agent:
+            usage_instructions: >
+              Changes to field groups, like moving fields into details, tabs or fieldsets, can not be done by the field agent. Always advice the user how to do this manually.
+
+              If they ask you to change an edit form, assume they want you to change the fields on a content type if they are visiting a node form.
+
+              If they ask to create an Image Field, assume they want an Media Field with the image bundle, unless they tell you not to create a media field. Specifically ask for an Entity Reference Field with Entity Type media and the bundle image. Always set the form widget to Media Library if its available and the view mode to Rendered Entity.
+
+              If they ask to create a taxonomy field, make sure that you ask for select list on the form view.
+            permissions:
+              authenticated: 0
+              content_editor: 0
+              administrator: 0
+            plugin_settings: {  }
+    block.block.ai_chatbot:
+      placeBlockInAdminTheme:
+        region:
+          gin: content
+          claro: content
+        default_region: content
+        plugin: ai_deepchat_block
+        settings:
+          id: ai_deepchat_block
+          label: 'Drupal Agent Chatbot'
+          label_display: '0'
+          provider: ai_chatbot
+          ai_assistant: drupal_cms_assistant
+          bot_name: 'Drupal Agent'
+          width: auto
+          height: '100%'
+          style_file: toolbar.yml
+          placement: toolbar
+          stream: 0
+          default_avatar: /core/misc/druplicon.png
+          first_message: 'I am a Drupal AI Assistant, I can help you set up your Drupal site. I can give you instructions and I can also do some functions.'
+    klaro.klaro_app.deepchat:
+      enable: []
+    klaro.settings:
+      simpleConfigUpdate:
+        auto_decorate_final_html: true
+        library.group_by_purpose: true
+    user.role.anonymous:
+      grantPermission: 'use klaro'
+    user.role.authenticated:
+      grantPermission: 'use klaro'

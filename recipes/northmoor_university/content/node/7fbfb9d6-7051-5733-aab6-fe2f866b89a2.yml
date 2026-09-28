@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7fbfb9d6-7051-5733-aab6-fe2f866b89a2
+  bundle: page
+  default_langcode: en
+  depends:
+    82eca78b-1f7f-5614-8d04-1173f31c60ed: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: R/V Cascadia Strait
+  created:
+  - value: 1767272400
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>R/V <em>Cascadia Strait</em> is a 94-foot, steel-hulled coastal research vessel operated by the <a href="/department-ocean-earth-sciences">Department of Ocean and Earth Sciences</a>. A large share of the science done at Northmoor University depends on her.</p>
+      <h2>The vessel</h2>
+      <ul>
+      <li>Cruising speed of 10 knots and a range of about 2,000 nautical miles</li>
+      <li>Eight crew and up to twelve scientists, with berths for a full teaching group on shorter trips</li>
+      <li>Endurance of fourteen days, although most cruises last five to eight</li>
+      </ul>
+      <p>On deck aft are a hydraulic A-frame and two winches. She carries a twelve-bottle CTD rosette and a multibeam echo sounder, with wet and dry laboratories amidships. The open deck has held a sediment corer on one cruise and a student-built glider on the next. Her dynamic positioning system is steady enough to keep her on a single site for a full tide cycle.</p>
+      <h2>Who sails</h2>
+      <p>Every undergraduate in Oceanography and Marine Geoscience spends time aboard. It starts with a day trip in the first year, and by the third year some students are running their own sampling stations. Students in the <a href="/bs-oceanography">BS in Oceanography</a> should expect sea time to be a regular part of the degree, not an optional extra.</p>
+      <p>Graduate students and faculty take the longer legs. That includes the annual Arctic transit, the one cruise each year that leaves regional waters and a highlight for students in the <a href="/phd-oceanography">PhD in Oceanography</a>.</p>
+      <p>When our own schedule leaves room, other institutions charter the vessel. Those charters are a significant part of how she is funded.</p>
+      <h2>Visiting and booking</h2>
+      <p>When she is not at sea, <em>Cascadia Strait</em> is tied up at the university dock. Community tours run several times a year, and are a good addition to a campus <a href="/visit">visit</a>. Research ship time is arranged with Oliver Brandt, the vessel operations manager.</p>
+      <p>Be ready for cold water and early mornings. No one has ever called a departure convenient.</p>
+    format: content_format
+  field_description:
+  - value: Northmoor University's 94-foot coastal research vessel. Students in oceanography and marine geoscience sail on her from their first year.
+  field_featured_image:
+  - entity: 82eca78b-1f7f-5614-8d04-1173f31c60ed
+  path:
+  - alias: /rv-cascadia-strait
+    langcode: en
+    pathauto: 0

@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: b48ce392-76d9-5bb5-8705-2cbe871a7bbc
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    4c36d224-2330-5cb5-81b6-7689423cf71c: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: R/V Cascadia Strait
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/rv-cascadia-strait
+    title: ''
+    options: {}
+  weight:
+  - value: 0
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:4c36d224-2330-5cb5-81b6-7689423cf71c

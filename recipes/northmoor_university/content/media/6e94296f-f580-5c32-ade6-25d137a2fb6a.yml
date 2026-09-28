@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6e94296f-f580-5c32-ade6-25d137a2fb6a
+  bundle: image
+  default_langcode: en
+  depends:
+    45a91efc-136f-55a4-b9b6-6ef77c1a7e5a: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A fabrication workshop with workbenches, tools and a drill press
+  field_media_image:
+  - alt: A fabrication workshop with workbenches, tools and a drill press
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 45a91efc-136f-55a4-b9b6-6ef77c1a7e5a

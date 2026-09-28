@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c18446e3-ba22-5134-be4c-5be33c1163b1
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: rov-sonar-equipment-lab.jpg
+  uri:
+  - value: public://northmoor/rov-sonar-equipment-lab.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 229023
+  status:
+  - value: true

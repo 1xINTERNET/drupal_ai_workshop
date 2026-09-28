@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ae99cc95-93ea-5f97-bab6-5292277a541f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    35312b3c-3c92-5218-9f39-be5c9487b01b: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: BS in Oceanography
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/bs-oceanography
+    title: ''
+    options: {}
+  weight:
+  - value: 1
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:35312b3c-3c92-5218-9f39-be5c9487b01b

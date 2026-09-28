@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 98622cd9-1988-54eb-bbd0-d68b4d89bb69
+  bundle: page
+  default_langcode: en
+  depends:
+    8a2717bf-29bd-52f9-8daa-99c453b2728b: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Prentice Coastal Field Station
+  created:
+  - value: 1767276000
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Prentice Coastal Field Station stands on a mixed-substrate shore at the mouth of the Aldwych River. A sheltered inlet and an exposed headland lie just twenty minutes apart on foot, and that contrast is why the station was built here. In one tide, a student can sample two very different intertidal communities and compare them with records going back to 2004.</p>
+      <h2>Facilities</h2>
+      <ul>
+      <li>Two wet laboratories with running seawater</li>
+      <li>A dry laboratory with microscopy and imaging equipment</li>
+      <li>A seawater table system for holding animals for short-term observation</li>
+      <li>A boat shed with three skiffs and a rigid inflatable</li>
+      <li>A dive locker supporting scientific diving by certified students and staff</li>
+      </ul>
+      <p>Year-round housing opened in 2026, with sixteen beds across two buildings. It replaced cabins that could only be used in summer, which had limited winter work to day trips. Winter is when this shore is at its most interesting, so the change matters more than the bed count suggests.</p>
+      <h2>A record without gaps</h2>
+      <p>The intertidal transect survey has run every month since 2004 with no interruption. Four permanent transects are walked each month, and the <a href="/department-life-sciences">Department of Life Sciences</a> holds the data. It is cold, wet work, and it is still the most popular thing the ecology group does. Students in the <a href="/bs-marine-biology">BS in Marine Biology</a> join the survey from their first spring.</p>
+      <h2>Getting here</h2>
+      <p>The station is thirty-one miles north of campus by road, roughly forty minutes outside the summer season. The laboratories are not open to the public. The shore itself is public land, though, and the interpretive boardwalk above the inlet is open all year, which makes it worth adding to a <a href="/visit">visit</a>.</p>
+      <p>Course groups book through the station manager, Tom Whitfield. Research use outside teaching terms is arranged directly with the department.</p>
+      <p><strong>Hours:</strong> staffed weekdays from 8 a.m. to 5 p.m., and whenever a course group is in residence. Field work follows the tide, not the clock.</p>
+    format: content_format
+  field_description:
+  - value: A working field station forty minutes north of campus, on a shoreline surveyed every month since 2004. Most Northmoor University field courses spend at least one night here.
+  field_featured_image:
+  - entity: 8a2717bf-29bd-52f9-8daa-99c453b2728b
+  path:
+  - alias: /prentice-coastal-field-station
+    langcode: en
+    pathauto: 0

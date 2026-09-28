@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 52bee57b-8923-5451-b7c5-8a80b69ca41c
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    4c36d224-2330-5cb5-81b6-7689423cf71c: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Prentice Coastal Field Station
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/prentice-coastal-field-station
+    title: ''
+    options: {}
+  weight:
+  - value: 1
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:4c36d224-2330-5cb5-81b6-7689423cf71c

@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 066bf893-e78c-5975-a494-df3cf639cdd2
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a8981b5d-55d1-503b-bfab-963830741209: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Department of Ocean and Earth Sciences
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/department-ocean-earth-sciences
+    title: ''
+    options: {}
+  weight:
+  - value: 3
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:a8981b5d-55d1-503b-bfab-963830741209

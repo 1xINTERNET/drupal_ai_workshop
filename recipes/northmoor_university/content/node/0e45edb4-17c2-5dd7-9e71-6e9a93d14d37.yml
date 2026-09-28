@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0e45edb4-17c2-5dd7-9e71-6e9a93d14d37
+  bundle: page
+  default_langcode: en
+  depends:
+    6e94296f-f580-5c32-ade6-25d137a2fb6a: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Department of Marine Engineering
+  created:
+  - value: 1767261600
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Marine Engineering is the smallest of Northmoor University's four departments, and it has more equipment per person than any of the others. Our work falls into two areas: machines that have to operate underwater with nobody watching, and structures that have to hold up on a shoreline that keeps moving.</p>
+      <h2>Research areas</h2>
+      <p><strong>Autonomous underwater systems.</strong> Below the surface there is no satellite positioning, no quick recovery and usually no way to intervene. Our group works on navigation, control and decision-making under those conditions, with a particular focus on vehicles that keep a realistic estimate of their own error. A vehicle that knows it is lost has done its job. A vehicle that is certain and wrong is the costly outcome.</p>
+      <p><strong>Sensor integration.</strong> Getting instruments from several manufacturers to work as one payload. It is not glamorous work, and it decides whether a cruise produces one coherent dataset or four that never line up.</p>
+      <p><strong>Coastal engineering.</strong> Shoreline protection designed for a coast that changes, evaluated over decades rather than against a single design storm. One recurring and unwelcome result: a structure that looks good on its own often just shifts the problem down the coast to a neighbor.</p>
+      <h2>The test basin</h2>
+      <p>The <a href="/marine-robotics-test-basin">Marine Robotics Test Basin</a> opened in 2026, after four years of the department arguing that students should not learn vehicle design without ever seeing a vehicle fail. It is 30 meters long and 5 meters deep at one end, with a wave maker and a movable false floor.</p>
+      <p>During the spring term it hosts undergraduate teaching every week. Outside teaching hours, graduate research takes over. The student competition team also prepares for its trials there, so a first-year build can end up in the water beside a doctoral project.</p>
+      <h2>Teaching and supervision</h2>
+      <p>The undergraduate degree puts engineering ahead of the ocean: statics, fluids and control come before anything goes in the water. Every student designs and tests a vehicle before graduating, and most break at least one along the way.</p>
+      <p>At graduate level we supervise master's students in ocean engineering. Anyone operating equipment in the basin must complete the safety briefing and work with a second person present. Basin bookings and briefings are handled by Samuel Hartley. The department office is in the Kestrel Engineering Building, room 304; see <a href="/contact">contact</a> for general inquiries.</p>
+    format: content_format
+  field_description:
+  - value: The smallest department at Northmoor University and the best equipped. Autonomous underwater systems, sensor integration and coastal engineering, tested in our own basin.
+  field_featured_image:
+  - entity: 6e94296f-f580-5c32-ade6-25d137a2fb6a
+  path:
+  - alias: /department-marine-engineering
+    langcode: en
+    pathauto: 0

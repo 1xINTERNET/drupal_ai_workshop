@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4aa9e859-fe8b-5b3c-95e7-0d0cd7376761
+  bundle: image
+  default_langcode: en
+  depends:
+    43cce603-b230-57ce-a5f3-6e5ce03d5ba8: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: An engineer in a hard hat measuring a crack in a concrete sea wall
+  field_media_image:
+  - alt: An engineer in a hard hat measuring a crack in a concrete sea wall
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 43cce603-b230-57ce-a5f3-6e5ce03d5ba8

@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8a2717bf-29bd-52f9-8daa-99c453b2728b
+  bundle: image
+  default_langcode: en
+  depends:
+    ff1f4d79-fe8b-512d-984a-057df1ec006a: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A timber field station in the dunes reached by a winding boardwalk
+  field_media_image:
+  - alt: A timber field station in the dunes reached by a winding boardwalk
+    title: ''
+    width: 1600
+    height: 1073
+    entity: ff1f4d79-fe8b-512d-984a-057df1ec006a

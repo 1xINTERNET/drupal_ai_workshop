@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 362851a8-65ab-5a1b-ad33-0d3730b3db24
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: campus-exterior-on-the-coastline.jpg
+  uri:
+  - value: public://northmoor/campus-exterior-on-the-coastline.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 239498
+  status:
+  - value: true

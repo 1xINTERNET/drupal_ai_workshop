@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c6e84cdb-9517-58b1-8416-5adda9452543
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a8981b5d-55d1-503b-bfab-963830741209: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Department of Marine Engineering
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/department-marine-engineering
+    title: ''
+    options: {}
+  weight:
+  - value: 1
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:a8981b5d-55d1-503b-bfab-963830741209

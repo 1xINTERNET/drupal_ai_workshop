@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2a13812a-95f4-5896-a53c-7f2406c86f5f
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: specimen-aquarium-room.jpg
+  uri:
+  - value: public://northmoor/specimen-aquarium-room.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 247776
+  status:
+  - value: true

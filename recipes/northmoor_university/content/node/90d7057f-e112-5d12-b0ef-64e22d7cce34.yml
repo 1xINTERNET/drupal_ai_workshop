@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 90d7057f-e112-5d12-b0ef-64e22d7cce34
+  bundle: page
+  default_langcode: en
+  depends:
+    8a7144b2-f112-5035-a4b3-9d401379afef: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Department of Life Sciences
+  created:
+  - value: 1767258000
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Life Sciences is the biology department of a marine university. Instead of following the traditional divisions of a biology faculty, it is organized around marine organisms and the water they live in. Marine biology, fisheries science and aquaculture are taught as one connected group, because anyone working in one of them soon needs the other two. The department is led by Aisha Tanaka and is based on the second and third floors of Aldwych Hall.</p>
+      <h2>Research</h2>
+      <ul>
+      <li><strong>Coastal ecology.</strong> The intertidal transect survey at <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a> has run continuously since 2004 and is the longest dataset the university holds. It informs work on disturbance and recovery, on restoration targets, and on whether "recovery" really means what management literature assumes.</li>
+      <li><strong>Marine mammal science.</strong> Population assessment, acoustic and visual survey methods, and the statistics of counting animals you only see when they surface. This is a graduate research area, and its master's program is the department's main graduate offering.</li>
+      <li><strong>Fisheries and aquaculture.</strong> Stock assessment for well-studied populations and for the far larger number with little data, plus shellfish hatchery production and the water chemistry problems that have made hatchery output harder to predict over the past decade.</li>
+      <li><strong>Molecular methods.</strong> Environmental DNA and its real limits, developed alongside the field survey rather than as a replacement for it.</li>
+      </ul>
+      <h2>Programs and teaching</h2>
+      <p>The department offers the <a href="/bs-marine-biology">BS in Marine Biology</a>, a BS in Aquaculture and Fisheries, and an MS in Marine Mammal Science. Marine mammal science is the subject prospective students ask about most, and it is taught only at graduate level. The usual route in is the BS in Marine Biology.</p>
+      <p>Field work begins in the first year and continues throughout. Students spend nights at Prentice from their first spring; the courses with the most cold water fill first. The department also teaches the biology core for Environmental Science and contributes to the <a href="/department-marine-policy">marine policy</a> programs whenever a governance question depends on a population question, which is most of the time.</p>
+      <h2>Working with us</h2>
+      <p>We supervise graduate students in marine ecology, marine mammal science, fisheries science and aquaculture. Prospective graduate students should write to an individual faculty member rather than the department office. Undergraduate research places are usually filled from the transect walks.</p>
+      <p>General inquiries: lifesciences@northmoor.example or (360) 555-0100, Aldwych Hall 210. Field station bookings go to station manager Tom Whitfield. See the <a href="/contact">contact page</a> for other offices.</p>
+    format: content_format
+  field_description:
+  - value: Marine biology, fisheries and aquaculture taught as one connected subject, built around an intertidal survey walked every month since 2004.
+  field_featured_image:
+  - entity: 8a7144b2-f112-5035-a4b3-9d401379afef
+  path:
+  - alias: /department-life-sciences
+    langcode: en
+    pathauto: 0

@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: a8981b5d-55d1-503b-bfab-963830741209
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Departments
+  menu_name:
+  - value: main
+  link:
+  - uri: route:<nolink>
+    title: ''
+    options: {}
+  weight:
+  - value: 2
+  expanded:
+  - value: true

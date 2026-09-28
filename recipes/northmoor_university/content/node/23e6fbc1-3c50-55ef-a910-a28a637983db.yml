@@ -1,0 +1,57 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 23e6fbc1-3c50-55ef-a910-a28a637983db
+  bundle: page
+  default_langcode: en
+  depends:
+    f5b3c26a-85cd-5752-9fd0-ce818ae5d1f7: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Welcome to Northmoor University
+  created:
+  - value: 1767225600
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p><strong>Northmoor University does not exist.</strong> This fictional university website is the sample site for the Drupal AI Workshop. All people, programs and facilities are invented.</p>
+      <p>Northmoor University is a specialized institution on the coast. Around 4,100 students study here across twelve degree programs in four departments, and every one of those programs is about the ocean, the shoreline or the rules that govern how people use them. <a href="/about">Read more about who we are</a>.</p>
+      <h2>Study the water, on the water</h2>
+      <p>Our research facilities are also our teaching facilities. First-year students go to sea aboard <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>. Undergraduates walk the shoreline transects at <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a>, where a monthly survey has run without a gap since 2004. The <a href="/marine-robotics-test-basin">Marine Robotics and Test Basin</a> hosts teaching sessions every week of spring term.</p>
+      <p>Explore the four departments:</p>
+      <ul>
+      <li><a href="/department-life-sciences">Life Sciences</a> — marine biology, fisheries and aquaculture</li>
+      <li><a href="/department-ocean-earth-sciences">Ocean and Earth Sciences</a> — oceanography, climate and environmental science</li>
+      <li><a href="/department-marine-engineering">Marine Engineering</a> — autonomous systems and coastal engineering</li>
+      <li><a href="/department-marine-policy">Marine Policy and Economics</a> — ocean governance and resource economics</li>
+      </ul>
+      <h2>Programs</h2>
+      <p>Undergraduates can start with the <a href="/bs-marine-biology">BS in Marine Biology</a> or the <a href="/bs-oceanography">BS in Oceanography</a>. Graduate options include the professional <a href="/ms-coastal-resilience">MS in Coastal Resilience</a> and the <a href="/phd-oceanography">PhD in Oceanography</a>. A useful thing to know early: marine mammal science is a graduate program here, and the route in is a bachelor's degree in marine biology first.</p>
+      <h2>Life on a small coastal campus</h2>
+      <p>The campus is compact, the town is walkable, and the student association runs about forty clubs, with diving and sailing among the largest. There is no athletics program worth mentioning. Winters are dark, wet and quiet, and field work starts before dawn when the tide says so. Some students love exactly that; others find out by January that they wanted a city.</p>
+      <h2>Next steps</h2>
+      <ul>
+      <li><a href="/admissions">Admissions</a> and <a href="/apply">how to apply</a></li>
+      <li><a href="/tuition-and-aid">Tuition and financial aid</a></li>
+      <li><a href="/visit">Visit campus</a>, ideally in winter</li>
+      <li><a href="/research">Research at Northmoor</a></li>
+      <li><a href="/contact">Contact us</a> and <a href="/accessibility">accessibility</a></li>
+      </ul>
+    format: content_format
+  field_description:
+  - value: A specialized coastal university of around 4,100 students, teaching and researching marine and coastal science across four departments and twelve programs.
+  field_featured_image:
+  - entity: f5b3c26a-85cd-5752-9fd0-ce818ae5d1f7
+  path:
+  - alias: /home
+    langcode: en
+    pathauto: 0

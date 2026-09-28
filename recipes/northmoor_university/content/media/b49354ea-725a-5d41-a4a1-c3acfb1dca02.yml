@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b49354ea-725a-5d41-a4a1-c3acfb1dca02
+  bundle: image
+  default_langcode: en
+  depends:
+    362851a8-65ab-5a1b-ad33-0d3730b3db24: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Students walking along a stone path beside a modern campus building on the coast
+  field_media_image:
+  - alt: Students walking along a stone path beside a modern campus building on the coast
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 362851a8-65ab-5a1b-ad33-0d3730b3db24

@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 554e2a0d-923b-5da4-b9fd-70882acf7027
+  bundle: page
+  default_langcode: en
+  depends:
+    4aa9e859-fe8b-5b3c-95e7-0d0cd7376761: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: MS in Coastal Resilience
+  created:
+  - value: 1767290400
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Coastal Resilience is a joint program of the <a href="/department-marine-policy">Department of Marine Policy and Economics</a> and the <a href="/department-ocean-earth-sciences">Department of Ocean and Earth Sciences</a>. The joint teaching is the point of the program, not an administrative detail, because the problem it tackles does not sit inside either department.</p>
+      <h2>At a glance</h2>
+      <ul>
+      <li><strong>Credential:</strong> Master of Science (MS); also available as a graduate certificate</li>
+      <li><strong>Length:</strong> 2 years</li>
+      <li><strong>Start terms:</strong> Fall or spring</li>
+      <li><strong>Departments:</strong> Marine Policy and Economics, and Ocean and Earth Sciences</li>
+      </ul>
+      <h2>What you study</h2>
+      <p>Someone deciding the future of a stretch of coast needs several things at once: a sea level projection, a clear sense of what its uncertainty means, a realistic view of what engineering can achieve, and a working knowledge of the regulatory and financial systems that decide what gets built. A program that teaches only one of these leaves its graduates depending on others for the rest.</p>
+      <p>The core covers climate change and coasts, coastal community resilience, and coastal engineering design. It ends in a capstone project done on real terms for a real client wherever possible.</p>
+      <p>Uncertainty runs through all of it. Giving a planner a range with no guidance on how to use it simply hands a scientific problem to someone less equipped to solve it. Much of the program is about doing better than that.</p>
+      <h2>The certificate option</h2>
+      <p>Professionals already working in planning, emergency management or coastal engineering can take the same core as a four-course graduate certificate, part time if needed. Many start with the certificate and later transfer into the full master's.</p>
+      <h2>Where it leads</h2>
+      <p>Municipal and regional planning, state coastal programs, emergency management, consulting, insurance and infrastructure risk, and nonprofit work. Many students already work in one of these fields and return for the degree. Expect a cohort that is mixed in both discipline and career stage. It takes a semester to settle, and it is the program's most valuable feature. See <a href="/apply">apply</a> for how to start.</p>
+    format: content_format
+  field_description:
+  - value: A professional master's for people who make decisions about a moving shoreline, taught jointly by the policy and ocean science departments. Also offered as a graduate certificate.
+  field_featured_image:
+  - entity: 4aa9e859-fe8b-5b3c-95e7-0d0cd7376761
+  path:
+  - alias: /ms-coastal-resilience
+    langcode: en
+    pathauto: 0

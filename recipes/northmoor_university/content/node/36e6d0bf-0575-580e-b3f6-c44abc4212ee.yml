@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 36e6d0bf-0575-580e-b3f6-c44abc4212ee
+  bundle: page
+  default_langcode: en
+  depends:
+    9ec163e1-a18a-5f49-b59e-fe8e8a3280b2: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Admissions
+  created:
+  - value: 1767232800
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>This page explains how admission works at Northmoor. The details for your own situation are on the linked pages, and the admissions office is happy to answer questions directly.</p>
+      <h2>Undergraduate admission</h2>
+      <p>All seven undergraduate programs admit students for fall entry. Environmental Science and Marine Policy also accept students for spring entry.</p>
+      <p>We look at each application as a whole. Your high school courses and grades carry the most weight, and each program sets its own requirements. <a href="/bs-oceanography">Oceanography</a> and Marine Engineering require calculus without exception; <a href="/bs-marine-biology">Marine Biology</a> recommends physics but does not require it.</p>
+      <p>The personal statement matters. Tell us why this subject interests you and why you want to study it at a specialized institution. That tells us more than a list of achievements.</p>
+      <p>If you miss one requirement, we may admit you with a condition to meet in your first semester rather than turning you down. An unusual record is a reason to apply and explain, not to hold back.</p>
+      <h2>Graduate admission</h2>
+      <p>Our five graduate programs admit in different ways, and it pays to know which applies to you.</p>
+      <ul>
+      <li><strong>Doctoral program.</strong> Admission is by supervisor. Identify the faculty member whose research you want to join and contact them before you apply. The decision depends on research fit and available funding. See the <a href="/phd-oceanography">PhD in Oceanography</a>.</li>
+      <li><strong>Research master's programs</strong> in Marine Mammal Science and Ocean Engineering expect a specific undergraduate background and say so clearly. Early contact with a potential supervisor helps.</li>
+      <li><strong>Professional master's programs</strong> in <a href="/ms-coastal-resilience">Coastal Resilience</a> and Marine Resource Management accept students from many disciplines and give real weight to work experience.</li>
+      </ul>
+      <h2>Graduate-only subjects</h2>
+      <p>Some of the subjects we are asked about most are taught only at graduate level. Marine mammal science is the clearest example. The usual path is a bachelor's degree in marine biology, here or elsewhere, followed by a graduate application. That is the standard route, not a second-best option.</p>
+      <h2>Costs and deadlines</h2>
+      <p>All cost figures are on the <a href="/tuition-and-aid">tuition and financial aid page</a> and nowhere else, so there is only one number to trust. Start your aid application early, because the aid timeline runs ahead of admission.</p>
+      <p>Fall undergraduate applications close on January 15, and spring entry closes on October 1. Graduate applications for fall entry close on January 15. The admissions office, led by Rosa Delgado, handles every inquiry. See <a href="/apply">how to apply</a> for the steps, and <a href="/visit">visit campus</a> before you decide.</p>
+    format: content_format
+  field_description:
+  - value: How admission works for undergraduate and graduate study at Northmoor, what we look for in an application, and the key deadlines.
+  field_featured_image:
+  - entity: 9ec163e1-a18a-5f49-b59e-fe8e8a3280b2
+  path:
+  - alias: /admissions
+    langcode: en
+    pathauto: 0

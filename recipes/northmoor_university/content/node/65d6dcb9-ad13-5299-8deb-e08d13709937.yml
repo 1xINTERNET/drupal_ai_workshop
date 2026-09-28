@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 65d6dcb9-ad13-5299-8deb-e08d13709937
+  bundle: page
+  default_langcode: en
+  depends:
+    b49354ea-725a-5d41-a4a1-c3acfb1dca02: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: About Northmoor
+  created:
+  - value: 1767229200
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Northmoor University teaches and researches one broad subject: the ocean and the coast. Around 4,100 students are enrolled across twelve degree programs in four departments, covering marine biology, oceanography, marine engineering, and the policy and economics that shape how the sea and shoreline are used.</p>
+      <h2>Why a specialized university</h2>
+      <p><strong>A narrow focus lets us be precise.</strong> With twelve programs rather than hundreds, students are not browsing a catalog. They are choosing a subject and a place to study it.</p>
+      <p><strong>Teaching happens on research equipment.</strong> First-year students sail on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a>. At <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a>, undergraduates walk transects that have been surveyed continuously since 2004. The <a href="/marine-robotics-test-basin">Marine Robotics and Test Basin</a> is booked for classes every week of spring term.</p>
+      <p>A larger university would keep facilities like these for graduate researchers. We do not have enough graduate students to fill them, so they are used to teach the degrees. What began as a limitation has become one of our strengths.</p>
+      <p><strong>Departments work across their boundaries.</strong> Fisheries scientists and policy faculty co-teach fisheries policy. Coastal resilience is run jointly by two departments. Climate scientists and coastal engineers share a course. None of this needed a formal initiative, only colleagues who know one another.</p>
+      <h2>Four departments</h2>
+      <ul>
+      <li><a href="/department-life-sciences"><strong>Life Sciences</strong></a> — marine biology, fisheries and aquaculture, and the long-running intertidal survey.</li>
+      <li><a href="/department-ocean-earth-sciences"><strong>Ocean and Earth Sciences</strong></a> — physical, chemical and geological oceanography, plus climate and environmental science. Operates the research vessel.</li>
+      <li><a href="/department-marine-engineering"><strong>Marine Engineering</strong></a> — autonomous underwater systems and coastal engineering. Operates the test basin.</li>
+      <li><a href="/department-marine-policy"><strong>Marine Policy and Economics</strong></a> — ocean governance and resource economics, and home of the policy clinic.</li>
+      </ul>
+      <h2>What we do not offer</h2>
+      <p>Northmoor is not a comprehensive university. There is no business school, no medical school and no athletics program of any real size. If you want a large institution with everything under one roof, you should choose one. We would not serve you well, and we are not trying to.</p>
+      <h2>Come and see</h2>
+      <p>The campus is on the waterfront, thirty-one miles south of Prentice Coastal Field Station. We encourage prospective students to <a href="/visit">visit</a>, and to do it in winter if possible. September on the coast is easy to like. February is the real test.</p>
+    format: content_format
+  field_description:
+  - value: A specialized coastal university of around 4,100 students and twelve programs in four departments, where research facilities are used for teaching from the first year.
+  field_featured_image:
+  - entity: b49354ea-725a-5d41-a4a1-c3acfb1dca02
+  path:
+  - alias: /about
+    langcode: en
+    pathauto: 0

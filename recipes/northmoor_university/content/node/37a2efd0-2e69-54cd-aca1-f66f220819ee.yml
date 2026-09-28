@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 37a2efd0-2e69-54cd-aca1-f66f220819ee
+  bundle: page
+  default_langcode: en
+  depends:
+    0a17a4c2-d931-5195-89e2-624bf09492f4: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Visit campus
+  created:
+  - value: 1767243600
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>We want prospective students to visit before they decide, and our advice on timing may surprise you: <strong>come in winter if you can!</strong> Any coastal campus looks good in September. The real question is whether you still want to be here in February, when it is dark early and the wind does not let up.</p>
+      <h2>Open Days</h2>
+      <p>The <strong>fall open day</strong> on 17 October 2026 is the biggest visit event of the year and runs from 9am-3pm. It includes programme sessions led by teaching faculty, tours of laboratories and the research vessel, and a session on admissions and financial aid. Registration is required, and the vessel tour is always the first to fill.</p>
+      <p>The <strong>spring open day</strong> in March follows the same format with fewer visitors, which some people find easier.</p>
+      <h2>Individual Visits</h2>
+      <p>If the open days do not fit your schedule, you can arrange an individual visit on most weekdays during term, and a visit of this kind includes a campus tour with a current student, a meeting with someone from your department of interest and, where the timetable allows it and the lecturer agrees, a seat in a class that matches the programme you are considering.</p>
+      <p>If you already know which program you want, an individual visit usually tells you more than an open day. To book one, <a href="/contact">click here</a>.</p>
+      <h2>Seeing The Facilities</h2>
+      <ul>
+      <li><a href="/rv-cascadia-strait"><strong>R/V <em>Cascadia Strait</em></strong></a> ties up at the university dock when she is not at sea. Open day tours include her, and two community tour days each year are open to anyone without booking.</li>
+      <li>The <a href="/marine-robotics-test-basin"><strong>Marine Robotics and Test Basin</strong></a> has a viewing gallery, open during open days and by arrangement.</li>
+      <li><a href="/prentice-coastal-field-station"><strong>Prentice Coastal Field Station</strong></a> is thirty-one miles north. The labs are closed to the public, but the shore is public land and the boardwalk above the inlet is open all year.</li>
+      </ul>
+      <p>The <strong>undergraduate research symposium</strong> runs every April and is free to attend. Students present &amp; defend their own work, which may tell you more about a degree here than any tour.</p>
+      <h2>Practical Details</h2>
+      <p>Visitor parking is signposted from the north entrance and is free on open days and after 6 p.m. The campus is compact and easy to walk; the dock is about ten minutes from the centre. Boarding the vessel means crossing a gangway, and below deck there are ladders.</p>
+      <p>Please tell us about any access needs when you book. Some facilities are hard to make step-free, and we would rather plan with you in advance. See our <a href="/accessibility">accessibility page</a> for more.</p>
+    format: content_format
+  field_description:
+  - value: Open days in October and March, individual weekday visits, facility tours, and our honest advice to come in winter rather than September.
+  field_featured_image:
+  - entity: 0a17a4c2-d931-5195-89e2-624bf09492f4
+  path:
+  - alias: /visit
+    langcode: en
+    pathauto: 0

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ef874903-9fa4-5cfe-8d66-effc217fec64
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: reception-desk.jpg
+  uri:
+  - value: public://northmoor/reception-desk.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 152761
+  status:
+  - value: true

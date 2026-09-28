@@ -1,0 +1,25 @@
+# PostgreSQL with pgvector, used as vector database in a later workshop step.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: ddev-${DDEV_SITENAME}-postgres
+    restart: "no"
+    environment:
+      POSTGRES_USER: vectordb
+      POSTGRES_PASSWORD: vectordb
+      POSTGRES_DB: default
+    ports:
+      - "5432"
+    volumes:
+      - "./postgres:/docker-entrypoint-initdb.d"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+
+  web:
+    environment:
+      - VECTOR_DB_HOST=postgres
+      - VECTOR_DB_PORT=5432
+      - VECTOR_DB_USER=vectordb
+      - VECTOR_DB_PASSWORD=vectordb
+      - VECTOR_DB_NAME=default

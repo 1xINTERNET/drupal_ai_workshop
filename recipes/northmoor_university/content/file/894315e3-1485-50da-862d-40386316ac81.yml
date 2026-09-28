@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 894315e3-1485-50da-862d-40386316ac81
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: orientation-info-session-room.jpg
+  uri:
+  - value: public://northmoor/orientation-info-session-room.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 189872
+  status:
+  - value: true

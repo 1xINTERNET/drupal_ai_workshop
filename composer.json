@@ -1,0 +1,75 @@
+{
+    "name": "drupal/drupal_ai_workshop",
+    "description": "Hands-on Drupal AI workshop based on Drupal CMS.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.3",
+        "drupal/ai": "^1.5",
+        "drupal/ai_ckeditor": "^1.5@beta",
+        "drupal/ai_provider_amazeeio": "^1.4",
+        "drupal/ai_provider_anthropic": "^1.2",
+        "drupal/ai_provider_openai": "^1.3@beta",
+        "drupal/ai_recipe_image_alt_text": "1.x-dev@dev",
+        "drupal/ai_recipe_image_classification": "^1.1",
+        "drupal/core-composer-scaffold": "^11.4",
+        "drupal/core-project-message": "^11.4",
+        "drupal/core-recommended": "^11.4",
+        "drupal/core-vendor-hardening": "^11.4",
+        "drupal/drupal_cms_ai": "^2",
+        "drupal/drupal_cms_site_template_base": "^2",
+        "twig/twig": "<3.30"
+    },
+    "require-dev": {
+        "drush/drush": "^13.7"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
+            "php-http/discovery": true,
+            "symfony/runtime": true
+        },
+        "bin-dir": "vendor/bin",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.4.0"
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/example.gitignore": false
+            },
+            "allowed-packages": [
+                "drupal/drupal_cms_site_template_base"
+            ]
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "recipes/{$name}": ["type:drupal-recipe"]
+        },
+        "drupal-core-vendor-hardening": {
+            "composer/composer": false
+        }
+    }
+}

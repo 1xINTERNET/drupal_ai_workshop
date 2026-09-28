@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a53f9928-6025-55f4-bc97-39cff76b49e2
+  bundle: image
+  default_langcode: en
+  depends:
+    85c2457c-6da9-5f0b-8fe8-fb5f0d64ff70: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A long hall of round experimental seawater tanks with pipework overhead
+  field_media_image:
+  - alt: A long hall of round experimental seawater tanks with pipework overhead
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 85c2457c-6da9-5f0b-8fe8-fb5f0d64ff70

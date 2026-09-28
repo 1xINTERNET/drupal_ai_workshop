@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 16b94731-df8c-5712-8844-ee86d36362dd
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: administrative-front-office.jpg
+  uri:
+  - value: public://northmoor/administrative-front-office.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 154839
+  status:
+  - value: true

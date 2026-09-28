@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5da26640-821e-55cc-b503-95c7f5ea417e
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: weather-buoy-seascape.jpg
+  uri:
+  - value: public://northmoor/weather-buoy-seascape.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 167194
+  status:
+  - value: true

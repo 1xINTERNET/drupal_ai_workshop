@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 27e0b639-aa76-5e55-99be-0b731a576c17
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    89e6f15f-5ea2-5217-9c40-acf53701a439: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Tuition and financial aid
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/tuition-and-aid
+    title: ''
+    options: {}
+  weight:
+  - value: 1
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:89e6f15f-5ea2-5217-9c40-acf53701a439

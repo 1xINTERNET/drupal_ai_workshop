@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a1365d32-bea9-5ffc-86cd-4015a26ebeb6
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: boardwalk-to-field-station-wide.jpg
+  uri:
+  - value: public://northmoor/boardwalk-to-field-station-wide.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 320047
+  status:
+  - value: true

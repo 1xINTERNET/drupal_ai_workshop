@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2e8c7eff-37a7-53bf-ac40-620e6d9f3923
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    89e6f15f-5ea2-5217-9c40-acf53701a439: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Visit campus
+  menu_name:
+  - value: main
+  link:
+  - uri: internal:/visit
+    title: ''
+    options: {}
+  weight:
+  - value: 2
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:89e6f15f-5ea2-5217-9c40-acf53701a439

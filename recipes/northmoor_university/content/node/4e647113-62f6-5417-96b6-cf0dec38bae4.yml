@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4e647113-62f6-5417-96b6-cf0dec38bae4
+  bundle: page
+  default_langcode: en
+  depends:
+    0d95b7d4-4f15-55fe-a543-5a8c0201707e: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Accessibility
+  created:
+  - value: 1767254400
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>Northmoor University aims to make its website, campus and programs usable by everyone. This page describes where we stand today, including the places where we do not yet meet that aim.</p>
+      <h2>This website</h2>
+      <p>Our target is WCAG 2.2 Level AA. We test the site with screen readers and keyboard-only navigation, and we check color contrast on every template.</p>
+      <p><strong>Known gaps:</strong></p>
+      <ul>
+      <li>Some older PDF documents in the research pages are untagged and cannot be read by screen readers. We replace them as they are updated. If you need one now in an accessible format, ask and we will prepare it.</li>
+      <li>Some data visualizations on research pages have a text description but cannot be navigated on their own. We consider this only a partial solution.</li>
+      </ul>
+      <h2>Campus and facilities</h2>
+      <p>Teaching buildings, the library and the main lecture theaters have step-free access and accessible restrooms. The Halloran Building atrium and the Kestrel auditorium are fully accessible.</p>
+      <p><strong>Some facilities are genuinely hard to access.</strong> The main deck of <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a> is reached by gangway, but the labs and bridge are below deck and reached by ladder. At <a href="/prentice-coastal-field-station">Prentice Coastal Field Station</a>, the dry lab and accommodation buildings are step-free, but the shore, where most of the work happens, is uneven ground.</p>
+      <p>We will not call these places accessible when they are not. Instead, we plan with each student individually. Field and vessel work has been offered in alternative forms for students who needed it, and program directors are glad to discuss this before you apply.</p>
+      <h2>Teaching, assessment and events</h2>
+      <p>Students with a documented disability should contact student services, which arranges adjustments to teaching, assessment and field work. Field courses receive adjustments just like classroom courses; the field part of a degree is not exempt.</p>
+      <p>When you register for an event, tell us about your access requirements and we will arrange what you need. Open day tours offer alternatives wherever a facility is not step-free. See <a href="/visit">visit campus</a> for details.</p>
+      <h2>Reporting a problem</h2>
+      <p>If any part of this site, the campus or a program does not work for you, please tell us. Send reports to the office concerned or to student services; the <a href="/contact">contact page</a> lists who handles what. We would much rather hear about a problem than have you quietly work around it.</p>
+      <p>We aim to respond within five working days.</p>
+    format: content_format
+  field_description:
+  - value: Our commitment to an accessible website, campus and programs, an honest account of where we fall short, and how to report a problem.
+  field_featured_image:
+  - entity: 0d95b7d4-4f15-55fe-a543-5a8c0201707e
+  path:
+  - alias: /accessibility
+    langcode: en
+    pathauto: 0

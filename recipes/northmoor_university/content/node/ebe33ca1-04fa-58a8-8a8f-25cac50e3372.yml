@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ebe33ca1-04fa-58a8-8a8f-25cac50e3372
+  bundle: page
+  default_langcode: en
+  depends:
+    16333f1f-af94-5cf7-8829-582efba92325: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: How to apply
+  created:
+  - value: 1767236400
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>This page sets out the steps. For what we look for and how programs differ, read the <a href="/admissions">admissions page</a> first.</p>
+      <h2>Undergraduate applicants</h2>
+      <ul>
+      <li><strong>Pick a program.</strong> You apply to a specific degree, not to the university in general. Check the requirements on the program page, such as the <a href="/bs-marine-biology">BS in Marine Biology</a> or the <a href="/bs-oceanography">BS in Oceanography</a>.</li>
+      <li><strong>Submit your application</strong> through the common application or our own form. Neither route gives an advantage.</li>
+      <li><strong>Send official transcripts</strong> from high school, plus any college coursework. Transfer applicants should send all of their records.</li>
+      <li><strong>Write a personal statement</strong> of one to two pages explaining why this subject and why a specialized institution.</li>
+      <li><strong>Provide one recommendation letter</strong>, ideally from a teacher in a related subject. One strong letter beats several generic ones.</li>
+      <li><strong>Apply for financial aid separately and early.</strong> The aid deadline is February 1. Do not wait for an admission decision. See <a href="/tuition-and-aid">tuition and financial aid</a>.</li>
+      </ul>
+      <p>Test scores are optional and are considered if you send them. The deadline for fall entry is January 15. Spring entry, available only in Environmental Science and Marine Policy, closes on October 1.</p>
+      <h2>Graduate applicants</h2>
+      <ul>
+      <li><strong>Contact a prospective supervisor first</strong> if you are applying for the doctorate or a research master's. For the <a href="/phd-oceanography">doctoral program</a>, the supervisor makes the admission decision.</li>
+      <li><strong>Submit the application</strong> with transcripts, a research or professional statement, and a CV.</li>
+      <li><strong>Arrange three recommendation letters.</strong> Research programs need academic references; professional references suit programs such as the <a href="/ms-coastal-resilience">MS in Coastal Resilience</a>.</li>
+      <li><strong>Provide English language test results</strong> if your degree was not taught in English.</li>
+      </ul>
+      <p>All graduate programs close on January 15 for fall entry.</p>
+      <h2>Transfer and international applicants</h2>
+      <p>Transfer students are accepted into every undergraduate program. Credit is assessed course by course after admission. Lab and field courses transfer less reliably than lectures, so ask before you count on them.</p>
+      <p>International applicants follow the same steps, plus English language testing and, once admitted, visa paperwork. The admissions office can guide you through the visa timeline, which usually takes longer than people expect.</p>
+      <h2>After you apply</h2>
+      <p>Undergraduate decisions are sent from mid-March. Graduate decisions depend on the program and supervisor availability and usually arrive between February and April. Questions at any point go to the <a href="/contact">admissions office</a>.</p>
+    format: content_format
+  field_description:
+  - value: The step-by-step application procedure for undergraduate, graduate, transfer and international applicants, with deadlines and decision dates.
+  field_featured_image:
+  - entity: 16333f1f-af94-5cf7-8829-582efba92325
+  path:
+  - alias: /apply
+    langcode: en
+    pathauto: 0

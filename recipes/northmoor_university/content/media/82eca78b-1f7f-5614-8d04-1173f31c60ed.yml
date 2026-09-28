@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 82eca78b-1f7f-5614-8d04-1173f31c60ed
+  bundle: image
+  default_langcode: en
+  depends:
+    55810700-9661-57d8-af5a-1b8e9d1893cc: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A research vessel leaving the harbour at dawn
+  field_media_image:
+  - alt: A research vessel leaving the harbour at dawn
+    title: ''
+    width: 1600
+    height: 1073
+    entity: 55810700-9661-57d8-af5a-1b8e9d1893cc

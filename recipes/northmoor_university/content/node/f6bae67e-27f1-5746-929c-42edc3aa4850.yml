@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f6bae67e-27f1-5746-929c-42edc3aa4850
+  bundle: page
+  default_langcode: en
+  depends:
+    4750762e-4f9d-5db3-9f62-df556671cc04: media
+default:
+  status:
+  - value: true
+  moderation_state:
+  - value: published
+  uid:
+  - target_id: 1
+  title:
+  - value: Marine Robotics Test Basin
+  created:
+  - value: 1767279600
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  field_content:
+  - value: |
+      <p>The Marine Robotics Test Basin is where Northmoor University's underwater vehicles get tested before they go anywhere near open water. It opened in 2026 and is run by the <a href="/department-marine-engineering">Department of Marine Engineering</a>.</p>
+      <h2>The basin</h2>
+      <ul>
+      <li>30 meters long and 12 meters wide</li>
+      <li>5 meters deep at one end, with a movable false floor so shallow and deep trials can share the same tank</li>
+      <li>A gantry crane running the full length</li>
+      <li>A wave maker producing a regular sea state of up to about half a meter</li>
+      </ul>
+      <p>Half a meter of wave is enough to tell whether a control system works, and not enough to make anyone seasick.</p>
+      <h2>Why test here first</h2>
+      <p>Failure is part of vehicle development, and the question is where it happens. In the basin, a failure is cheap: it happens on a weekday afternoon, in front of the whole team, with the fault in plain view. The same failure offshore costs a day of ship time on <a href="/rv-cascadia-strait">R/V <em>Cascadia Strait</em></a> and usually leaves nothing to examine.</p>
+      <h2>Who uses it</h2>
+      <p>MENG 340 Underwater Robotics uses the basin every week during the spring term. Outside teaching hours, graduate research on autonomous systems has priority. The student competition team also trains here for its trials, so a first-year project can end up in the water next to a doctoral one.</p>
+      <h2>Access and visits</h2>
+      <p>Bookings go through the Department of Marine Engineering. Before operating any equipment in the basin you must complete the safety briefing, and a second person must be present. Nobody works alone over open water, indoors or out.</p>
+      <p>The viewing gallery on the mezzanine is open to visitors on open days and by arrangement. See <a href="/visit">visit</a> for campus visit options.</p>
+    format: content_format
+  field_description:
+  - value: An indoor basin where underwater vehicles are tested before they meet the ocean. Opened in 2026 and shared by engineering teaching, graduate research and student projects.
+  field_featured_image:
+  - entity: 4750762e-4f9d-5db3-9f62-df556671cc04
+  path:
+  - alias: /marine-robotics-test-basin
+    langcode: en
+    pathauto: 0
