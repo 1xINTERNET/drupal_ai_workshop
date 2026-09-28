@@ -6,6 +6,7 @@ site_url: https://1xinternet.github.io/drupal_ai_workshop/
 repo_url: https://github.com/1xINTERNET/drupal_ai_workshop
 repo_name: 1xINTERNET/drupal_ai_workshop
 edit_uri: ""
+copyright: Workshop material by <a href="https://www.1xinternet.com/en">1xINTERNET</a> · GPL-2.0-or-later
 docs_dir: .site-build/docs
 site_dir: .site-build/site
 
@@ -18,18 +19,22 @@ nav:
 
 theme:
   name: material
+  # No Google Fonts: Inter is served from the site itself (site-theme/assets/fonts).
+  font: false
+  logo: assets/brand/logo-accent.svg
+  favicon: assets/brand/logo-accent.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: light blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: light blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Light mode
@@ -39,6 +44,9 @@ theme:
     - navigation.top
     - search.highlight
     - toc.follow
+
+extra_css:
+  - assets/stylesheets/1x.css
 
 plugins:
   - search

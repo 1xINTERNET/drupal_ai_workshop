@@ -25,6 +25,9 @@ The repository is published at https://github.com/1xINTERNET/drupal_ai_workshop
   `01_setup`. Each step branches off the previous step.
 - **Each branch adds exactly one guide**, `docs/NN_short_name.md`, plus its screenshots in
   `docs/images/NN_short_name/`, and a regenerated `dumps/db.sql.gz`.
+- **The README shows the date of the material** ("Last updated: …", with the Drupal CMS,
+  core and AI versions). Update the date and the versions whenever guides, recipes,
+  packages or dumps change. There is no other version number.
 - **README.md covers getting started only**: requirements, clone, DDEV commands,
   `ddev catch-up`, own API keys. It links to the `docs/` folder. It contains no step
   content and does not change per branch.
@@ -62,6 +65,7 @@ recipes/workshop_ai_provider/      Easy Encryption + amazee.ai trial; OpenAI/Ant
 recipes/workshop_ai_guardrails/    Guardrail set "Workshop security" (prompt injection in, malicious code out)
 dumps/db.sql.gz                    Database at the end of the branch's guide
 mkdocs.yml, scripts/build-site.sh   Website with all step guides (see below)
+site-theme/assets/                 Logo, self-hosted Inter font and styles of the website
 ```
 
 Contrib recipes are installed by Composer into `recipes/` too, and are ignored by Git
@@ -87,9 +91,11 @@ scripts/build-site.sh --deploy   # build and push to gh-pages
 
 The script exports `docs/` and `README.md` from that branch with `git archive`, turns
 the README into the start page, and points links that leave `docs/` (recipes, license)
-to GitHub. It runs MkDocs in Docker (`squidfunk/mkdocs-material:9.7`). When a new step
-branch is added, change the default branch in the script and add the guide to `nav` in
-`mkdocs.yml`. Never commit to `gh-pages` by hand.
+to GitHub. It adds the 1xINTERNET branding from `site-theme/assets/`: the logo, the red
+accent #e5322d and the Inter font, served from the site itself. Do not load Google
+Fonts; they send visitors' IP addresses to Google. MkDocs runs in Docker
+(`squidfunk/mkdocs-material:9.7`). When a new step branch is added, change the default
+branch in the script and add the guide to `nav` in `mkdocs.yml`. Never commit to `gh-pages` by hand.
 
 ## Working on the site
 

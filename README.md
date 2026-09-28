@@ -12,6 +12,18 @@ first step. Every later branch builds on the one before it and adds one guide to
 Read all step guides online at **https://1xinternet.github.io/drupal_ai_workshop/**. The
 links in the guides open your local workshop site, https://drupal-ai-workshop.ddev.site.
 
+## How recent is this material?
+
+**Last updated: September 28, 2026.**
+
+The guides, recipes and database dumps were created and tested on this date, with
+Drupal CMS 2.2, Drupal core 11.4 and the Drupal AI module 1.5. The exact versions of all
+packages are in `composer.lock`.
+
+The Drupal AI modules change quickly. If you use this material much later, some screens,
+settings or module names may differ from what the guides describe. The date above
+changes whenever the material is updated.
+
 ## Requirements
 
 - [DDEV](https://ddev.com/get-started/) 1.24 or newer, with Docker
