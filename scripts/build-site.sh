@@ -62,6 +62,9 @@ for name in os.listdir(root):
     if name.endswith(".md"):
         p = os.path.join(root, name)
         s = open(p).read()
+        if name == "index.md":
+            # The start page is the website itself: drop the pointer to it.
+            s = re.sub(r"\nRead all step guides online at .*?\n\n", "\n", s, flags=re.S)
         open(p, "w").write(rewrite(s, name == "index.md"))
 PY
 
