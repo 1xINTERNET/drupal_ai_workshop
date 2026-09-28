@@ -1,0 +1,105 @@
+/* 1xINTERNET branding for the guides website: white header with the logo, red accent. */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  --onex-red: #e5322d;
+  --onex-red-dark: #c61f1f;
+  --onex-red-light: #ea7b7b;
+  --onex-gray: #232429;
+  --md-text-font: "Inter";
+  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --md-text-font-family: var(--md-text-font), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --md-code-font-family: var(--md-code-font);
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #fff;
+  --md-primary-fg-color--light: #fff;
+  --md-primary-fg-color--dark: #f3f4f9;
+  --md-primary-bg-color: var(--onex-gray);
+  --md-primary-bg-color--light: #75767b;
+  --md-accent-fg-color: var(--onex-red);
+  --md-accent-fg-color--transparent: rgba(229, 50, 45, 0.1);
+  --md-typeset-a-color: var(--onex-red-dark);
+  --onex-line: var(--onex-red);
+  --md-footer-bg-color: var(--onex-gray);
+  --md-footer-bg-color--dark: #1a1b1f;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--onex-gray);
+  --md-primary-fg-color--light: var(--onex-gray);
+  --md-primary-fg-color--dark: #1a1b1f;
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #c1c2c7;
+  --md-accent-fg-color: var(--onex-red-light);
+  --md-accent-fg-color--transparent: rgba(234, 123, 123, 0.1);
+  --md-typeset-a-color: var(--onex-red-light);
+  --onex-line: #fff;
+  --md-footer-bg-color: var(--onex-gray);
+  --md-footer-bg-color--dark: #1a1b1f;
+}
+
+/* A thin line under the header, as on www.1xinternet.com: red, white in dark mode. */
+.md-header {
+  border-bottom: 3px solid var(--onex-line);
+  box-shadow: none;
+}
+
+.md-header[data-md-state="shadow"],
+.md-header--shadow {
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.md-header__button.md-logo img {
+  height: 1.6rem;
+}
+
+/* Headings in the text color, with a short bar under the page title. */
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.md-typeset h1::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.6rem;
+  background: var(--onex-line);
+}
+
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* The header search field on the white header. */
+[data-md-color-scheme="default"] .md-search__input {
+  background-color: #f3f4f9;
+}
+
+[data-md-color-scheme="default"] .md-search__input:hover {
+  background-color: #dedfe4;
+}
+
+/* Focus outlines are white in dark mode too. */
+[data-md-color-scheme="slate"] :focus-visible {
+  outline-color: #fff;
+}
