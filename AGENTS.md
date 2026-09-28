@@ -63,6 +63,7 @@ recipes/workshop_ai_provider/      Easy Encryption + amazee.ai trial; OpenAI/Ant
 recipes/workshop_ai_guardrails/    Guardrail set "Workshop security" (prompt injection in, malicious code out)
 recipes/workshop_ai_content_review/ Step 04: the Content Review agent and a rule with only the Grammar & Conventions criterion
 dumps/db.sql.gz                    Database at the end of the branch's guide
+mkdocs.yml, scripts/build-site.sh   Website with all step guides (see below)
 ```
 
 Contrib recipes are installed by Composer into `recipes/` too, and are ignored by Git
@@ -74,6 +75,25 @@ or be added to that whitelist.
 of that step starts with `ddev composer install` and `ddev drush cache:rebuild`, and
 `ddev catch-up` always runs `ddev composer install`. Do not go back and change earlier
 branches for a later step.
+
+## Guides website
+
+All step guides are published at https://1xinternet.github.io/drupal_ai_workshop/
+(GitHub Pages, served from the `gh-pages` branch, MkDocs Material). The site is built
+from the **last step branch**, currently `04_ai_content_review`, because only that
+branch contains every guide. After a guide changes and the branches are pushed, rebuild
+and deploy it from any branch:
+
+```bash
+scripts/build-site.sh            # build into .site-build/site and check links (--strict)
+scripts/build-site.sh --deploy   # build and push to gh-pages
+```
+
+The script exports `docs/` and `README.md` from that branch with `git archive`, turns
+the README into the start page, and points links that leave `docs/` (recipes, license)
+to GitHub. It runs MkDocs in Docker (`squidfunk/mkdocs-material:9.7`). When a new step
+branch is added, change the default branch in the script and add the guide to `nav` in
+`mkdocs.yml`. Never commit to `gh-pages` by hand.
 
 ## Working on the site
 
