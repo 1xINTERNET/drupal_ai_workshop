@@ -36,6 +36,7 @@
   --md-accent-fg-color: var(--onex-red);
   --md-accent-fg-color--transparent: rgba(229, 50, 45, 0.1);
   --md-typeset-a-color: var(--onex-red-dark);
+  --onex-line: var(--onex-red);
   --md-footer-bg-color: var(--onex-gray);
   --md-footer-bg-color--dark: #1a1b1f;
 }
@@ -49,13 +50,14 @@
   --md-accent-fg-color: var(--onex-red-light);
   --md-accent-fg-color--transparent: rgba(234, 123, 123, 0.1);
   --md-typeset-a-color: var(--onex-red-light);
+  --onex-line: #fff;
   --md-footer-bg-color: var(--onex-gray);
   --md-footer-bg-color--dark: #1a1b1f;
 }
 
-/* A thin red line under the header, as on www.1xinternet.com. */
+/* A thin line under the header, as on www.1xinternet.com: red, white in dark mode. */
 .md-header {
-  border-bottom: 3px solid var(--onex-red);
+  border-bottom: 3px solid var(--onex-line);
   box-shadow: none;
 }
 
@@ -68,7 +70,7 @@
   height: 1.6rem;
 }
 
-/* Headings in the text color, with a short red bar under the page title. */
+/* Headings in the text color, with a short bar under the page title. */
 .md-typeset h1 {
   color: var(--md-default-fg-color);
   font-weight: 600;
@@ -80,7 +82,7 @@
   width: 3rem;
   height: 3px;
   margin-top: 0.6rem;
-  background: var(--onex-red);
+  background: var(--onex-line);
 }
 
 .md-typeset h2,
@@ -95,4 +97,9 @@
 
 [data-md-color-scheme="default"] .md-search__input:hover {
   background-color: #dedfe4;
+}
+
+/* Focus outlines are white in dark mode too. */
+[data-md-color-scheme="slate"] :focus-visible {
+  outline-color: #fff;
 }
