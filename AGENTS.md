@@ -56,6 +56,7 @@ The repository is published at https://github.com/1xINTERNET/drupal_ai_workshop
 ```
 README.md                          Getting started (all branches)
 docs/NN_*.md, docs/images/NN_*/    Step guides and screenshots
+docs/images/drupal/                Drupal logo (black and white) for the README, not a step
 .ddev/config.yaml                  Project drupal-ai-workshop, PHP 8.4, MySQL 8, DDEV-managed settings
 .ddev/docker-compose.postgres.yaml pgvector service: the vector database of step 03 (AI Search)
 .ddev/commands/host/catch-up       composer install, imports the dump, copies images, reconnects the AI provider, re-indexes content_vector
@@ -98,8 +99,14 @@ the README into the start page, and points links that leave `docs/` (recipes, li
 to GitHub. It adds the 1xINTERNET branding from `site-theme/assets/`: the logo, the red
 accent #e5322d and the Inter font, served from the site itself. Do not load Google
 Fonts; they send visitors' IP addresses to Google. MkDocs runs in Docker
-(`squidfunk/mkdocs-material:9.7`). When a new step branch is added, change the default
-branch in the script and add the guide to `nav` in `mkdocs.yml`. Never commit to `gh-pages` by hand.
+(`squidfunk/mkdocs-material:9.7`).
+
+The README shows the Drupal logo in a `<picture>` element that follows the GitHub
+theme. The script replaces it with two images marked `#only-light` and `#only-dark`,
+which follow the site's own dark mode switch.
+
+When a new step branch is added, change the default branch in the script and add the
+guide to `nav` in `mkdocs.yml`. Never commit to `gh-pages` by hand.
 
 ## Working on the site
 
