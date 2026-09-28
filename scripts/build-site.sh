@@ -19,6 +19,8 @@ mkdir -p "$build/src" "$build/docs"
 git archive "$branch" docs README.md | tar -x -C "$build/src"
 cp -r "$build/src/docs/." "$build/docs/"
 cp "$build/src/README.md" "$build/docs/index.md"
+# Logo, fonts and styles of the website.
+cp -r site-theme/assets "$build/docs/"
 
 # Links that leave docs/ point to the repository on GitHub instead.
 BRANCH="$branch" REPO_URL="$repo_url" python3 - "$build/docs" <<'PY'
