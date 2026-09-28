@@ -1,5 +1,10 @@
 # Drupal AI Workshop
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/drupal/drupal-logo-white.svg">
+  <img alt="Drupal" src="docs/images/drupal/drupal-logo-black.svg" width="140">
+</picture>
+
 A hands-on workshop for the [Drupal AI](https://www.drupal.org/project/ai) modules,
 built on [Drupal CMS](https://new.drupal.org/drupal-cms) and based on the official Drupal
 AI demo. You install a small sample website for the fictional Northmoor University, then
