@@ -1,0 +1,57 @@
+# Website with all step guides: https://1xinternet.github.io/drupal_ai_workshop/
+# Build and deploy it with scripts/build-site.sh; see AGENTS.md.
+site_name: Drupal AI Workshop
+site_description: Hands-on workshop for the Drupal AI modules on Drupal CMS.
+site_url: https://1xinternet.github.io/drupal_ai_workshop/
+repo_url: https://github.com/1xINTERNET/drupal_ai_workshop
+repo_name: 1xINTERNET/drupal_ai_workshop
+edit_uri: ""
+docs_dir: .site-build/docs
+site_dir: .site-build/site
+
+nav:
+  - Getting started: index.md
+  - Step 1 · Set up the site and the AI base: 01_setup.md
+  - Step 2 · CKEditor AI, AI Automators and field widget actions: 02_automators_ckeditor.md
+  - Step 3 · AI Search and AI Answers: 03_ai_search.md
+  - Step 4 · AI Content Review: 04_ai_content_review.md
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - content.code.copy
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+validation:
+  links:
+    anchors: warn
