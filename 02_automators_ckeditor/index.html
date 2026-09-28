@@ -1,0 +1,1609 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on workshop for the Drupal AI modules on Drupal CMS.">
+      
+      
+      
+        <link rel="canonical" href="https://1xinternet.github.io/drupal_ai_workshop/02_automators_ckeditor/">
+      
+      
+        <link rel="prev" href="../01_setup/">
+      
+      
+        <link rel="next" href="../03_ai_search/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Step 2 · CKEditor AI, AI Automators and field widget actions - Drupal AI Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-2-ckeditor-ai-ai-automators-and-field-widget-actions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Drupal AI Workshop" class="md-header__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Drupal AI Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 2 · CKEditor AI, AI Automators and field widget actions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Drupal AI Workshop" class="md-nav__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Drupal AI Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 1 · Set up the site and the AI base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2 · CKEditor AI, AI Automators and field widget actions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2 · CKEditor AI, AI Automators and field widget actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-enable-the-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Enable the modules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ckeditor-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CKEditor AI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. CKEditor AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-the-ai-button-to-the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add the AI button to the editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-ai-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the AI menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-prompts-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the prompts are
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai-automators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AI Automators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. AI Automators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-first-automator-the-page-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A first automator: the page description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-automator-settings-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The automator settings explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-field-widget-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Field widget actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Field widget actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-button-to-the-description-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a button to the Description field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the button
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-an-automator-that-runs-on-save-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. An automator that runs on save: tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. An automator that runs on save: tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-images-alt-text-and-image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Images: alt text and image classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Images: alt text and image classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apply-the-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply the recipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-alt-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate alt text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe-and-tag-an-image-on-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Describe and tag an image on save
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classify-existing-images-in-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classify existing images in bulk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-images-by-description-and-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find images by description and tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_ai_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3 · AI Search and AI Answers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_ai_content_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 4 · AI Content Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-enable-the-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Enable the modules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ckeditor-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CKEditor AI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. CKEditor AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-the-ai-button-to-the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add the AI button to the editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-ai-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the AI menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-prompts-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the prompts are
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai-automators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AI Automators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. AI Automators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-first-automator-the-page-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A first automator: the page description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-automator-settings-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The automator settings explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-field-widget-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Field widget actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Field widget actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-button-to-the-description-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a button to the Description field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the button
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-an-automator-that-runs-on-save-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. An automator that runs on save: tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. An automator that runs on save: tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-images-alt-text-and-image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Images: alt text and image classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Images: alt text and image classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apply-the-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply the recipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-alt-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate alt text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe-and-tag-an-image-on-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Describe and tag an image on save
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classify-existing-images-in-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classify existing images in bulk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-images-by-description-and-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find images by description and tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="step-2-ckeditor-ai-ai-automators-and-field-widget-actions">Step 2: CKEditor AI, AI Automators and field widget actions<a class="headerlink" href="#step-2-ckeditor-ai-ai-automators-and-field-widget-actions" title="Permanent link">&para;</a></h1>
+<p><strong>Goal:</strong> editors get AI help while they write. You add an AI menu to the text editor,
+let AI fill fields from the page content, give editors buttons that run AI on demand,
+and let AI describe, tag and write alt text for images.</p>
+<p><strong>Before you start:</strong> you have finished <a href="../01_setup/">step 1</a>. If you have not, reset
+your site to the end of step 1:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>01_setup
+ddev<span class="w"> </span>catch-up
+</code></pre></div>
+<p>To skip this step and see the result, check out the branch of this step and catch up:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>02_automators_ckeditor
+ddev<span class="w"> </span>catch-up
+</code></pre></div>
+<p>All examples use the <strong>Utility page</strong> content type and the Northmoor pages from step 1.</p>
+<h2 id="1-enable-the-modules">1. Enable the modules<a class="headerlink" href="#1-enable-the-modules" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>pm:install<span class="w"> </span>ai_ckeditor<span class="w"> </span>ai_automators<span class="w"> </span>field_widget_actions
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Project</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI CKEditor (<code>ai_ckeditor</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_ckeditor">AI CKEditor</a></td>
+<td>Adds an AI menu to CKEditor 5.</td>
+</tr>
+<tr>
+<td>AI Automators (<code>ai_automators</code>)</td>
+<td><a href="https://www.drupal.org/project/ai">AI</a> (submodule)</td>
+<td>Fills fields with AI, based on other fields.</td>
+</tr>
+<tr>
+<td>Field Widget Actions (<code>field_widget_actions</code>)</td>
+<td><a href="https://www.drupal.org/project/field_widget_actions">Field Widget Actions</a></td>
+<td>Adds buttons to form fields. The module is a generic framework; the AI buttons come from AI Automators and other modules.</td>
+</tr>
+</tbody>
+</table>
+<p>AI CKEditor and Field Widget Actions used to be part of the AI project. They are now
+separate projects. The AI project still contains old copies with the same names, but
+Drupal enables the separate projects.</p>
+<h2 id="2-ckeditor-ai">2. CKEditor AI<a class="headerlink" href="#2-ckeditor-ai" title="Permanent link">&para;</a></h2>
+<p><strong>Module:</strong> AI CKEditor (<code>ai_ckeditor</code>), from the separate
+<a href="https://www.drupal.org/project/ai_ckeditor">AI CKEditor</a> project.</p>
+<p>CKEditor AI adds an <strong>AI Assistant</strong> menu to the text editor. Editors select text and
+let the AI rewrite, summarize or correct it, or they let the AI write new text. The
+result is shown in a dialog first, so the editor decides what goes into the page.</p>
+<h3 id="add-the-ai-button-to-the-editor">Add the AI button to the editor<a class="headerlink" href="#add-the-ai-button-to-the-editor" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>Configuration › Content authoring › Text formats and editors</strong> and configure
+   the <a href="https://drupal-ai-workshop.ddev.site/admin/config/content/formats/manage/content_format">Content</a>
+   text format.</li>
+<li>Under <strong>Toolbar configuration</strong>, move the <strong>AI CKEditor</strong> button (the first button in
+   <strong>Available buttons</strong>) into the <strong>Active toolbar</strong>. Place it at the start, so it does
+   not end up in the overflow menu. You can drag it with the mouse, or select it and use
+   the arrow keys: ↓ adds it to the toolbar, ← moves it to the left.</li>
+</ol>
+<p><img alt="The AI CKEditor button at the start of the active toolbar" src="../images/02_automators_ckeditor/ckeditor-toolbar.png" /></p>
+<ol>
+<li>Under <strong>CKEditor 5 plugin settings</strong>, open the <strong>AI tools</strong> tab. Enable these tools:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate with AI</td>
+<td>Writes new text from your instructions.</td>
+</tr>
+<tr>
+<td>Modify with a prompt</td>
+<td>Changes the selected text with your instructions.</td>
+</tr>
+<tr>
+<td>Fix spelling</td>
+<td>Corrects spelling and punctuation, without changing the style.</td>
+</tr>
+<tr>
+<td>Summarize</td>
+<td>Summarizes the selected text.</td>
+</tr>
+</tbody>
+</table>
+<p>Each tool has an <strong>AI provider</strong> setting. Keep the preselected chat model.</p>
+<p><img alt="The Generate with AI tool in the AI tools settings" src="../images/02_automators_ckeditor/ckeditor-ai-plugins.png" /></p>
+<p>The other tools need more setup. <strong>Tone</strong> and <strong>Translate</strong> take their options (the
+   tones, the languages) from a taxonomy vocabulary. <strong>AI Agents CKEditor</strong> and <strong>AI
+   Automators CKEditor</strong> connect the editor to agents and automator chains.</p>
+<ol>
+<li>Click <strong>Save configuration</strong>.</li>
+</ol>
+<p>Only users with the permission <strong>Use AI CKEditor plugin</strong> can use the menu. Administrators have
+every permission. Give it to content editors too, on the
+<a href="https://drupal-ai-workshop.ddev.site/admin/people/permissions/module/ai_ckeditor">AI CKEditor permissions</a>
+page, or with:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>content_editor<span class="w"> </span><span class="s1">&#39;use ai ckeditor&#39;</span>
+</code></pre></div>
+<h3 id="use-the-ai-menu">Use the AI menu<a class="headerlink" href="#use-the-ai-menu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open the page <a href="https://drupal-ai-workshop.ddev.site/about">About Northmoor</a> and click <strong>Edit</strong>.
+   If Drupal asks about a draft from an earlier visit, click <strong>Discard</strong>.</li>
+<li>In <strong>Content</strong>, select the first paragraph.</li>
+<li>Open <strong>AI Assistant</strong> in the toolbar and choose <strong>Modify with a prompt</strong>.</li>
+</ol>
+<p><img alt="The AI Assistant menu in CKEditor" src="../images/02_automators_ckeditor/ckeditor-ai-menu.png" /></p>
+<ol>
+<li>In <strong>Your instructions</strong>, enter:</li>
+</ol>
+<blockquote>
+<p>Rewrite this paragraph in a friendly, welcoming tone for prospective students.</p>
+</blockquote>
+<ol>
+<li>Click <strong>Modify text</strong>. The answer appears in <strong>Response from AI</strong>. You can edit it
+   there. Click <strong>Save changes to editor</strong> to replace the selected text.</li>
+</ol>
+<p><img alt="The AI response in the Modify with a prompt dialog" src="../images/02_automators_ckeditor/ckeditor-modify.png" /></p>
+<p>Then try the other tools:</p>
+<ul>
+<li>Put the cursor at the end of the text, choose <strong>Generate with AI</strong> and ask for a short
+  paragraph about visiting the campus in winter.</li>
+<li>Type a sentence with spelling mistakes, select it and choose <strong>Fix spelling</strong>.</li>
+<li>Select a long section and choose <strong>Summarize</strong>.</li>
+</ul>
+<p>You do not need to save the page. Leave it without saving if you want to keep the
+original text.</p>
+<h3 id="where-the-prompts-are">Where the prompts are<a class="headerlink" href="#where-the-prompts-are" title="Permanent link">&para;</a></h3>
+<p>Every tool sends a prompt to the AI, together with the selected text and your
+instructions. The prompts are editable. Go to <strong>Configuration › AI Setup and
+Configuration ›</strong> <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/prompts">AI Prompts</a>.
+The prompts <code>ai_ckeditor_*__default</code> belong to the CKEditor tools. The <strong>AI Prompt
+Types</strong> tab shows which variables each prompt can use, such as <code>{inputText}</code>.</p>
+<p><img alt="AI Prompts" src="../images/02_automators_ckeditor/ai-prompts.png" /></p>
+<p>Open <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/logging/collection">AI Logs</a>
+to see the full request that CKEditor sent. It is tagged <code>ai_ckeditor</code>.</p>
+<h2 id="3-ai-automators">3. AI Automators<a class="headerlink" href="#3-ai-automators" title="Permanent link">&para;</a></h2>
+<p><strong>Module:</strong> AI Automators (<code>ai_automators</code>), a submodule of the AI project.</p>
+<p>An automator fills a field with AI. You attach it to a field and tell it where the input
+comes from (usually another field on the same entity) and what to do with it. Automators
+exist for almost every field type: text, taxonomy terms, images, links, numbers and
+more.</p>
+<h3 id="a-first-automator-the-page-description">A first automator: the page description<a class="headerlink" href="#a-first-automator-the-page-description" title="Permanent link">&para;</a></h3>
+<p>The <strong>Description</strong> field of the Utility page is used as the teaser and as the
+description for search engines. We let the AI write it from the page content.</p>
+<ol>
+<li>Go to <strong>Structure › Content types › Utility page › Manage fields</strong> and edit
+   <a href="https://drupal-ai-workshop.ddev.site/admin/structure/types/manage/page/fields/node.page.field_description">Description</a>.</li>
+<li>Check <strong>Enable AI Automator</strong>, and fill in:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choose AI Automator Type</td>
+<td><strong>LLM: Text (simple)</strong></td>
+</tr>
+<tr>
+<td>Automator Input Mode</td>
+<td><strong>Base Mode</strong></td>
+</tr>
+<tr>
+<td>Automator Base Field</td>
+<td><strong>Content</strong></td>
+</tr>
+<tr>
+<td>Automator Prompt</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code>Summarize the following page text in one or two sentences of at most 250 characters. The summary is used as a teaser for the page. Return only the summary, without quotes or explanations.
+
+{{ context }}
+</code></pre></div>
+<p><code>{{ context }}</code> is replaced with the text of the base field, without HTML. Open
+   <strong>Placeholders available</strong> to see all placeholders.</p>
+<p><img alt="The automator settings of the Description field" src="../images/02_automators_ckeditor/automator-settings.png" /></p>
+<ol>
+<li>Open <strong>Advanced Settings</strong>:</li>
+<li>Under <strong>Automator Label</strong>, enter <code>Description from content</code>. The label is shown
+     when you pick the automator for a button in the next section.</li>
+<li>Under <strong>Automator Worker</strong>, choose <strong>Field Widget</strong>.</li>
+</ol>
+<p><img alt="The advanced automator settings with the Field Widget worker" src="../images/02_automators_ckeditor/automator-advanced.png" /></p>
+<ol>
+<li>Click <strong>Save settings</strong>.</li>
+</ol>
+<h3 id="the-automator-settings-explained">The automator settings explained<a class="headerlink" href="#the-automator-settings-explained" title="Permanent link">&para;</a></h3>
+<p><strong>Automator types.</strong> The list depends on the field type. For a plain long text field
+you can choose:
+- <strong>LLM: Text (simple):</strong> one prompt, one answer.
+- <strong>LLM: Text:</strong> can return several values.
+- <strong>Summarize:</strong> uses the summarize operation of the AI provider.</p>
+<p><strong>Input mode.</strong>
+- <strong>Base Mode</strong> uses one field as input, as <code>{{ context }}</code> in the prompt.
+- <strong>Advanced Mode (Token)</strong> builds the prompt from tokens instead, such as <code>[node:title]</code>
+  and <code>[node:field_content]</code>, so it can combine several fields.</p>
+<p><strong>Edit when changed.</strong> By default an automator only fills an empty field. With this
+option, it also overwrites the value when the base field changes.</p>
+<p><strong>Automator Weight.</strong> When one automator uses the result of another, the weight sets the
+order: higher weights run later.</p>
+<p><strong>Automator Worker.</strong> This decides <em>when</em> the automator runs:</p>
+<table>
+<thead>
+<tr>
+<th>Worker</th>
+<th>When it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct</td>
+<td>When the entity is saved. The value is saved directly.</td>
+</tr>
+<tr>
+<td>Field Widget</td>
+<td>When the editor clicks a button next to the field. It only fills the form and does not save.</td>
+</tr>
+<tr>
+<td>Queue/Cron</td>
+<td>Later, in a queue that runs on cron. Useful for slow requests or many entities.</td>
+</tr>
+<tr>
+<td>Batch</td>
+<td>In a JavaScript batch after saving. Not recommended; it does not run when content is saved by code.</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Only as an action, for example as a bulk operation in a content view.</td>
+</tr>
+</tbody>
+</table>
+<p>We use <strong>Field Widget</strong> for the description, because the field is <strong>required</strong>. Drupal
+does not save the form while a required field is empty, so an automator that runs on
+save would come too late. With a button, the editor fills the field before saving, and
+can review and change the text.</p>
+<p><strong>AI Provider.</strong> By default, automators use the default model for <em>chat with complex
+JSON</em> from the AI settings. You can pick a specific provider and model per automator.</p>
+<p><strong>Guardrail set.</strong> An automator can use a guardrail set, for example the <em>Workshop
+security</em> set from step 1. Input and output are then checked, and a blocked run leaves
+the field unchanged.</p>
+<p>All automators are listed under <strong>Configuration › AI Setup and Configuration › AI
+Automators ›</strong> <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/ai-automators/ai-automator">AI Automator Configuration</a>.</p>
+<h2 id="4-field-widget-actions">4. Field widget actions<a class="headerlink" href="#4-field-widget-actions" title="Permanent link">&para;</a></h2>
+<p><strong>Modules:</strong> Field Widget Actions (<code>field_widget_actions</code>), from the separate
+<a href="https://www.drupal.org/project/field_widget_actions">Field Widget Actions</a> project,
+provides the buttons. The <strong>Automator Text Suggestion</strong> action comes from AI Automators
+(<code>ai_automators</code>).</p>
+<p>A field widget action is a button next to a form field. An AI action button runs an
+automator and puts the result into the field, without saving the entity.</p>
+<h3 id="add-a-button-to-the-description-field">Add a button to the Description field<a class="headerlink" href="#add-a-button-to-the-description-field" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>Structure › Content types › Utility page ›</strong>
+   <a href="https://drupal-ai-workshop.ddev.site/admin/structure/types/manage/page/form-display">Manage form display</a>.</li>
+<li>Click the gear icon of the <strong>Description</strong> field to open its widget settings, then
+   open <strong>Field Widget Actions</strong>.</li>
+<li>In <strong>Add New Action</strong>, choose <strong>Automator Text Suggestion</strong> and click <strong>Add action</strong>.
+   The list only shows actions that fit the field type and widget. The automator action
+   only appears when the field has an automator.</li>
+</ol>
+<p><img alt="The Field Widget Actions settings of the Description field" src="../images/02_automators_ckeditor/widget-action-settings.png" /></p>
+<ol>
+<li>Configure the new action:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show button on edit form</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Button label</td>
+<td><code>Generate description</code></td>
+</tr>
+<tr>
+<td>Enable an Automator › Automator to use for suggestions</td>
+<td><strong>Description from content</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Two more options are worth knowing:
+   - <strong>Automatic</strong> runs the action when the form loads, without a click.
+   - <strong>Enable interactive refinement</strong> shows the result in a dialog, where the editor
+     can refine it with more instructions before inserting it.</p>
+<p><img alt="The settings of the Generate description button" src="../images/02_automators_ckeditor/widget-action-button.png" /></p>
+<ol>
+<li>Click <strong>Update</strong>, then <strong>Save</strong>.</li>
+</ol>
+<h3 id="use-the-button">Use the button<a class="headerlink" href="#use-the-button" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open the page <a href="https://drupal-ai-workshop.ddev.site/about">About Northmoor</a> and click <strong>Edit</strong>.</li>
+<li>Clear the <strong>Description</strong> field.</li>
+<li>Click <strong>Generate description</strong>. After a few seconds, the field contains a new
+   summary of the page content.</li>
+</ol>
+<p><img alt="The generated description" src="../images/02_automators_ckeditor/widget-action-result.png" /></p>
+<p>The page is not saved yet. Review the text, change it if needed, then save the page, or
+leave without saving.</p>
+<p>Field widget actions exist for many field types: alt text for images, taxonomy terms,
+images generated from text, links, numbers and more. Other modules can add their own
+actions.</p>
+<h2 id="5-an-automator-that-runs-on-save-tags">5. An automator that runs on save: tags<a class="headerlink" href="#5-an-automator-that-runs-on-save-tags" title="Permanent link">&para;</a></h2>
+<p>The Tags field is empty on all pages. This automator adds tags whenever a page is saved,
+with no button.</p>
+<ol>
+<li>Edit the field <a href="https://drupal-ai-workshop.ddev.site/admin/structure/types/manage/page/fields/node.page.field_tags">Tags</a>
+   of the Utility page, and check <strong>Enable AI Automator</strong>:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choose AI Automator Type</td>
+<td><strong>LLM: Taxonomy</strong></td>
+</tr>
+<tr>
+<td>Automator Input Mode</td>
+<td><strong>Base Mode</strong></td>
+</tr>
+<tr>
+<td>Automator Base Field</td>
+<td><strong>Content</strong></td>
+</tr>
+<tr>
+<td>Automator Prompt</td>
+<td>see below</td>
+</tr>
+<tr>
+<td>Advanced Settings › Automator Label</td>
+<td><code>Tags from content</code></td>
+</tr>
+<tr>
+<td>Advanced Settings › Automator Worker</td>
+<td><strong>Direct</strong></td>
+</tr>
+<tr>
+<td>Advanced Settings › Find similar tags</td>
+<td><strong>Off</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Prompt:</p>
+<div class="highlight"><pre><span></span><code>Choose up to 5 short tags (one to three words each) that describe the main topics of the page text below. Reuse existing tags when they fit. Existing tags: {{ value_options_comma }}
+
+Page text:
+{{ context }}
+</code></pre></div>
+<p><code>{{ value_options_comma }}</code> lists the existing terms of the vocabulary. The Tags field
+   allows new terms to be created, so the automator can add new tags.</p>
+<p>Leave <strong>Find similar tags</strong> off. It asks the AI in a second request whether a new tag
+   is almost the same as an existing one. When the AI finds none, it correctly answers
+   with an empty list, but the current version of AI Automators does not accept that
+   answer. The automator then fails, the page is saved without tags, and the log shows
+   <em>The response was not a valid JSON response. The response was: []</em>.</p>
+<p><img alt="The automator settings of the Tags field" src="../images/02_automators_ckeditor/automator-tags.png" /></p>
+<ol>
+<li>Click <strong>Save settings</strong>.</li>
+<li>Open the page <a href="https://drupal-ai-workshop.ddev.site/bs-marine-biology">BS in Marine Biology</a>, click <strong>Edit</strong>,
+   and click <strong>Save</strong> without changing anything.</li>
+<li>Edit the page again. The <strong>Tags</strong> field now contains tags that the AI chose.</li>
+</ol>
+<p><img alt="Tags generated on save" src="../images/02_automators_ckeditor/tags-generated.png" /></p>
+<p>The automator only runs when the Tags field is empty. Saving takes a little longer,
+because Drupal waits for the AI.</p>
+<p>Open <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/logging/collection">AI Logs</a>
+again. The automator requests are tagged with the automator, the entity and the field,
+for example <code>ai_automator:id:node.page.field_tags.default</code>.</p>
+<p><img alt="The two automators in the AI Automator Configuration" src="../images/02_automators_ckeditor/automators-list.png" /></p>
+<h3 id="more-to-try">More to try<a class="headerlink" href="#more-to-try" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add an <strong>Automator Taxonomy</strong> button to the Tags field. The Tags field uses the Tagify
+  widget, which supports this action. It works well next to the automator that runs
+  on save.</li>
+<li>Add automators to <strong>SEO title</strong> and <strong>SEO description</strong> in <strong>Advanced Mode (Token)</strong>,
+  with a prompt like: <em>Write a page title of at most 60 characters for search engines,
+  based on [node:title] and [node:field_content]. Return only the title.</em> Give them a
+  button each.</li>
+<li>Attach the <strong>Workshop security</strong> guardrail set to an automator and try to trigger it
+  with page content.</li>
+</ul>
+<h2 id="6-images-alt-text-and-image-classification">6. Images: alt text and image classification<a class="headerlink" href="#6-images-alt-text-and-image-classification" title="Permanent link">&para;</a></h2>
+<p><strong>Recipes:</strong> <a href="https://www.drupal.org/project/ai_recipe_image_alt_text">AI Image Alternative Text</a>
+(<code>ai_recipe_image_alt_text</code>) and
+<a href="https://www.drupal.org/project/ai_recipe_image_classification">AI Image Classification</a>
+(<code>ai_recipe_image_classification</code>). They are separate projects. They do not add new
+features; they configure AI Automators and Field Widget Actions, the modules you just
+used, for the <strong>Image</strong> media type. The classification recipe also installs
+<a href="https://www.drupal.org/project/views_bulk_operations">Views Bulk Operations</a>.</p>
+<p>You apply them and then look at what they configured, instead of building it by hand.</p>
+<h3 id="apply-the-recipes">Apply the recipes<a class="headerlink" href="#apply-the-recipes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>recipe<span class="w"> </span>../recipes/ai_recipe_image_alt_text
+ddev<span class="w"> </span>drush<span class="w"> </span>recipe<span class="w"> </span>../recipes/ai_recipe_image_classification
+</code></pre></div>
+<p>The recipes add to the Image media type:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Automator</th>
+<th>Model</th>
+<th>Worker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alternative text (of <code>field_media_image</code>)</td>
+<td><em>Image Vision</em> (<code>llm_image_alt_text</code>)</td>
+<td>Default vision model</td>
+<td>Field Widget: a <strong>Generate Alt Text</strong> button</td>
+</tr>
+<tr>
+<td>Image Description (<code>field_image_description</code>, new)</td>
+<td><em>Image Description Default</em> (<code>llm_simple_string_long</code>)</td>
+<td>Default vision model</td>
+<td>Direct: on save</td>
+</tr>
+<tr>
+<td>Image Tags (<code>field_image_tags</code>, new, vocabulary <em>Image Classification</em>)</td>
+<td><em>Image Tags Default</em> (<code>llm_taxonomy</code>)</td>
+<td>Default JSON model</td>
+<td>Direct: on save, after the description</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Turn off Find similar tags for Image Tags.</strong> The recipe switches on <em>Find similar
+tags</em> for the two Image Tags automators. It fails in the same way as described for the
+page tags above. Turn it off:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>config:set<span class="w"> </span>ai_automators.ai_automator.media.image.field_image_tags.default<span class="w"> </span>plugin_config.automator_search_similar_tags<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y
+ddev<span class="w"> </span>drush<span class="w"> </span>config:set<span class="w"> </span>ai_automators.ai_automator.media.image.field_image_tags.action<span class="w"> </span>plugin_config.automator_search_similar_tags<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y
+</code></pre></div>
+<p>For the first one you can also uncheck <strong>Find similar tags</strong> in the settings of the
+<a href="https://drupal-ai-workshop.ddev.site/admin/structure/media/manage/image/fields/media.image.field_image_tags">Image Tags field</a>.
+The second one, for bulk actions, has no form for this setting.</p>
+<p>They also add:
+- <strong>Two more automators</strong>, <em>Image Description Action</em> and <em>Image Tags Action</em>, with the
+  <strong>Action</strong> worker. They run as bulk actions on existing images.
+- <strong>Two bulk actions</strong> in the <a href="https://drupal-ai-workshop.ddev.site/admin/content/media">media list</a>: <em>AI: Image
+  Description</em> and <em>AI: Image Tags</em>.
+- <strong>Filters</strong> for description and tags in the media list and the media library.</p>
+<p>Open <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/ai-automators/ai-automator">AI Automator Configuration</a> to
+see the new automators, and open them to read their prompts:</p>
+<ul>
+<li><strong>Image Vision</strong> uses token mode, with the language of the media item
+  (<code>[media:language:name]</code>), and asks for an accessible alt text under 100 characters.</li>
+<li><strong>Image Description Default</strong> asks for a detailed description (colours, style, people,
+  objects) for search. The model receives the image itself; it is a <em>vision</em> request.</li>
+<li><strong>Image Tags Default</strong> uses base mode, with <strong>Image Description</strong> as the base field. It
+  does not look at the image, but classifies the text description. That is why its
+  weight is 101: it runs after the description automator (weight 100).</li>
+</ul>
+<h3 id="generate-alt-text">Generate alt text<a class="headerlink" href="#generate-alt-text" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to the <a href="https://drupal-ai-workshop.ddev.site/admin/content/media">media list</a> and edit the image <em>A research vessel
+   leaving the harbour at dawn</em>.</li>
+<li>Clear <strong>Alternative text</strong> and click <strong>Generate Alt Text</strong>. The AI looks at the image
+   and writes a new alt text.</li>
+</ol>
+<p><img alt="The generated alt text" src="../images/02_automators_ckeditor/alt-text-generated.png" /></p>
+<h3 id="describe-and-tag-an-image-on-save">Describe and tag an image on save<a class="headerlink" href="#describe-and-tag-an-image-on-save" title="Permanent link">&para;</a></h3>
+<p><strong>Image Description</strong> and <strong>Image Tags</strong> are empty. Click <strong>Save</strong>. The two automators
+that run on save fill them in. Saving takes a few seconds longer. Then edit the image
+again:</p>
+<p><img alt="The generated image description and tags" src="../images/02_automators_ckeditor/image-description-tags.png" /></p>
+<p>The field help says so too: <em>A description will be generated if left blank.</em> Every new
+image that editors upload is described and tagged this way.</p>
+<h3 id="classify-existing-images-in-bulk">Classify existing images in bulk<a class="headerlink" href="#classify-existing-images-in-bulk" title="Permanent link">&para;</a></h3>
+<p>The other 19 images were created before the automators existed. Classify them with the
+bulk actions:</p>
+<ol>
+<li>In the <a href="https://drupal-ai-workshop.ddev.site/admin/content/media">media list</a>, select a few images (three to five are
+   enough; each one is an AI request).</li>
+<li>In <strong>Action</strong>, choose <strong>AI: Image Description</strong> and click <strong>Apply to selected
+   items</strong>.</li>
+</ol>
+<p><img alt="The AI bulk actions in the media list" src="../images/02_automators_ckeditor/media-bulk-action.png" /></p>
+<ol>
+<li>Select the same images again, choose <strong>AI: Image Tags</strong> and apply. The tags are
+   based on the description, so run the description first.</li>
+</ol>
+<h3 id="find-images-by-description-and-tags">Find images by description and tags<a class="headerlink" href="#find-images-by-description-and-tags" title="Permanent link">&para;</a></h3>
+<p>Open the <a href="https://drupal-ai-workshop.ddev.site/admin/content/media-grid">media library grid</a>. It now has <strong>Description</strong>
+and <strong>Tags</strong> filters. Search for <code>harbour</code> in <strong>Description</strong>. The filter searches the
+text that the AI wrote, so it finds images by what they show, not only by their name.</p>
+<p><img alt="The media library filtered by description" src="../images/02_automators_ckeditor/media-library-filter.png" /></p>
+<p>The same filters are in the media library dialog that editors use to pick an image for a
+page. The tags are terms in the <strong>Image Classification</strong> vocabulary, which starts empty
+and grows as images are tagged.</p>
+<h2 id="checkpoint">Checkpoint<a class="headerlink" href="#checkpoint" title="Permanent link">&para;</a></h2>
+<p>You now have:</p>
+<ul>
+<li>an <strong>AI Assistant</strong> menu in the text editor, with four tools</li>
+<li>an automator for the Description field, and a <strong>Generate description</strong> button that
+  runs it</li>
+<li>an automator that adds tags to a page when it is saved</li>
+<li>a <strong>Generate Alt Text</strong> button for images, and images that are described and tagged
+  on save or in bulk</li>
+</ul>
+<p>If something does not work, reset your site to the end of this step:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>02_automators_ckeditor
+ddev<span class="w"> </span>catch-up
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Step 1 · Set up the site and the AI base">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Step 1 · Set up the site and the AI base
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03_ai_search/" class="md-footer__link md-footer__link--next" aria-label="Next: Step 3 · AI Search and AI Answers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Step 3 · AI Search and AI Answers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.top", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

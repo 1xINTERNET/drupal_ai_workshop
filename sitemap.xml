@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://1xinternet.github.io/drupal_ai_workshop/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://1xinternet.github.io/drupal_ai_workshop/01_setup/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://1xinternet.github.io/drupal_ai_workshop/02_automators_ckeditor/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://1xinternet.github.io/drupal_ai_workshop/03_ai_search/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://1xinternet.github.io/drupal_ai_workshop/04_ai_content_review/</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+</urlset>

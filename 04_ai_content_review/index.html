@@ -1,0 +1,1012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on workshop for the Drupal AI modules on Drupal CMS.">
+      
+      
+      
+        <link rel="canonical" href="https://1xinternet.github.io/drupal_ai_workshop/04_ai_content_review/">
+      
+      
+        <link rel="prev" href="../03_ai_search/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Step 4 · AI Content Review - Drupal AI Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-4-ai-content-review" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Drupal AI Workshop" class="md-header__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Drupal AI Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 4 · AI Content Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Drupal AI Workshop" class="md-nav__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Drupal AI Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 1 · Set up the site and the AI base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_automators_ckeditor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2 · CKEditor AI, AI Automators and field widget actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_ai_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3 · AI Search and AI Answers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 4 · AI Content Review
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 4 · AI Content Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-ai-content-review-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How AI Content Review works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-the-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Apply the recipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-review-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The review rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-content-review-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Content Review agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-review-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Review a page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-plan-and-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Plan and correct
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-compare-and-get-an-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Compare and get an overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-ai-content-review-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How AI Content Review works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-the-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Apply the recipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-review-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The review rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-content-review-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Content Review agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-review-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Review a page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-plan-and-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Plan and correct
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-compare-and-get-an-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Compare and get an overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="step-4-ai-content-review">Step 4: AI Content Review<a class="headerlink" href="#step-4-ai-content-review" title="Permanent link">&para;</a></h1>
+<p><strong>Goal:</strong> an AI reviewer checks pages against the Northmoor house style. It gives each page
+a score, quotes every problem it finds, and suggests corrections. Editors decide which
+suggestions to follow, correct the text and review it again.</p>
+<p><strong>Before you start:</strong> this step adds new Composer packages. Check out the branch of this
+step and install them:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>04_ai_content_review
+ddev<span class="w"> </span>composer<span class="w"> </span>install
+ddev<span class="w"> </span>drush<span class="w"> </span>cache:rebuild
+</code></pre></div>
+<p>Then:</p>
+<ul>
+<li>to do this step yourself, continue with your site from <a href="../03_ai_search/">step 3</a>;</li>
+<li>to skip to the result of this step, run <code>ddev catch-up</code>.</li>
+</ul>
+<h2 id="1-how-ai-content-review-works">1. How AI Content Review works<a class="headerlink" href="#1-how-ai-content-review-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A <strong>review rule</strong> says which content is reviewed (here: all Utility pages) and against
+  which <strong>criteria</strong>.</li>
+<li>A <strong>criterion</strong> is one editorial check with a written rubric, scored examples and a
+  pass and a warning threshold. This step uses one criterion: <strong>Grammar &amp;
+  Conventions</strong>.</li>
+<li>An <strong>AI agent</strong> is the judge. It reads the page and the rubric, and reports a score, an
+  explanation and suggestions through a tool.</li>
+<li>Every run is stored as a <strong>review record</strong>, with the revision of the page it reviewed.
+  Suggestions are stored with it.</li>
+<li>Reviews run <strong>on demand</strong>: an editor clicks a button, or reviews are queued in bulk. They
+  never run automatically when a page is saved.</li>
+</ul>
+<p>Two pages of the sample site contain deliberate style errors for this step: <a href="https://drupal-ai-workshop.ddev.site/visit">Visit
+campus</a> and <a href="https://drupal-ai-workshop.ddev.site/tuition-and-aid">Tuition and financial
+aid</a>. Look at them first: they have
+title-case headings, British spelling, dash ranges, "click here" links and exclamation
+marks.</p>
+<h2 id="2-apply-the-recipe">2. Apply the recipe<a class="headerlink" href="#2-apply-the-recipe" title="Permanent link">&para;</a></h2>
+<p>There is no public recipe for AI Content Review yet. The workshop recipe
+<a href="https://github.com/1xINTERNET/drupal_ai_workshop/tree/04_ai_content_review/recipes/workshop_ai_content_review/">recipes/workshop_ai_content_review</a> installs the
+modules and adds the rule and the agent.</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>recipe<span class="w"> </span>../recipes/workshop_ai_content_review
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Project</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Content Review (<code>ai_content_review</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_content_review">AI Content Review</a></td>
+<td>Review rules, criteria, review records, suggestions and the review UI.</td>
+</tr>
+<tr>
+<td>AI Agents (<code>ai_agents</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_agents">AI Agents</a></td>
+<td>The judge agent. Already installed in step 1.</td>
+</tr>
+<tr>
+<td>Entity (<code>entity</code>)</td>
+<td><a href="https://www.drupal.org/project/entity">Entity API</a></td>
+<td>Required by AI Content Review.</td>
+</tr>
+<tr>
+<td>Token (<code>token</code>), Token Entity Render (<code>token_entity_render</code>)</td>
+<td><a href="https://www.drupal.org/project/token">Token</a>, <a href="https://www.drupal.org/project/token_entity_render">Token Entity Render</a></td>
+<td>The token <code>[node:render:full]</code>, which passes the rendered page to the agent. Without it, the agent sees no content.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-the-review-rule">3. The review rule<a class="headerlink" href="#3-the-review-rule" title="Permanent link">&para;</a></h2>
+<p>Go to <strong>Configuration › AI Setup and Configuration ›</strong>
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/content-review/rules">Review Rules</a>
+and edit <strong>Editorial review</strong>.</p>
+<p><img alt="The Review Rules list" src="../images/04_ai_content_review/rules.png" /></p>
+<p>The rule reviews <strong>Content</strong> of the subtype <strong>Utility page</strong>. It has one criterion,
+<strong>Grammar &amp; Conventions</strong>.</p>
+<p><img alt="The Editorial review rule" src="../images/04_ai_content_review/rule-edit.png" /></p>
+<p>Open <strong>Criterion 1: Grammar &amp; Conventions</strong>:</p>
+<ul>
+<li><strong>Criterion type:</strong> <em>Agent-based criterion</em>. An AI agent does the review.</li>
+<li><strong>AI agent:</strong> <em>Content Review</em>.</li>
+<li><strong>AI provider:</strong> <em>amazee.ai – claude-4-5-haiku</em>. The workshop uses a fast model here:
+  a review with the default chat model of the amazee.ai trial takes longer than the
+  30-second request limit of the provider. If you use OpenAI or Anthropic, choose one of
+  their models.</li>
+</ul>
+<p><img alt="The agent and provider of the criterion" src="../images/04_ai_content_review/criterion-agent.png" /></p>
+<ul>
+<li><strong>Execution mode:</strong> <em>Direct</em> runs the review in one request. <em>Polling</em> runs it step by
+  step from the browser, for long reviews.</li>
+<li><strong>Guidelines &amp; rules:</strong> the rubric the AI reads. It has these parts:</li>
+<li><strong>Method:</strong> start at 100, subtract 5 for each error, and report the arithmetic.</li>
+<li><strong>Two counting rules:</strong> each rule counts at most two errors, and an error only counts
+    if the AI can quote the text and name the rule.</li>
+<li><strong>A closed list of 10 house-style rules:</strong> sentence-case headings, dates such as
+    November 19, 2026, times such as 9 a.m., ranges with "to" instead of a dash,
+    American spelling, link text that stands alone, at most two em dashes, no
+    exclamation marks or ampersands, course codes, and no sentence over 40 words.</li>
+<li><strong>A list of things that are not errors,</strong> because they caused false findings in
+    tests.</li>
+<li><strong>How to write suggestions:</strong> a short rationale for an editor, in plain words.</li>
+</ul>
+<p><img alt="The rubric of the criterion" src="../images/04_ai_content_review/criterion-prompt.png" /></p>
+<ul>
+<li><strong>Scoring thresholds:</strong> below 85 fails, 85 to 89 warns, 90 and above passes.</li>
+</ul>
+<p><img alt="The scoring thresholds" src="../images/04_ai_content_review/criterion-scores.png" /></p>
+<ul>
+<li><strong>Evaluation examples:</strong> short texts with their correct score and the reason. They
+  calibrate the AI, so that it scores the way the editorial team would. Each group is an
+  aspect of the criterion, such as <em>Case and the two-error cap</em>.</li>
+</ul>
+<p><img alt="The evaluation examples" src="../images/04_ai_content_review/criterion-examples.png" /></p>
+<h2 id="4-the-content-review-agent">4. The Content Review agent<a class="headerlink" href="#4-the-content-review-agent" title="Permanent link">&para;</a></h2>
+<p><strong>Module:</strong> AI Agents (<code>ai_agents</code>).</p>
+<p>Edit the <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/tools-automation/agents/content_review/edit/form">Content Review agent</a>.
+Its instructions contain the content between <code>--- BEGIN CONTENT ---</code> and
+<code>--- END CONTENT ---</code>, as the tokens <code>[node:title]</code> and <code>[node:render:full]</code>. The rubric
+and the examples of the criterion are sent in the task message.</p>
+<p>The agent has two tools from AI Content Review:</p>
+<ul>
+<li><strong>AI Content Review Result</strong> reports the score, severity, explanation and suggestions.
+  It is set to <strong>Require usage</strong> and <strong>Return directly</strong>: the agent must call it, and its
+  result is the answer. You saw these tool settings in step 1.</li>
+<li><strong>AI Content Review Suggestion Item</strong> describes the format of a suggestion. The agent
+  does not call it directly.</li>
+</ul>
+<p><img alt="The tools of the Content Review agent" src="../images/04_ai_content_review/agent-tools.png" /></p>
+<h2 id="5-permissions">5. Permissions<a class="headerlink" href="#5-permissions" title="Permanent link">&para;</a></h2>
+<p>Administrators have every permission. To let content editors run reviews, give the
+<em>Content editor</em> role the permissions <strong>Run AI content reviews</strong>, <strong>View AI review
+records</strong> and <strong>View AI review records history</strong> on the
+<a href="https://drupal-ai-workshop.ddev.site/admin/people/permissions/module/ai_content_review">AI Content Review permissions</a>
+page, or with:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>content_editor<span class="w"> </span><span class="s1">&#39;run reviews&#39;</span>
+ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>content_editor<span class="w"> </span><span class="s1">&#39;view review records&#39;</span>
+ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>content_editor<span class="w"> </span><span class="s1">&#39;view review history&#39;</span>
+</code></pre></div>
+<h2 id="6-review-a-page">6. Review a page<a class="headerlink" href="#6-review-a-page" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open <a href="https://drupal-ai-workshop.ddev.site/visit">Visit campus</a> and click the <strong>AI
+   Review</strong> tab.</li>
+<li>Click <strong>Review</strong>. After about 10 seconds, the result appears: a score of about
+   <strong>60%</strong>, grade <strong>Fail</strong>.</li>
+</ol>
+<p><img alt="The review result on the AI Review tab" src="../images/04_ai_content_review/review-result.png" /></p>
+<ol>
+<li>Click <strong>Edit</strong>. The sidebar of the edit form has a <strong>Content Review</strong> panel with the
+   same result. Click <strong>Grammar &amp; Conventions</strong> to open the details.</li>
+</ol>
+<p><img alt="The Content Review panel in the edit form" src="../images/04_ai_content_review/edit-sidebar.png" /></p>
+<p>The explanation counts every error, quotes the text, names the rule and shows the
+arithmetic, for example <em>Rule 2 (Dates): "17 October 2026" should be October 17, 2026</em>.
+Below it are the <strong>recommendations</strong>. Each one has a new value and a short rationale.
+<strong>Show proposed change</strong> compares the current and the suggested value.</p>
+<p><img alt="The explanation and the recommendations" src="../images/04_ai_content_review/review-detail.png" /></p>
+<p><img alt="A proposed change" src="../images/04_ai_content_review/review-suggestion.png" /></p>
+<blockquote>
+<p><strong>Do not click Apply.</strong> In the current version of AI Content Review (1.0.0-alpha3),
+<em>Apply</em> replaces the <strong>whole field</strong> with the suggested value. The suggestions here
+are short phrases, so applying one replaces the entire page text with a few words, and
+the page is saved immediately. If it happens, restore the previous revision on the
+<strong>Revisions</strong> tab, or run <code>ddev catch-up</code>.</p>
+<p>This is a known bug, see issue
+<a href="https://git.drupalcode.org/project/ai_content_review/-/work_items/3585854">#3585854</a>.</p>
+</blockquote>
+<h2 id="7-plan-and-correct">7. Plan and correct<a class="headerlink" href="#7-plan-and-correct" title="Permanent link">&para;</a></h2>
+<ol>
+<li>For each recommendation, click <strong>Accept</strong> or <strong>Ignore</strong>. Not every suggestion is
+   right. For example, the reviewer may suggest a "change" that keeps the text the same.
+   The editor decides.</li>
+<li>Close the dialog and open <strong>Improvement plan</strong> in the sidebar. It lists the accepted
+   suggestions as tasks that you check off as you correct the text.</li>
+</ol>
+<p><img alt="The improvement plan" src="../images/04_ai_content_review/improvement-plan.png" /></p>
+<ol>
+<li>Correct the text in <strong>Content</strong> yourself: headings in sentence case, the date and
+   time formats, <em>program</em> and <em>center</em>, no exclamation mark or ampersand, a link text
+   instead of "click here", and the very long sentence split in two.</li>
+<li>Save the page.</li>
+<li>Go back to the <strong>AI Review</strong> tab and click <strong>Update</strong>. The review runs on the new
+   revision. With the errors corrected, the page passes.</li>
+</ol>
+<p><img alt="The review after the corrections" src="../images/04_ai_content_review/review-rerun.png" /></p>
+<p>The <strong>AI Review History</strong> tab lists every review of the page, with its revision and
+score.</p>
+<h2 id="8-compare-and-get-an-overview">8. Compare and get an overview<a class="headerlink" href="#8-compare-and-get-an-overview" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Review <a href="https://drupal-ai-workshop.ddev.site/tuition-and-aid">Tuition and financial aid</a>,
+  the second page with errors. It also fails.</li>
+<li>Review a page without deliberate errors, for example
+  <a href="https://drupal-ai-workshop.ddev.site/about">About Northmoor</a>. It passes, or comes
+  close.</li>
+<li>Go to <strong>Content ›</strong> <a href="https://drupal-ai-workshop.ddev.site/admin/content/ai-review">AI content review</a>.
+  It lists all pages with their review results, and can be filtered by outcome and
+  criterion. The bulk action <strong>Queue AI review</strong> reviews several pages at once, on cron. It
+  needs the permission <em>Queue AI reviews in bulk</em>.</li>
+</ul>
+<p><img alt="The AI content review overview" src="../images/04_ai_content_review/overview.png" /></p>
+<p>Every review is an AI request. Open
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/logging/collection">AI Logs</a> to see
+the prompt the agent received and the tool call it returned.</p>
+<h2 id="more-to-try">More to try<a class="headerlink" href="#more-to-try" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Your own house rule:</strong> add a rule 11 to the criterion's <strong>Guidelines &amp; rules</strong>, for
+  example <em>Northmoor University is never abbreviated as NU</em>, and save the rule. Earlier
+  results no longer count, because the criterion has changed. The button on the AI Review
+  tab changes to <strong>Update</strong>.</li>
+<li><strong>Stricter thresholds:</strong> set the passing score to 95 and review About Northmoor again.</li>
+<li><strong>A second criterion:</strong> click <strong>Add criterion</strong> and write a short <em>Readability</em>
+  criterion, for example: <em>Judge how easily a general reader gets through this content:
+  short sentences, common words, one idea per sentence.</em></li>
+</ul>
+<h2 id="checkpoint">Checkpoint<a class="headerlink" href="#checkpoint" title="Permanent link">&para;</a></h2>
+<p>You now have:</p>
+<ul>
+<li>the rule <strong>Editorial review</strong> with the criterion <strong>Grammar &amp; Conventions</strong> for all
+  Utility pages</li>
+<li>a reviewed and corrected <em>Visit campus</em> page that passes</li>
+<li>an overview of the review results of all pages</li>
+</ul>
+<p>If something does not work, reset your site to the end of this step:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>04_ai_content_review
+ddev<span class="w"> </span>catch-up
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03_ai_search/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Step 3 · AI Search and AI Answers">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Step 3 · AI Search and AI Answers
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.top", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

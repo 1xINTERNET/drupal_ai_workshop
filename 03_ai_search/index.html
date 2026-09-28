@@ -1,0 +1,1534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on workshop for the Drupal AI modules on Drupal CMS.">
+      
+      
+      
+        <link rel="canonical" href="https://1xinternet.github.io/drupal_ai_workshop/03_ai_search/">
+      
+      
+        <link rel="prev" href="../02_automators_ckeditor/">
+      
+      
+        <link rel="next" href="../04_ai_content_review/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Step 3 · AI Search and AI Answers - Drupal AI Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-3-ai-search-and-ai-answers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Drupal AI Workshop" class="md-header__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Drupal AI Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 3 · AI Search and AI Answers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Drupal AI Workshop" class="md-nav__button md-logo" aria-label="Drupal AI Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Drupal AI Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1xINTERNET/drupal_ai_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    1xINTERNET/drupal_ai_workshop
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 1 · Set up the site and the AI base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_automators_ckeditor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2 · CKEditor AI, AI Automators and field widget actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3 · AI Search and AI Answers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3 · AI Search and AI Answers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-ai-answers-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How AI Answers works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-the-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Apply the recipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-look-at-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Look at the configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Look at the configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-embeddings-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The embeddings model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-index-the-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Index the content
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-test-the-search-in-the-ai-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Test the search in the AI Explorer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Test the search in the AI Explorer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-db-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector DB Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rag-tool-in-the-tools-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The RAG tool in the Tools Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-the-agent-and-the-ai-answers-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. The agent and the AI Answers settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. The agent and the AI Answers settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-content-search-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Content Search Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-answers-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Answers settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-build-the-ask-northmoor-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Build the Ask Northmoor page
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Build the Ask Northmoor page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#place-the-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Place the blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ask-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ask questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Ask questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-an-answer-in-the-ai-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow an answer in the AI logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A note on data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_ai_content_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 4 · AI Content Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-ai-answers-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How AI Answers works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-the-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Apply the recipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-look-at-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Look at the configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Look at the configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-embeddings-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The embeddings model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-index-the-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Index the content
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-test-the-search-in-the-ai-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Test the search in the AI Explorer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Test the search in the AI Explorer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-db-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector DB Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rag-tool-in-the-tools-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The RAG tool in the Tools Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-the-agent-and-the-ai-answers-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. The agent and the AI Answers settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. The agent and the AI Answers settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-content-search-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Content Search Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-answers-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Answers settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-build-the-ask-northmoor-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Build the Ask Northmoor page
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Build the Ask Northmoor page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#place-the-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Place the blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ask-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ask questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Ask questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-an-answer-in-the-ai-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow an answer in the AI logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A note on data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-to-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More to try
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="step-3-ai-search-and-ai-answers">Step 3: AI Search and AI Answers<a class="headerlink" href="#step-3-ai-search-and-ai-answers" title="Permanent link">&para;</a></h1>
+<p><strong>Goal:</strong> visitors ask a question in their own words and get an answer written from the
+Northmoor pages, with the source pages listed. You index the site content in a vector
+database, look at how search by meaning works, and build an <strong>Ask Northmoor</strong> page.</p>
+<p><strong>Before you start:</strong> this step adds new Composer packages. Check out the branch of this
+step and install them:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>03_ai_search
+ddev<span class="w"> </span>composer<span class="w"> </span>install
+ddev<span class="w"> </span>drush<span class="w"> </span>cache:rebuild
+</code></pre></div>
+<p>Then:</p>
+<ul>
+<li>to do this step yourself, continue with your site from <a href="../02_automators_ckeditor/">step 2</a>;</li>
+<li>to skip to the result of this step, run <code>ddev catch-up</code>.</li>
+</ul>
+<h2 id="1-how-ai-answers-works">1. How AI Answers works<a class="headerlink" href="#1-how-ai-answers-works" title="Permanent link">&para;</a></h2>
+<p>A normal search finds pages that contain the words you typed. AI Search finds text that
+has the same <strong>meaning</strong>, even when it uses other words. AI Answers then lets an AI write
+an answer from that text.</p>
+<ul>
+<li><strong>Embeddings.</strong> An embeddings model turns a piece of text into a long list of numbers
+  (a <em>vector</em>). Texts with a similar meaning get similar vectors. Try it in the
+  <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/explorers/embeddings_generator">Embeddings Explorer</a>.</li>
+<li><strong>Chunks.</strong> Pages are too long for one vector, so each page is split into chunks of a
+  few hundred tokens. Each chunk gets its own vector.</li>
+<li><strong>Vector database.</strong> The vectors are stored in a database that can find the vectors
+  nearest to a question. Here, that is PostgreSQL with the <em>pgvector</em> extension, which
+  runs as the <code>postgres</code> service in DDEV.</li>
+<li><strong>RAG</strong> (retrieval-augmented generation). The question is turned into a vector, the
+  best matching chunks are retrieved, and the AI writes the answer from those chunks
+  only.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Question ─► AI agent ─► RAG search tool ─► vector database (chunks of the Northmoor pages)
+                ▲                                   │
+                └──────── best matching chunks ◄────┘
+                │
+                ▼
+      Answer with [1] [2] citations  +  list of sources
+</code></pre></div>
+<h2 id="2-apply-the-recipe">2. Apply the recipe<a class="headerlink" href="#2-apply-the-recipe" title="Permanent link">&para;</a></h2>
+<p><strong>Recipe:</strong> <a href="https://www.drupal.org/project/ai_recipe_answers">AI Answers</a>
+(<code>ai_recipe_answers</code>). It applies two more recipes:
+<a href="https://www.drupal.org/project/ai_recipe_vdb_provider_postgres">AI Vector DB Provider for Postgres</a>
+and <a href="https://www.drupal.org/project/ai_recipe_content_search_vector">AI Content Search Vector</a>.</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>recipe<span class="w"> </span>../recipes/ai_recipe_answers
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Project</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search API (<code>search_api</code>)</td>
+<td><a href="https://www.drupal.org/project/search_api">Search API</a></td>
+<td>The search framework: servers, indexes, indexing.</td>
+</tr>
+<tr>
+<td>AI Search (<code>ai_search</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_search">AI Search</a></td>
+<td>A Search API backend that stores content as vectors, and the <em>RAG/Vector Search</em> tool. It used to be part of the AI project; the copy there is deprecated.</td>
+</tr>
+<tr>
+<td>Postgres VDB Provider (<code>ai_vdb_provider_postgres</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_vdb_provider_postgres">Postgres VDB Provider</a></td>
+<td>Connects AI Search to PostgreSQL with pgvector.</td>
+</tr>
+<tr>
+<td>AI Agents (<code>ai_agents</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_agents">AI Agents</a></td>
+<td>The agent that searches and writes the answer. Already installed in step 1.</td>
+</tr>
+<tr>
+<td>AI Answers (<code>ai_answers</code>)</td>
+<td><a href="https://www.drupal.org/project/ai_answers">AI Answers</a></td>
+<td>The question, answer and sources blocks, and the answer service behind them.</td>
+</tr>
+</tbody>
+</table>
+<p>The recipes create:</p>
+<ul>
+<li>the connection to the vector database, with the DDEV settings (host <code>postgres</code>,
+  database <code>default</code>, user <code>vectordb</code>);</li>
+<li>the Search API <strong>server</strong> <em>Content Vector</em>, which stores vectors in PostgreSQL;</li>
+<li>the Search API <strong>index</strong> <em>Content Vector</em>, for all pages;</li>
+<li>the view mode <strong>Search index</strong>, which decides how a page is rendered for indexing;</li>
+<li>the agent <strong>Content Search Agent</strong>, and the AI Answers settings for it.</li>
+</ul>
+<h2 id="3-look-at-the-configuration">3. Look at the configuration<a class="headerlink" href="#3-look-at-the-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="the-embeddings-model">The embeddings model<a class="headerlink" href="#the-embeddings-model" title="Permanent link">&para;</a></h3>
+<p>In <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/settings">AI Settings</a>, the
+default for <strong>Embeddings</strong> is amazee.ai with the model <code>embeddings</code>. The recipe uses
+this default for the server.</p>
+<h3 id="the-server">The server<a class="headerlink" href="#the-server" title="Permanent link">&para;</a></h3>
+<p>Go to <strong>Configuration › Search and metadata ›</strong>
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/search/search-api">Search API</a>.</p>
+<p><img alt="The Search API overview with the Content Vector server and index" src="../images/03_ai_search/search-api-overview.png" /></p>
+<p>Edit the <a href="https://drupal-ai-workshop.ddev.site/admin/config/search/search-api/server/content_vector/edit">Content Vector server</a>:</p>
+<ul>
+<li><strong>Backend:</strong> <em>AI Search</em>, which indexes items in a vector database.</li>
+<li><strong>Embeddings Engine:</strong> amazee.ai <code>embeddings</code>, with <strong>1024 dimensions</strong>. Every chunk
+  and every question gets a vector of this length. Changing the engine means indexing
+  everything again.</li>
+<li><strong>Vector Database:</strong> <em>Postgres</em>, database <code>default</code>, collection
+  <code>content_database_index</code>, similarity metric <em>cosine similarity</em>.</li>
+</ul>
+<p><img alt="The embeddings engine of the server" src="../images/03_ai_search/server-embeddings.png" /></p>
+<ul>
+<li><strong>Advanced Embeddings Strategy Configuration:</strong> <em>Enriched Embedding Strategy</em> splits
+  every page into chunks of <strong>300</strong> tokens with <strong>100</strong> tokens of overlap. It adds
+  contextual content (such as the title) to each chunk, up to 30% of the chunk.</li>
+</ul>
+<p><img alt="The chunking strategy of the server" src="../images/03_ai_search/server-chunking.png" /></p>
+<h3 id="the-index">The index<a class="headerlink" href="#the-index" title="Permanent link">&para;</a></h3>
+<p>Open the <a href="https://drupal-ai-workshop.ddev.site/admin/config/search/search-api/index/content_vector/fields">fields of the Content Vector index</a>.
+The <strong>Indexing option</strong> of each field decides its role in the vector database:</p>
+<table>
+<thead>
+<tr>
+<th>Indexing option</th>
+<th>Meaning</th>
+<th>Fields in this index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main content</td>
+<td>Split into chunks; questions are matched against it.</td>
+<td><strong>Rendered HTML output</strong> (the page rendered in the <em>Search index</em> view mode)</td>
+</tr>
+<tr>
+<td>Contextual content</td>
+<td>Added to every chunk, so a chunk keeps its context.</td>
+<td><strong>Title</strong>, <strong>URI</strong></td>
+</tr>
+<tr>
+<td>Filterable attributes</td>
+<td>Stored with the chunk for filtering, not embedded.</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="The Vector Database indexing options" src="../images/03_ai_search/index-indexing-options.png" /></p>
+<p><img alt="The fields of the Content Vector index" src="../images/03_ai_search/index-fields.png" /></p>
+<h2 id="4-index-the-content">4. Index the content<a class="headerlink" href="#4-index-the-content" title="Permanent link">&para;</a></h2>
+<p>The index is empty. Index all pages:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>search-api:index<span class="w"> </span>content_vector
+</code></pre></div>
+<p>You can also click <strong>Index now</strong> on the
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/search/search-api/index/content_vector">index page</a>.
+Every page is sent to the embeddings model, so this takes a few seconds. New and changed
+pages are indexed when they are saved.</p>
+<p>Look at the chunks in PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-s<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>vectordb<span class="w"> </span>-d<span class="w"> </span>default<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;select count(*) from content_database_index&quot;</span>
+ddev<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-s<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>vectordb<span class="w"> </span>-d<span class="w"> </span>default<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;select drupal_long_id, left(regexp_replace(content, &#39;\s+&#39;, &#39; &#39;, &#39;g&#39;), 70) as chunk from content_database_index order by drupal_long_id limit 5&quot;</span>
+</code></pre></div>
+<p>The 21 pages become a little more than 100 chunks. <code>drupal_long_id</code> shows the page and
+the number of the chunk, for example <code>entity:node/10:en:2</code> is the third chunk of node 10.</p>
+<h2 id="5-test-the-search-in-the-ai-explorer">5. Test the search in the AI Explorer<a class="headerlink" href="#5-test-the-search-in-the-ai-explorer" title="Permanent link">&para;</a></h2>
+<p>You can test search by meaning before any answer is written.</p>
+<h3 id="vector-db-explorer">Vector DB Explorer<a class="headerlink" href="#vector-db-explorer" title="Permanent link">&para;</a></h3>
+<p><strong>Module:</strong> AI Search (<code>ai_search</code>).</p>
+<p>Go to <strong>Configuration › AI Setup and Configuration › AI API Explorers ›</strong>
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/explorers/vector_db_generator">Vector DB Explorer</a>:</p>
+<ol>
+<li>Enter <code>Where can students go to sea?</code>.</li>
+<li>Select the index <strong>Content Vector</strong> and set <strong>Results</strong> to <code>5</code>.</li>
+<li>Click <strong>Run DB Query</strong>.</li>
+</ol>
+<p>The best match is a chunk of the <em>R/V Cascadia Strait</em> page, although the question does
+not contain the word "vessel". The <strong>Score</strong> shows how close each chunk is to the
+question, where 1 is identical.</p>
+<p><img alt="The Vector DB Explorer" src="../images/03_ai_search/vector-db-explorer.png" /></p>
+<h3 id="the-rag-tool-in-the-tools-explorer">The RAG tool in the Tools Explorer<a class="headerlink" href="#the-rag-tool-in-the-tools-explorer" title="Permanent link">&para;</a></h3>
+<p>In step 1 you tested tools in the
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/explorers/tools_explorer">Tools Explorer</a>.
+Choose <strong>RAG/Vector Search (ai_search)</strong> and enter <code>content_vector</code> as <strong>index</strong> and
+<code>Where can students go to sea?</code> as <strong>search_string</strong>. Click <strong>Run Function</strong>.</p>
+<p>The result is exactly the text the agent receives when it searches: the best chunks,
+each with its page URL and title. <strong>min_score</strong> (default <code>0.5</code>) drops chunks that are
+not similar enough.</p>
+<p><img alt="The RAG/Vector Search tool in the Tools Explorer" src="../images/03_ai_search/tools-explorer-rag.png" /></p>
+<h2 id="6-the-agent-and-the-ai-answers-settings">6. The agent and the AI Answers settings<a class="headerlink" href="#6-the-agent-and-the-ai-answers-settings" title="Permanent link">&para;</a></h2>
+<h3 id="the-content-search-agent">The Content Search Agent<a class="headerlink" href="#the-content-search-agent" title="Permanent link">&para;</a></h3>
+<p><strong>Module:</strong> AI Agents (<code>ai_agents</code>).</p>
+<p>Edit the <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/tools-automation/agents/content_search_agent/edit/form">Content Search Agent</a>.
+Its instructions tell it to answer only from the retrieved content, to say so when the
+content has no answer, and to cite its sources inline. Its only tool is <strong>RAG/Vector
+Search</strong>.</p>
+<p><img alt="The instructions and the tool of the Content Search Agent" src="../images/03_ai_search/agent-tools.png" /></p>
+<p>Click <strong>Configure</strong> on the tool and open <strong>Property setup</strong>. The property <strong>index</strong> is
+set to <strong>Force value</strong> <code>content_vector</code>. The AI decides what to search for, but it
+cannot search any other index. This is the property setup you saw in step 1.</p>
+<p><img alt="The index property is forced to content_vector" src="../images/03_ai_search/agent-force-index.png" /></p>
+<h3 id="ai-answers-settings">AI Answers settings<a class="headerlink" href="#ai-answers-settings" title="Permanent link">&para;</a></h3>
+<p><strong>Module:</strong> AI Answers (<code>ai_answers</code>).</p>
+<p>Go to <strong>Configuration › AI Setup and Configuration ›</strong>
+<a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/ai-answers/agents">AI Answers agents</a>
+and edit the Content Search Agent:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provide answers with this agent</td>
+<td>Makes the agent available for the AI Answers blocks. The agent needs a RAG tool with a forced index.</td>
+</tr>
+<tr>
+<td>AI provider</td>
+<td><em>Default</em> uses the default model for <em>Chat with tools</em>.</td>
+</tr>
+<tr>
+<td>Reference view mode</td>
+<td>How each source page is shown in the list of sources. Change it to <strong>Card</strong>, which is more compact than <em>Teaser</em>.</td>
+</tr>
+<tr>
+<td>No-answer message</td>
+<td>Shown when nothing relevant is found.</td>
+</tr>
+<tr>
+<td>Accept feedback</td>
+<td>Shows thumbs up and down under each answer. The feedback is logged.</td>
+</tr>
+<tr>
+<td>Conversation retention</td>
+<td>How long a conversation is kept for follow-up questions (3600 seconds).</td>
+</tr>
+</tbody>
+</table>
+<p>Click <strong>Save</strong>.</p>
+<p><img alt="The AI Answers settings of the Content Search Agent" src="../images/03_ai_search/ai-answers-agent-settings.png" /></p>
+<h3 id="permission">Permission<a class="headerlink" href="#permission" title="Permanent link">&para;</a></h3>
+<p>Visitors need the permission <strong>Use AI Answers</strong>. Give it to <em>Anonymous user</em> and
+<em>Authenticated user</em> on the
+<a href="https://drupal-ai-workshop.ddev.site/admin/people/permissions/module/ai_answers">AI Answers permissions</a>
+page, or with:</p>
+<div class="highlight"><pre><span></span><code>ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>anonymous<span class="w"> </span><span class="s1">&#39;use ai answers&#39;</span>
+ddev<span class="w"> </span>drush<span class="w"> </span>role:perm:add<span class="w"> </span>authenticated<span class="w"> </span><span class="s1">&#39;use ai answers&#39;</span>
+</code></pre></div>
+<p>Without it, every question fails with "Could not reach the answer service".</p>
+<h2 id="7-build-the-ask-northmoor-page">7. Build the Ask Northmoor page<a class="headerlink" href="#7-build-the-ask-northmoor-page" title="Permanent link">&para;</a></h2>
+<h3 id="create-the-page">Create the page<a class="headerlink" href="#create-the-page" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>Content › Add content ›</strong>
+   <a href="https://drupal-ai-workshop.ddev.site/node/add/page">Utility page</a>.</li>
+<li><strong>Title:</strong> <code>Ask Northmoor</code>.</li>
+<li><strong>Content:</strong> a short introduction, for example: <em>Ask a question about Northmoor
+   University: programs, admissions, research, our facilities or visiting the campus.
+   The answer is written by AI from the pages on this website, and the sources are
+   listed below the answer.</em></li>
+<li><strong>Description:</strong> click <strong>Generate description</strong>, the button from step 2.</li>
+<li><strong>URL alias:</strong> uncheck <strong>Generate automatic URL alias</strong> and enter <code>/ask</code>.</li>
+<li><strong>Change to:</strong> <strong>Published</strong>. New pages are drafts by default.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3 id="place-the-blocks">Place the blocks<a class="headerlink" href="#place-the-blocks" title="Permanent link">&para;</a></h3>
+<p>The AI Answers module provides three blocks that work together:</p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Answers: Question</td>
+<td>The question field, and optional suggested questions.</td>
+</tr>
+<tr>
+<td>AI Answers: Answer</td>
+<td>The answer, follow-up questions and feedback. It decides which agent answers.</td>
+</tr>
+<tr>
+<td>AI Answers: Sources</td>
+<td>The source pages of the answer.</td>
+</tr>
+</tbody>
+</table>
+<p>Go to <strong>Structure ›</strong> <a href="https://drupal-ai-workshop.ddev.site/admin/structure/block">Block layout</a>
+(Olivero) and place these blocks in the <strong>Content</strong> region. Place the Answer block first,
+because the other two point to it.</p>
+<ol>
+<li><strong>AI Answers: Answer</strong></li>
+<li><strong>Display title:</strong> off</li>
+<li><strong>AI Agent:</strong> <em>Content Search Agent</em></li>
+<li><strong>Show references:</strong> off, because the Sources block shows them</li>
+<li><strong>Visibility › Pages:</strong> <code>/ask</code></li>
+</ol>
+<p><img alt="The Answer block settings" src="../images/03_ai_search/block-answer.png" /></p>
+<ol>
+<li><strong>AI Answers: Question</strong></li>
+<li><strong>Display title:</strong> off</li>
+<li><strong>Target Answer block:</strong> <em>AI Answers: Answer (content)</em></li>
+<li><strong>Placeholder:</strong> <code>Ask anything about Northmoor</code></li>
+<li>
+<p><strong>Suggested questions</strong>, one per line:</p>
+<div class="highlight"><pre><span></span><code>Which master&#39;s programs can I study?
+How do I apply?
+What is the R/V Cascadia Strait used for?
+</code></pre></div>
+</li>
+<li>
+<p><strong>Visibility › Pages:</strong> <code>/ask</code></p>
+</li>
+</ol>
+<p><img alt="The Question block settings" src="../images/03_ai_search/block-question.png" /></p>
+<ol>
+<li><strong>AI Answers: Sources</strong></li>
+<li><strong>Display title:</strong> off</li>
+<li><strong>Target Answer block:</strong> <em>AI Answers: Answer (content)</em></li>
+<li>
+<p><strong>Visibility › Pages:</strong> <code>/ask</code></p>
+</li>
+<li>
+<p>Put the blocks in order in the Content region: <em>Main page content</em>, Question,
+   Answer, Sources. Drag them, or click <strong>Show row weights</strong> and set the weights. Click
+   <strong>Save blocks</strong>.</p>
+</li>
+</ol>
+<p>Then add a question field to every page, in the footer:</p>
+<ol>
+<li>Place <strong>AI Answers: Question</strong> in the <strong>Footer Top</strong> region:</li>
+<li><strong>Title:</strong> <code>Ask Northmoor</code>, with <strong>Display title</strong> on</li>
+<li><strong>Target Answer block:</strong> <em>AI Answers: Answer (content)</em></li>
+<li><strong>Cross-page fallback URL:</strong> <code>/ask</code>. The Answer block is not on the other pages, so
+     the browser goes to <code>/ask</code> and takes the question along.</li>
+<li><strong>Visibility › Pages:</strong> <code>/ask</code>, with <strong>Hide for the listed pages</strong></li>
+</ol>
+<p><img alt="The footer Question block settings" src="../images/03_ai_search/block-footer-question.png" /></p>
+<h2 id="8-ask-questions">8. Ask questions<a class="headerlink" href="#8-ask-questions" title="Permanent link">&para;</a></h2>
+<p>Log out, or use a private browser window, and open
+<a href="https://drupal-ai-workshop.ddev.site/ask">Ask Northmoor</a>. Click a suggested question or
+type your own:</p>
+<ul>
+<li><em>Which master's programs can I study?</em></li>
+<li><em>How do I apply?</em></li>
+<li><em>What is the R/V Cascadia Strait used for?</em></li>
+<li><em>Can I study part-time?</em></li>
+<li>an off-topic question, such as <em>Who won the football world cup in 2014?</em> The agent
+  says that its sources do not cover it.</li>
+</ul>
+<p>The answer cites its sources as [1], [2] and so on. The sources are listed below the
+answer, with the similarity score. Ask a follow-up question in the field under the
+answer.</p>
+<p><img alt="An answer with its source on the Ask Northmoor page" src="../images/03_ai_search/ask-answer.jpg" /></p>
+<p>Try the footer field on another page, for example
+<a href="https://drupal-ai-workshop.ddev.site/about">About Northmoor</a>. It takes you to <code>/ask</code>
+with the answer.</p>
+<p><img alt="The Ask Northmoor field in the footer" src="../images/03_ai_search/footer-question.png" /></p>
+<h3 id="follow-an-answer-in-the-ai-logs">Follow an answer in the AI logs<a class="headerlink" href="#follow-an-answer-in-the-ai-logs" title="Permanent link">&para;</a></h3>
+<p><strong>Module:</strong> AI Logging (<code>ai_logging</code>).</p>
+<p>The <strong>Threads</strong> tab of the AI logs groups the requests that belong together. It
+recognizes them by the beginning of their tags. The chatbot from step 1 tags its requests
+with <code>ai_assistant_thread_…</code>, but AI Answers runs its agent without a thread. Each answer
+is tagged with <code>ai_agents_runner_…</code> instead, so it does not appear under Threads yet.</p>
+<ol>
+<li>Open the <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/logging/settings">AI Logging Settings</a>
+   and open <strong>Conversation threads</strong>.</li>
+<li>Add a new line <code>ai_agents_runner_</code> to <strong>Thread tag prefixes</strong>, and click <strong>Save
+   configuration</strong>.</li>
+<li>Open <a href="https://drupal-ai-workshop.ddev.site/admin/config/ai/logging/threads">AI Logs › Threads</a>
+   as admin. Every answer is now a thread, with the question, the number of requests and
+   the tokens used. This also applies to answers you asked before the change.</li>
+</ol>
+<p><img alt="Answers as threads in the AI logs" src="../images/03_ai_search/ai-log-threads.png" /></p>
+<p>Open a thread to see its requests: the agent's call to the RAG search tool, and the
+answer written from the retrieved chunks. The embedding of the question is a separate
+request with the tag <code>embeddings</code>, in the list of all logs.</p>
+<h3 id="a-note-on-data">A note on data<a class="headerlink" href="#a-note-on-data" title="Permanent link">&para;</a></h3>
+<p>Questions are sent to the AI provider, together with the retrieved page content. AI
+Answers keeps each conversation for one hour, for follow-up questions, and logs the
+feedback. On a real site, mention this in your privacy notice.</p>
+<h2 id="more-to-try">More to try<a class="headerlink" href="#more-to-try" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Stricter matching:</strong> on the Content Search Agent, open the RAG tool's <strong>Property
+  setup</strong> and force <strong>min_score</strong> to <code>0.7</code>. Ask a vague question and compare.</li>
+<li><strong>Guardrails:</strong> attach the <em>Workshop security</em> guardrail set from step 1 to the agent
+  and try a prompt injection in the question field.</li>
+<li><strong>Chunk size:</strong> change the chunk size on the server to <code>150</code>, index again
+  (<code>ddev drush search-api:clear content_vector &amp;&amp; ddev drush search-api:index content_vector</code>)
+  and compare the answers.</li>
+<li><strong>Watch indexing:</strong> change a page, save it, and search for the new text in the Vector
+  DB Explorer. Pages are indexed when they are saved.</li>
+</ul>
+<h2 id="checkpoint">Checkpoint<a class="headerlink" href="#checkpoint" title="Permanent link">&para;</a></h2>
+<p>You now have:</p>
+<ul>
+<li>the Northmoor pages indexed as vectors in PostgreSQL</li>
+<li>search by meaning in the Vector DB Explorer and the RAG tool</li>
+<li>an <strong>Ask Northmoor</strong> page at <code>/ask</code> that answers questions with sources, for all
+  visitors</li>
+<li>a question field in the footer of every page</li>
+</ul>
+<p>If something does not work, reset your site to the end of this step:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>03_ai_search
+ddev<span class="w"> </span>catch-up
+</code></pre></div>
+<p><code>ddev catch-up</code> also indexes the content again, because the vectors are stored in
+PostgreSQL and not in the database dump.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02_automators_ckeditor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Step 2 · CKEditor AI, AI Automators and field widget actions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Step 2 · CKEditor AI, AI Automators and field widget actions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04_ai_content_review/" class="md-footer__link md-footer__link--next" aria-label="Next: Step 4 · AI Content Review">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Step 4 · AI Content Review
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.top", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
