@@ -9,6 +9,9 @@ Each workshop step lives in its own Git branch. The default branch, `01_setup`, 
 first step. Every later branch builds on the one before it and adds one guide to the
 [docs/](docs/) folder.
 
+Read all step guides online at **https://1xinternet.github.io/drupal_ai_workshop/**. The
+links in the guides open your local workshop site, https://drupal-ai-workshop.ddev.site.
+
 ## Requirements
 
 - [DDEV](https://ddev.com/get-started/) 1.24 or newer, with Docker

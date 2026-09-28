@@ -61,6 +61,7 @@ recipes/workshop_ai_base/          Drupal CMS AI stack without image alt text, p
 recipes/workshop_ai_provider/      Easy Encryption + amazee.ai trial; OpenAI/Anthropic from env vars
 recipes/workshop_ai_guardrails/    Guardrail set "Workshop security" (prompt injection in, malicious code out)
 dumps/db.sql.gz                    Database at the end of the branch's guide
+mkdocs.yml, scripts/build-site.sh   Website with all step guides (see below)
 ```
 
 Contrib recipes are installed by Composer into `recipes/` too, and are ignored by Git
@@ -70,6 +71,25 @@ or be added to that whitelist.
 **All Composer packages for all steps are required on `01_setup`**, so changing branches
 never needs `composer install`. If a later step needs a new package, add it on
 `01_setup` and merge forward.
+
+## Guides website
+
+All step guides are published at https://1xinternet.github.io/drupal_ai_workshop/
+(GitHub Pages, served from the `gh-pages` branch, MkDocs Material). The site is built
+from the **last step branch**, currently `04_ai_content_review`, because only that
+branch contains every guide. After a guide changes and the branches are pushed, rebuild
+and deploy it from any branch:
+
+```bash
+scripts/build-site.sh            # build into .site-build/site and check links (--strict)
+scripts/build-site.sh --deploy   # build and push to gh-pages
+```
+
+The script exports `docs/` and `README.md` from that branch with `git archive`, turns
+the README into the start page, and points links that leave `docs/` (recipes, license)
+to GitHub. It runs MkDocs in Docker (`squidfunk/mkdocs-material:9.7`). When a new step
+branch is added, change the default branch in the script and add the guide to `nav` in
+`mkdocs.yml`. Never commit to `gh-pages` by hand.
 
 ## Working on the site
 
