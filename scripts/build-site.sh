@@ -45,9 +45,9 @@ def rewrite(text, in_readme):
         path, _, anchor = target.partition("#")
         anchor = "#" + anchor if anchor else ""
         if in_readme:
-            if path.startswith("docs/") and path.endswith(".md"):
+            if path.startswith("docs/") and path != "docs/":
                 page = path[len("docs/"):]
-                if label == path:
+                if page.endswith(".md") and label == path:
                     label = title(page)
                 return f"[{label}]({page}{anchor})"
             return f"[{label}]({github(path)}{anchor})"
@@ -68,8 +68,8 @@ for name in os.listdir(root):
             # The site has its own dark mode switch, which <picture> does not follow.
             s = re.sub(
                 r"<picture>.*?</picture>",
-                '![Drupal](images/drupal/drupal-logo-black.svg#only-light){ width="140" }\n'
-                '![Drupal](images/drupal/drupal-logo-white.svg#only-dark){ width="140" }',
+                '![Drupal](docs/images/drupal/drupal-logo-black.svg#only-light){ width="140" }\n'
+                '![Drupal](docs/images/drupal/drupal-logo-white.svg#only-dark){ width="140" }',
                 s, count=1, flags=re.S)
         open(p, "w").write(rewrite(s, name == "index.md"))
 PY
