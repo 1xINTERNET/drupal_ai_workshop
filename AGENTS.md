@@ -14,7 +14,8 @@ repository. Do not refer to it in guides, recipes or configuration.
 |---|---|---|
 | `01_setup` | Done | `docs/01_setup.md` |
 | `02_automators_ckeditor` | Done | `docs/02_automators_ckeditor.md` |
-| `03_…` | Not planned yet | |
+| `03_ai_search` | Done | `docs/03_ai_search.md` |
+| `04_…` | Not planned yet | |
 
 The repository is published at https://github.com/1xINTERNET/drupal_ai_workshop
 (public). The default branch is `01_setup`. Push every step branch after a change.
@@ -53,8 +54,8 @@ The repository is published at https://github.com/1xINTERNET/drupal_ai_workshop
 README.md                          Getting started (all branches)
 docs/NN_*.md, docs/images/NN_*/    Step guides and screenshots
 .ddev/config.yaml                  Project drupal-ai-workshop, PHP 8.4, MySQL 8, DDEV-managed settings
-.ddev/docker-compose.postgres.yaml pgvector service for a later RAG step (unused so far)
-.ddev/commands/host/catch-up       Imports the dump, copies images, reconnects the AI provider
+.ddev/docker-compose.postgres.yaml pgvector service: the vector database of step 03 (AI Search)
+.ddev/commands/host/catch-up       composer install, imports the dump, copies images, reconnects the AI provider, re-indexes content_vector
 composer.json / composer.lock      Public packages only; config.platform.php = 8.4.0
 recipes/northmoor_university/      Site recipe: Drupal CMS basics + Olivero + 20 pages, images, menus
 recipes/workshop_ai_base/          Drupal CMS AI stack without image alt text, plus API Explorer and AI Logging
@@ -67,9 +68,11 @@ Contrib recipes are installed by Composer into `recipes/` too, and are ignored b
 through a whitelist in `.gitignore`. New workshop recipes must be named `workshop_ai_*`
 or be added to that whitelist.
 
-**All Composer packages for all steps are required on `01_setup`**, so changing branches
-never needs `composer install`. If a later step needs a new package, add it on
-`01_setup` and merge forward.
+**Composer packages.** Steps 01 and 02 are finished; their packages are all required on
+`01_setup`. From step 03 on, a step adds its packages **on its own branch**. The guide
+of that step starts with `ddev composer install` and `ddev drush cache:rebuild`, and
+`ddev catch-up` always runs `ddev composer install`. Do not go back and change earlier
+branches for a later step.
 
 ## Working on the site
 
@@ -104,6 +107,7 @@ trial details**, because every participant provisions their own on `ddev catch-u
      $id = $key->id();
      if (in_array($id, ["amazeeio_ai", "amazeeio_ai_database", "openai_api_key", "anthropic_api_key"], TRUE) || str_starts_with($id, "easy_encrypted__")) { $key->delete(); }
    }
+   if ($vdb = $keys->load("ai_vdb_provider_postgres")) { $vdb->setPlugin("key_provider", "env"); $vdb->set("key_provider_settings", ["env_variable" => "VECTOR_DB_PASSWORD", "base64_encoded" => FALSE, "strip_line_breaks" => TRUE]); $vdb->save(); }
    \Drupal::configFactory()->getEditable("easy_encryption.keys")->delete();
    \Drupal::configFactory()->getEditable("ai_provider_amazeeio.settings")->set("host", "")->set("postgres_host", "")->set("postgres_default_database", "")->set("postgres_username", "")->save();
    \Drupal::state()->delete("ai_provider_amazeeio.trial_account");
@@ -125,6 +129,9 @@ trial details**, because every participant provisions their own on `ddev catch-u
    zcat dumps/db.sql.gz | grep -oE "sk-[A-Za-z0-9_-]{16,}|user_[0-9a-f]{8}|db_[0-9a-f]{8}|llm\.[a-z0-9.-]+amazee\.ai|vectordb[0-9]*\.[a-z0-9.-]+|easy_encrypted__[0-9a-f_]+"
    ```
 
+   The Postgres vector DB key is switched to the env provider (`VECTOR_DB_PASSWORD`,
+   set by DDEV) because its encrypted value would not survive the deleted key pair. The
+   value is the local DDEV default `vectordb`, not a secret.
 5. Test: `rm -rf .easy_encryption && ddev catch-up`, then send a chat request. The cleanup
    deleted the local site's keys, so this also restores your working site.
 
@@ -201,16 +208,30 @@ branch.
   `ai_recipe_image_classification` are applied in step 02. The workshop does not seed
   the Image Classification vocabulary.
   After the recipes, the media list shows the **+ Add media** button twice (cosmetic).
+- **New Composer packages need a cache rebuild.** After `composer install`, Drupal only
+  sees new modules after `drush cache:rebuild`. Until then, `drush recipe` fails with
+  "is not a known module".
+- **Two `ai_search` copies.** The AI project contains a deprecated `ai_search` submodule;
+  step 03 adds the standalone project. After a cache rebuild, Drupal uses the standalone
+  one (`modules/contrib/ai_search`).
+- **Vectors are not in the dump.** They are in the DDEV Postgres service. `ddev catch-up`
+  clears and rebuilds the `content_vector` index (about a minute, one embeddings request
+  per page).
+- **AI Answers blocks.** The Answer block shows a "Target id" on its add form that
+  changes when the block is saved. The Question and Sources blocks use a select list of
+  placed Answer blocks, so place the Answer block first. Turn off the Sources block's
+  title and the Answer block's *Show references*, or the sources appear twice. The
+  Answer block's reference view mode *Card* is more compact than *Teaser* in Olivero.
+- **New pages are drafts.** The editorial workflow creates new pages as drafts; set
+  *Change to: Published* before saving.
+- **Agent tool settings** are in a dialog that opens with the tool card's *Configure*
+  link (`a.dynamic-tool-modal`).
 - **Chatbot in the browser.** The chat is a `deep-chat` web component. Send messages with
   `document.querySelector('deep-chat').submitUserMessage({text: '…'})`, and accept the
   Klaro consent (**Yes (this time)**) first.
 
 ## Next step
 
-Step 03 is not planned yet. Candidates:
-
-- Image alt text (the AI image alt text module, which step 1 leaves out on purpose)
-- A RAG chatbot or vector search (the pgvector service is already in `.ddev/`)
-- AI agents that change content
-
-Plan the step with the user before building it.
+Step 04 is not planned yet. Candidates: AI agents that change
+content, AI translation, content review or moderation of comments. Plan the step with
+the user before building it.

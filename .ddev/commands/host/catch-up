@@ -15,9 +15,8 @@ if [ ! -f dumps/db.sql.gz ]; then
   exit 1
 fi
 
-if [ ! -f vendor/autoload.php ]; then
-  ddev composer install
-fi
+# Steps can add Composer packages, so install the packages of this branch.
+ddev composer install
 
 ddev import-db --file=dumps/db.sql.gz
 
@@ -27,5 +26,11 @@ ddev exec 'mkdir -p web/sites/default/files/northmoor && cp recipes/northmoor_un
 # The dump contains no API keys: connect this site to its own AI provider.
 ddev drush recipe ../recipes/workshop_ai_provider
 ddev drush cache:rebuild
+
+# Vectors are stored in Postgres, not in the dump: rebuild the vector index.
+if ddev drush search-api:list --field=id 2>/dev/null | grep -qx content_vector; then
+  ddev drush search-api:clear content_vector
+  ddev drush search-api:index content_vector
+fi
 
 echo "Done. Log in with: ddev drush user:login"

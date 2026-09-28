@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c032ed26ea3dffa80c1a1122faa8d1a",
+    "content-hash": "aea4fbdae8b61e9449ae4bf57e1b9050",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -737,6 +737,69 @@
             }
         },
         {
+            "name": "drupal/ai_answers",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_answers.git",
+                "reference": "1.0.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ai_answers-1.0.0-beta4.zip",
+                "reference": "1.0.0-beta4",
+                "shasum": "37104c8732c06b618ff2621fb10d7a820c66d553"
+            },
+            "require": {
+                "drupal/ai": "^1.4",
+                "drupal/ai_agents": "^1.3",
+                "drupal/ai_search": "^1.3.0-alpha5",
+                "drupal/core": "^11.2"
+            },
+            "suggest": {
+                "drupal/ai_logging": "Persist answers and feedback as queryable ai_log entities.",
+                "drupal/langfuse": "Observability and feedback trace scoring for answers."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta4",
+                    "datestamp": "1790251213",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "abhisekmazumdar",
+                    "homepage": "https://www.drupal.org/user/3557964"
+                },
+                {
+                    "name": "dropsolid_admin",
+                    "homepage": "https://www.drupal.org/user/3653977"
+                },
+                {
+                    "name": "l_vandamme",
+                    "homepage": "https://www.drupal.org/user/3162503"
+                },
+                {
+                    "name": "nielsaers",
+                    "homepage": "https://www.drupal.org/user/752444"
+                }
+            ],
+            "description": "RAG answer engine that grounds cited answers in an AI Agent, with its own retrieval configuration.",
+            "homepage": "https://www.drupal.org/project/ai_answers",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_answers"
+            }
+        },
+        {
             "name": "drupal/ai_ckeditor",
             "version": "1.5.0-beta4",
             "source": {
@@ -1263,6 +1326,73 @@
             }
         },
         {
+            "name": "drupal/ai_recipe_answers",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_recipe_answers.git",
+                "reference": "d84144e2f081b703f9264693fa32e086ab31c5a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Fai_recipe_answers/repository/archive.zip?sha=d84144e2f081b703f9264693fa32e086ab31c5a0",
+                "reference": "d84144e2f081b703f9264693fa32e086ab31c5a0",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/ai": "^1.4",
+                "drupal/ai_agents": "^1.3",
+                "drupal/ai_answers": "^1.0@beta",
+                "drupal/ai_recipe_content_search_vector": "1.x-dev@dev",
+                "drupal/ai_recipe_vdb_provider_postgres": "^1.0@dev",
+                "drupal/ai_search": "^1.3@alpha",
+                "drupal/ai_vdb_provider_postgres": "^1.0@alpha",
+                "drupal/core": "^10.5 || ^11.2",
+                "drupal/search_api": "^1.39"
+            },
+            "type": "drupal-recipe",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Generic setup for the AI Answers RAG search-and-cite Q&A feature: a vector search index over all site content, a retrieval agent, and placeable Question/Answer/Sources blocks.",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_recipe_answers/-/tree/1.0.0-beta3"
+            },
+            "time": "2026-09-23T17:37:36+00:00"
+        },
+        {
+            "name": "drupal/ai_recipe_content_search_vector",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_recipe_content_search_vector.git",
+                "reference": "50988dddf7ac6ed9f9a077fe09bf5b9f27a4d688"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Fai_recipe_content_search_vector/repository/archive.zip?sha=50988dddf7ac6ed9f9a077fe09bf5b9f27a4d688",
+                "reference": "50988dddf7ac6ed9f9a077fe09bf5b9f27a4d688",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/ai": "^1.5@RC",
+                "drupal/ai_search": ">=1.3.0-alpha3 <2.0.0-alpha1",
+                "drupal/search_api": "^1.40"
+            },
+            "default-branch": true,
+            "type": "drupal-recipe",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides basic configuration for implementing RAG search within site content.",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_recipe_content_search_vector/-/tree/1.x"
+            },
+            "time": "2026-09-19T18:12:13+00:00"
+        },
+        {
             "name": "drupal/ai_recipe_image_alt_text",
             "version": "1.x-dev",
             "source": {
@@ -1339,6 +1469,135 @@
                 "source": "https://git.drupalcode.org/project/ai_recipe_image_classification/-/tree/1.1.1"
             },
             "time": "2026-09-16T18:52:15+00:00"
+        },
+        {
+            "name": "drupal/ai_recipe_vdb_provider_postgres",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_recipe_vdb_provider_postgres.git",
+                "reference": "a013ff1c62ad57c05c8d152854ebdcf5b72e2c88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Fai_recipe_vdb_provider_postgres/repository/archive.zip?sha=a013ff1c62ad57c05c8d152854ebdcf5b72e2c88",
+                "reference": "a013ff1c62ad57c05c8d152854ebdcf5b72e2c88",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/ai_vdb_provider_postgres": "^1.0@alpha",
+                "drupal/core": "^11.3"
+            },
+            "default-branch": true,
+            "type": "drupal-recipe",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Artem Dmitriiev",
+                    "homepage": "https://www.drupal.org/u/admitriiev"
+                },
+                {
+                    "name": "Christoph Breidert",
+                    "homepage": "https://www.drupal.org/u/breidert"
+                },
+                {
+                    "name": "Marcus Johansson",
+                    "homepage": "https://www.drupal.org/u/marcus_johansson"
+                }
+            ],
+            "description": "Recipe for setting up the postgres vector database provider.",
+            "homepage": "https://www.drupal.org/project/ai_recipe_vdb_provider_postgres",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/ai_recipe_vdb_provider_postgres",
+                "source": "https://git.drupalcode.org/project/ai_recipe_vdb_provider_postgres/-/tree/1.x"
+            },
+            "time": "2026-06-09T13:14:03+00:00"
+        },
+        {
+            "name": "drupal/ai_search",
+            "version": "1.3.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_search.git",
+                "reference": "1.3.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ai_search-1.3.0-alpha5.zip",
+                "reference": "1.3.0-alpha5",
+                "shasum": "36aa21935139a75b4110e4ff593e32c37a137719"
+            },
+            "require": {
+                "drupal/ai": "^1.3",
+                "drupal/core": "^10.4 || ^11",
+                "drupal/search_api": "^1.40",
+                "league/html-to-markdown": "^5.1"
+            },
+            "conflict": {
+                "drupal/ai": "<1.3",
+                "drupal/search_api": "<1.40"
+            },
+            "require-dev": {
+                "allanpichardo/mysql-vector": "^2.0",
+                "drupal/search_api": "^1.x-dev",
+                "drupal/search_api_solr": "^4.0"
+            },
+            "suggest": {
+                "league/commonmark": "Allows previewing of chunked content when configuring the fields to be indexed in AI Search, and formats messages in the AI Chatbot module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.3.0-alpha5",
+                    "datestamp": "1790179668",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "a.dmitriiev",
+                    "homepage": "https://www.drupal.org/user/3235287"
+                },
+                {
+                    "name": "andrewbelcher",
+                    "homepage": "https://www.drupal.org/user/655282"
+                },
+                {
+                    "name": "gxleano",
+                    "homepage": "https://www.drupal.org/user/3591999"
+                },
+                {
+                    "name": "kevinquillen",
+                    "homepage": "https://www.drupal.org/user/317279"
+                },
+                {
+                    "name": "marcus_johansson",
+                    "homepage": "https://www.drupal.org/user/385947"
+                },
+                {
+                    "name": "scott_euser",
+                    "homepage": "https://www.drupal.org/user/3267594"
+                },
+                {
+                    "name": "seogow",
+                    "homepage": "https://www.drupal.org/user/3065779"
+                }
+            ],
+            "description": "AI Search module for Drupal",
+            "homepage": "https://www.drupal.org/project/ai_search",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_search"
+            }
         },
         {
             "name": "drupal/ai_translate",
@@ -1480,6 +1739,67 @@
             "homepage": "https://www.drupal.org/project/ai_validations",
             "support": {
                 "source": "https://git.drupalcode.org/project/ai_validations"
+            }
+        },
+        {
+            "name": "drupal/ai_vdb_provider_postgres",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_vdb_provider_postgres.git",
+                "reference": "1.0.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ai_vdb_provider_postgres-1.0.0-alpha4.zip",
+                "reference": "1.0.0-alpha4",
+                "shasum": "cb93dc2112ff15b25cf4b71ffb52e985e0c3ea13"
+            },
+            "require": {
+                "drupal/ai": "^1.3",
+                "drupal/ai_search": "~1.3@alpha",
+                "drupal/core": "^10.5 || ^11",
+                "drupal/key": "*",
+                "ext-pdo": "*",
+                "ext-pdo_pgsql": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha4",
+                    "datestamp": "1789018467",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aurora-norris",
+                    "homepage": "https://www.drupal.org/user/3825457"
+                },
+                {
+                    "name": "joshhytr",
+                    "homepage": "https://www.drupal.org/user/3633353"
+                },
+                {
+                    "name": "marcus_johansson",
+                    "homepage": "https://www.drupal.org/user/385947"
+                },
+                {
+                    "name": "rijidij",
+                    "homepage": "https://www.drupal.org/user/269886"
+                }
+            ],
+            "description": "Enables the use of a Postgres (pgvector) VDB in the AI module.",
+            "homepage": "https://www.drupal.org/project/ai_vdb_provider_postgres",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_vdb_provider_postgres"
             }
         },
         {
@@ -13287,6 +13607,7 @@
     "stability-flags": {
         "drupal/ai_ckeditor": 10,
         "drupal/ai_provider_openai": 10,
+        "drupal/ai_recipe_answers": 10,
         "drupal/ai_recipe_image_alt_text": 20
     },
     "prefer-stable": true,
