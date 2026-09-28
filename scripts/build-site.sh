@@ -65,6 +65,12 @@ for name in os.listdir(root):
         if name == "index.md":
             # The start page is the website itself: drop the pointer to it.
             s = re.sub(r"\nRead all step guides online at .*?\n\n", "\n", s, flags=re.S)
+            # The site has its own dark mode switch, which <picture> does not follow.
+            s = re.sub(
+                r"<picture>.*?</picture>",
+                '![Drupal](images/drupal/drupal-logo-black.svg#only-light){ width="140" }\n'
+                '![Drupal](images/drupal/drupal-logo-white.svg#only-dark){ width="140" }',
+                s, count=1, flags=re.S)
         open(p, "w").write(rewrite(s, name == "index.md"))
 PY
 
