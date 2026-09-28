@@ -15,7 +15,7 @@ repository. Do not refer to it in guides, recipes or configuration.
 | `01_setup` | Done | `docs/01_setup.md` |
 | `02_automators_ckeditor` | Done | `docs/02_automators_ckeditor.md` |
 | `03_ai_search` | Done | `docs/03_ai_search.md` |
-| `04_…` | Not planned yet | |
+| `04_ai_content_review` | Done | `docs/04_ai_content_review.md` |
 
 The repository is published at https://github.com/1xINTERNET/drupal_ai_workshop
 (public). The default branch is `01_setup`. Push every step branch after a change.
@@ -61,6 +61,7 @@ recipes/northmoor_university/      Site recipe: Drupal CMS basics + Olivero + 20
 recipes/workshop_ai_base/          Drupal CMS AI stack without image alt text, plus API Explorer and AI Logging
 recipes/workshop_ai_provider/      Easy Encryption + amazee.ai trial; OpenAI/Anthropic from env vars
 recipes/workshop_ai_guardrails/    Guardrail set "Workshop security" (prompt injection in, malicious code out)
+recipes/workshop_ai_content_review/ Step 04: the Content Review agent and a rule with only the Grammar & Conventions criterion
 dumps/db.sql.gz                    Database at the end of the branch's guide
 ```
 
@@ -226,12 +227,32 @@ branch.
   *Change to: Published* before saving.
 - **Agent tool settings** are in a dialog that opens with the tool card's *Configure*
   link (`a.dynamic-tool-modal`).
+- **Flawed content was added on `01_setup` on purpose.** For step 04, the two pages with
+  deliberate errors were changed in the site recipe on `01_setup` and merged into 02 and
+  03, with regenerated dumps. The dumps were updated by writing `field_content` directly
+  into `node__field_content` and `node_revision__field_content`, to avoid triggering the
+  tags automator on save.
+- **Content review and amazee.ai.** amazee.ai rejects OpenAI options in a criterion's
+  provider config (`max_output_tokens`, `store`, `reasoning_effort`). The
+  amazee.ai provider also builds its HTTP client without a timeout, so Drupal's default
+  of 30 seconds applies instead of `ai.settings: request_timeout`; a review with the
+  default `chat` model takes longer. The workshop rule therefore uses
+  `amazeeio` / `claude-4-5-haiku` with an empty provider config (about 10 seconds).
+  Saving the rule in the UI adds `max_tokens`, `temperature` and `top_p`, which amazee
+  accepts, but it changes the criterion hash, so earlier records stop counting.
+- **Do not use Apply in AI Content Review.** In 1.0.0-alpha3 (and the 1.x dev branch),
+  `TextReplaceSuggestion::apply()` sets the whole target field to the suggested value.
+  The agent suggests phrases, so applying one wipes the page text and saves a new
+  revision. The guide uses Accept/Ignore, the improvement plan and manual correction.
+  Upstream issue: [#3585854](https://git.drupalcode.org/project/ai_content_review/-/work_items/3585854)
+  (confirmed there for alpha3 and 1.x). Related: #3585856, the next Save of the edit
+  form fails after an Apply.
+- **Review details.** The criterion link on the node's AI Review tab does not open its
+  detail dialog; the same link in the edit form's Content Review sidebar panel does.
 - **Chatbot in the browser.** The chat is a `deep-chat` web component. Send messages with
   `document.querySelector('deep-chat').submitUserMessage({text: '…'})`, and accept the
   Klaro consent (**Yes (this time)**) first.
 
 ## Next step
 
-Step 04 is not planned yet. Candidates: AI agents that change
-content, AI translation, content review or moderation of comments. Plan the step with
-the user before building it.
+No further step is planned. Plan any new step with the user before building it.

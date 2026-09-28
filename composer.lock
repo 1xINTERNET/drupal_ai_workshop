@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aea4fbdae8b61e9449ae4bf57e1b9050",
+    "content-hash": "c9f9bd19605beae5e510a8017c6ca10b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -861,6 +861,66 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ai_ckeditor",
                 "issues": "https://www.drupal.org/project/issues/ai_ckeditor"
+            }
+        },
+        {
+            "name": "drupal/ai_content_review",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ai_content_review.git",
+                "reference": "1.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ai_content_review-1.0.0-alpha3.zip",
+                "reference": "1.0.0-alpha3",
+                "shasum": "ce6f4915e400a4f11c1a95109572e6a763fe90ef"
+            },
+            "require": {
+                "drupal/ai": "^1.3",
+                "drupal/ai_agents": "^1.2",
+                "drupal/core": "^10.5 || ^11.2",
+                "drupal/entity": "^1.6",
+                "php": ">=8.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha3",
+                    "datestamp": "1790353897",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "a.dmitriiev",
+                    "homepage": "https://www.drupal.org/user/3235287"
+                },
+                {
+                    "name": "afoster",
+                    "homepage": "https://www.drupal.org/user/594458"
+                },
+                {
+                    "name": "ahmad khader",
+                    "homepage": "https://www.drupal.org/user/3727855"
+                },
+                {
+                    "name": "breidert",
+                    "homepage": "https://www.drupal.org/user/135619"
+                }
+            ],
+            "description": "Configurable AI-assisted content quality review system for Drupal editors.",
+            "homepage": "https://www.drupal.org/project/ai_content_review",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ai_content_review"
             }
         },
         {
@@ -3707,6 +3767,83 @@
             }
         },
         {
+            "name": "drupal/entity",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "61349682d0db8dead9d6b571ac6b4aeae08abb0f"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1787858234",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "tr",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
+                }
+            ],
+            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
+            "homepage": "https://www.drupal.org/project/entity",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity",
+                "issues": "https://www.drupal.org/project/issues/entity"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "4.0.0",
             "source": {
@@ -5994,6 +6131,54 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/token_entity_render",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token_entity_render.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token_entity_render-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "8b5c117fce854acbc8bd92b80bbd6d9393002141"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1717761571",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alex.bukach",
+                    "homepage": "https://www.drupal.org/user/1958006"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides tokens that render full entities using view mode specified",
+            "homepage": "https://www.drupal.org/project/token_entity_render",
+            "support": {
+                "source": "https://git.drupalcode.org/project/token_entity_render"
             }
         },
         {
@@ -13606,6 +13791,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/ai_ckeditor": 10,
+        "drupal/ai_content_review": 15,
         "drupal/ai_provider_openai": 10,
         "drupal/ai_recipe_answers": 10,
         "drupal/ai_recipe_image_alt_text": 20

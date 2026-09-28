@@ -1,0 +1,141 @@
+langcode: en
+status: true
+dependencies: {}
+id: editorial_review
+label: Editorial review
+record_type: internal
+entity_type: node
+bundles:
+- page
+schedule_enabled: false
+schedule_interval: 86400
+criteria:
+- label: Grammar & Conventions
+  short_description: American English house style
+  acronym: GC
+  badge_color: '#15803D'
+  plugin_id: agent_based
+  pass_threshold: 90
+  warn_threshold: 85
+  configuration:
+    agent_id: content_review
+    provider_config:
+      use_default: false
+      provider: amazeeio
+      model: claude-4-5-haiku
+      config: {}
+    prompt_template: |-
+      Grammar and conventions: score by deduction against a closed rule list.
+
+      METHOD. Start at 100. Subtract 5 for each error you count. Report the total, floor 0. Every score is a multiple of 5. Do not adjust the total by feel afterwards -- the score is the arithmetic.
+
+      THE TWO COUNTING RULES. Both matter more than the rule list itself.
+
+      1. EACH RULE CAPS AT TWO ERRORS. One instance of a rule is one error. Two or more instances of the SAME rule is two errors, and never more, however many times it occurs. Ten title-case headings is two errors, not ten.
+      2. QUOTE IT OR DROP IT. Count an error only if you can quote the exact offending text and name the rule number it breaks. If you cannot quote text that plainly breaks a numbered rule below, there is no error. Listing something you checked is not finding an error. A page that follows a rule must never be counted as breaking it. When genuinely unsure, do not deduct.
+
+      THE RULES. This list is closed. Judge only against rules 1 to 10 and invent nothing.
+
+      1. CASE. Node titles and headings are sentence case. Sentence case means only the first word is capitalized, plus proper nouns.
+         NOT ERRORS: "What you study", "Undergraduate admission", "The long record", "Common questions", "Start an application", "Research at Northmoor", "The Department of Life Sciences".
+         ERRORS: "What You Study", "Where It Leads", "Apply For Graduate Study".
+         EXCEPTION: course titles and program titles are title case on purpose. "Marine Mammal Biology" as a course title is correct.
+         Also an error: a word in ALL CAPS for emphasis, and "the University" capitalized mid-sentence.
+      2. DATES. November 19, 2026. Errors: 19 November 2026, 11/19/26, November 19th, "November, 2026", the 1990's.
+      3. TIMES. 9 a.m. and 2:30 p.m. Errors: 9am, 09:00, 17:30, 9:00 a.m., 12 p.m. for noon.
+      4. RANGES USE "to", never a dash. Errors: 18-21 credits, 3-5 p.m., June 8-9, 2020-24.
+      5. AMERICAN SPELLING. Errors: programme, metres, modelling, behaviour, centre, analyse, analysing, colour, favourable, enrolment, adviser, towards, catalogue, grey, defence. Note: "analysis" is correct and is never an error.
+      6. LINK TEXT stands alone. Errors: "click here", "read more", a bare URL printed as text, a link to a PDF with no file type flagged.
+      7. EM DASHES. At most two per page. Each em dash beyond the second is an instance of this rule. A matched pair enclosing one aside is two occurrences and is within the limit.
+      8. NO EXCLAMATION MARKS, and no ampersand in running text or headings.
+      9. COURSE CODES read MBIO 310 -- space, no hyphen. Credits carry a decimal: 3.0 credits. Money is dollars: $412.
+      10. SENTENCE LENGTH. A sentence over 40 words is an instance of this rule.
+
+      DO NOT DEDUCT for any of the following. These were the largest sources of false findings and are now out of scope:
+      - Whether a number should be spelled out or written as a numeral. Out of scope entirely.
+      - Whether prose restates a structured field. Out of scope entirely.
+      - Paragraph length, rhythm, sentence variety, average sentence length, list formatting, heading frequency.
+      - Navigation labels, breadcrumbs, button styling, field limits, citation style.
+      Anything not in rules 1 to 10 is not an error, however wrong it looks.
+
+      WRITING A SUGGESTION RATIONALE. A rationale is read on its own, beside the text it changes, by an editor who cannot see this rule list. NEVER cite a rule by number there: "to comply with rule 8" tells that reader nothing. Name the rule in plain words instead, and keep it to one short sentence.
+        WRONG: "Removes exclamation marks to comply with rule 8."
+        RIGHT: "Northmoor style does not use exclamation marks."
+        WRONG: "Changes the date to the required format for rule 2."
+        RIGHT: "House date format is November 19, 2026."
+      Rule numbers belong only in the explanation, where they justify the count. They must never appear in a suggestion rationale.
+
+      Report the count and the arithmetic: state how many errors you counted, quote each one with its rule number, then give 100 minus 5 times the count.
+    execution_mode: direct
+    example_groups:
+    - label: Case and the two-error cap
+      examples:
+      - score: 100
+        text: |-
+          # Coastal processes and sediment transport
+
+          ## What you study
+          ## How the year is structured
+          ## Where graduates go
+
+          She studied marine biology. Research at Northmoor runs year round.
+        explanation: 'Title and headings are sentence case. 0 errors: 100 - (5 x 0) = 100.'
+      - score: 95
+        text: |-
+          # Coastal processes and sediment transport
+
+          ## What You Study
+          ## How the year is structured
+          ## Where graduates go
+        explanation: 'One title-case heading, a single instance of rule 1. 1 error: 100 - 5 = 95.'
+      - score: 90
+        text: |-
+          # Coastal Processes And Sediment Transport
+
+          ## What You Study
+          ## How The Year Is Structured
+          ## Where Graduates Go
+          ## Who Teaches It
+        explanation: 'Five instances of rule 1, but a rule caps at two errors. 2 errors: 100 - 10 = 90.'
+    - label: Counting across rules
+      examples:
+      - score: 90
+        text: |-
+          The degree requires 18-21 credits of field methods.
+
+          The programme is taught at Prentice.
+        explanation: 'Rule 4 (dash range) and rule 5 (programme), once each. 2 errors: 100 - 10 = 90.'
+      - score: 70
+        text: |-
+          The open day is 19 November 2026, 3-5 p.m., doors at 9am.
+
+          The programme uses metres, not feet. Click here to apply.
+        explanation: 'Six errors across rules 2, 3, 4, 5 and 6, two of them capped. 6 errors: 100 - 30 = 70.'
+      - score: 40
+        text: |-
+          The open day is 19 November 2026, November 19th, 3-5 p.m. and 9am. See https://example.edu now!
+
+          The programme measures in metres and centres. Marine Policy & Economics. Click here, or read more. MBIO-310 is 3 credits.
+        explanation: 'Twelve errors across six rules, each capped at two. 12 errors: 100 - 60 = 40.'
+      - score: 0
+        text: |-
+          # Coastal Processes And Sediment
+          ## What You Study
+          ## Where It Leads
+
+          19 November 2026, November 19th, 9am, 09:00, 3-5 p.m., June 8-9. The programme uses metres, modelling, behaviour and centres. Click here, read more, https://example.edu, handbook. — a — b — c — d — e — Marine Policy & Economics! Apply now! MBIO-310, 3 credits, 412 pounds.
+        explanation: 'All ten rules broken two or more times, each capped at two. 20 errors: 100 - 100 = 0.'
+    - label: 'Out of scope: not errors'
+      examples:
+      - score: 100
+        text: Twelve programs run at Prentice, and 28 stations are monitored along four miles of shoreline. This is a 1.0-credit course requiring MBIO 101, as the prerequisite chain above shows.
+        explanation: 'Number style and structured-field restatement are out of scope. Nothing to count: 100.'
+      - score: 100
+        text: |-
+          # Research at Northmoor
+
+          ## The Department of Life Sciences
+          ## Marine Mammal Biology
+
+          Applications open in March.
+        explanation: Proper nouns and official course titles do not make a heading title case. 100.

@@ -13,6 +13,7 @@
         "composer/installers": "^2.3",
         "drupal/ai": "^1.5",
         "drupal/ai_ckeditor": "^1.5@beta",
+        "drupal/ai_content_review": "^1.0@alpha",
         "drupal/ai_provider_amazeeio": "^1.4",
         "drupal/ai_provider_anthropic": "^1.2",
         "drupal/ai_provider_openai": "^1.3@beta",
@@ -25,6 +26,7 @@
         "drupal/core-vendor-hardening": "^11.4",
         "drupal/drupal_cms_ai": "^2",
         "drupal/drupal_cms_site_template_base": "^2",
+        "drupal/token_entity_render": "^2.0",
         "twig/twig": "<3.30"
     },
     "require-dev": {

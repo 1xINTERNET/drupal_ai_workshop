@@ -1,0 +1,20 @@
+name: 'Workshop: AI content review'
+description: 'AI Content Review with one editorial rule for Utility pages: the Grammar & Conventions criterion, judged by the Content Review agent.'
+type: 'Workshop'
+install:
+  - views
+  - ai
+  - ai_agents
+  - ai_content_review
+  - token
+  - token_entity_render
+config:
+  strict: false
+  import:
+    # Imports the optional AI Review view and the bulk review action.
+    ai_content_review: '*'
+  actions:
+    ai.settings:
+      verifySetupAi:
+        operation_type_has_default_model:
+          - chat_with_tools
