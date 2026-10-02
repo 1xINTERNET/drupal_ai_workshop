@@ -86,7 +86,7 @@ learn what it does, which module provides it, and where to find it in the admin 
 [AI Dashboard](https://www.drupal.org/project/ai_dashboard) project. It replaces the
 overview page of the AI module.
 
-Go to **Configuration › AI Setup and Configuration** ([/admin/config/ai](https://drupal-ai-workshop.ddev.site/admin/config/ai)). This is the
+Go to **Configuration › AI › Overview** ([/admin/config/ai](https://drupal-ai-workshop.ddev.site/admin/config/ai)). This is the
 starting point for all AI features. It lets you add a provider, and it lists AI
 features that you can apply to your site with one click.
 
